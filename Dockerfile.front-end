@@ -1,0 +1,30 @@
+# source versions && docker build -f Dockerfile.front-end --build-arg "DEPI_IMPL=$DEPI_IMPL" --build-arg "WEBGME_DEPI=$WEBGME_DEPI" --build-arg "GSN_ASSURANCE=$GSN_ASSURANCE" -t caid-front-end .
+# docker run --rm --name caid-fe -p 4000:4000 --network="host" caid-front-end
+
+ARG DEPI_IMPL
+ARG WEBGME_DEPI
+ARG GSN_ASSURANCE
+
+FROM git.isis.vanderbilt.edu:5050/aa-caid/depi-impl/depi-vsix:${DEPI_IMPL} as depi-vsix
+FROM git.isis.vanderbilt.edu:5050/aa-caid/webgme-depi/webgme-depi-vsix:${WEBGME_DEPI} as webgme-depi-vsix
+FROM git.isis.vanderbilt.edu:5050/aa-caid/gsn-domain/gsn-assurance-vsix:${GSN_ASSURANCE} as gsn-assurance-vsix
+
+# PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+# NAME="Debian GNU/Linux"
+# VERSION_ID="11"
+# VERSION="11 (bullseye)"
+FROM ghcr.io/eclipse-theia/theia-blueprint/theia-ide:1.49.100
+
+RUN mkdir -p /home/theia/.theia-ide/plugins
+
+# Copy over vsix-es
+COPY --from=depi-vsix /depi.vsix /home/theia/.theia-ide/plugins/depi.vsix
+COPY --from=webgme-depi-vsix /webgme-depi.vsix /home/theia/.theia-ide/plugins/webgme-depi.vsix
+COPY --from=gsn-assurance-vsix /gsn-assurance.vsix /home/theia/.theia-ide/plugins/gsn-assurance.vsix
+
+# Add all the repositores (currently localhost only)
+RUN mkdir /home/project/.theia
+COPY --chown=theia examples/client/settings.json /home/project/.theia/settings.json
+COPY --chown=theia examples/client/clone_repos.sh /home/project/clone_repos.sh
+
+CMD [ "/home/project", "--hostname=0.0.0.0", "--port=4000" ]

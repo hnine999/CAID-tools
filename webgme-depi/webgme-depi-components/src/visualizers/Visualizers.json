@@ -1,0 +1,8 @@
+[
+  {
+    "id": "DepiResourceViz",
+    "title": "DepiResourceViz",
+    "panel": "panels/DepiResourceViz/DepiResourceVizPanel",
+    "DEBUG_ONLY": false
+  }
+]

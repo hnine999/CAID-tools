@@ -1,0 +1,185 @@
+AssuranceModel:
+    assurancemodels += GSNDefinition*
+;
+
+GSNDefinition:
+    Goals|Contexts|Assumptions|Justifications|Solutions
+;
+
+Goals:
+    'GOALS'  name=ID  '{' goals *= GoalNode '}'
+;
+
+Strategies:
+    'STRATEGIES'  name=ID  '{' strategies *= StrategyNode '}'
+;
+
+
+Contexts:
+    'CONTEXTS' name=ID '{' contexts *= ContextNode '}'
+;
+
+Assumptions:
+    'ASSUMPTIONS'  name=ID  '{' assumptions *= AssumptionNode '}'
+;
+
+Justifications:
+    'JUSTIFICATIONS'  name=ID  '{' justifications *= JustificationNode '}'
+;
+
+Solutions:
+    'SOLUTIONS'  name=ID  '{' solutions *= SolutionNode '}'
+;
+
+GoalSupportNodes:
+    GoalNode
+    | StrategyNode
+    | SolutionNode
+    | GoalNodeRef
+    | StrategyNodeRef
+    | SolutionNodeRef
+;
+
+StrategySupportNodes:
+    GoalNode
+    | StrategyNode
+    | GoalNodeRef
+    | StrategyNodeRef
+;
+
+ContextNodes:
+    ContextNode
+    | ContextNodeRef
+;
+
+AssumptionNodes:
+    AssumptionNode
+    | AssumptionNodeRef
+;
+
+JustificationNodes:
+    JustificationNode
+    | JustificationNodeRef
+;
+
+ALLNodes: 
+    GoalNode
+    | StrategyNode
+    | SolutionNode
+    | ContextNode
+    | AssumptionNode
+    | JustificationNode
+    
+;
+
+
+GoalNodeRef:
+    'ref_goal' ref=[GoalNode:FQN]
+;
+
+StrategyNodeRef:
+    'ref_strategy' ref=[StrategyNode:FQN]
+;
+
+SolutionNodeRef:
+    'ref_solution' ref=[SolutionNode:FQN]
+;
+
+ContextNodeRef:
+    'ref_context' ref=[ContextNode:FQN]
+;
+AssumptionNodeRef:
+    'ref_assumption' ref=[AssumptionNode:FQN]
+;
+JustificationNodeRef:
+    'ref_justification' ref=[JustificationNode:FQN]
+;
+
+GoalDetails:
+    GoalSupportNodes|
+    ContextNodes|
+    AssumptionNodes|
+    JustificationNodes
+;
+
+StrategyDetails:
+    StrategySupportNodes|
+    ContextNodes|
+    AssumptionNodes|
+    JustificationNodes
+;
+
+
+
+GoalNode:
+    'goal' name=ID '{'
+        (details += BaseNode)
+        ('status' status=SolutionStatus)?
+        (nodedetails *= GoalDetails)
+    '}'
+;
+
+StrategyNode:
+    'strategy' name=ID '{'
+        (details += BaseNode)
+        (nodedetails *= StrategyDetails)
+    '}'
+;
+
+ContextNode:
+    'context' name=ID '{'
+        (details += BaseNode)
+    '}'
+;
+
+AssumptionNode:
+    'assumption' name=ID '{'
+        (details += BaseNode)
+    '}'
+;
+
+JustificationNode:
+    'justification' name=ID '{'
+        (details += BaseNode)
+    '}'
+;
+
+SolutionNode:
+    'solution' name=ID '{'
+        (details += BaseNode)
+        ('status' status=SolutionStatus)?
+    '}'
+;
+
+BaseNode:
+    'uuid' uuid=UString
+    ('summary' summary=MLString)?
+    ('info' info=MLString)?
+    (labels  *=LabelInfo)
+    (artifacts *=URI)
+;
+
+SolutionStatus:
+    'NotReviewed' |
+    'Approved' |
+    'Disapproved'
+    ;
+FQN: // this rules matches either an FQN or a simple identifier
+    ID+['.']
+;
+
+LabelInfo: 
+    'label' name=ID
+;
+
+URI:
+    'artifact' uri=STRING
+;
+
+MLString: data=/(?ms)\"(.*?)\"/;
+UString: data=/[\d\w-]*\b/;
+UUIDString: (INT*)? ID '-' (INT*)? ID '-' (INT*)? ID '-' (INT*)? ID '-' (INT*)? ID;
+
+Comment:
+  /\/\/.*$/
+;

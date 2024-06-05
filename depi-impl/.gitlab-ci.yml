@@ -1,0 +1,80 @@
+stages:
+    - build
+    - test
+    - publish
+
+node-repos-build:
+  stage: build
+  image: node:gallium
+  services:
+    - docker:dind
+  script:
+    - npm --prefix ./node-client install
+    - npm --prefix ./node-client run build
+    - npm --prefix ./blackboard-graph install
+    - npm --prefix ./blackboard-graph run build
+    - npm --prefix ./vscode-depi install
+    - npm --prefix ./vscode-depi run compile
+    - npm --prefix ./vscode-depi run test
+
+python-unit-tests:
+  stage: test
+  image: python:3.11-buster
+  services:
+    - docker:dind
+  before_script:
+    - apt-get update
+    - apt-get install -y python3-dev default-libmysqlclient-dev build-essential pkg-config
+  script:
+    - cd depi/server
+    - pip install --upgrade pip
+    - pip install .
+    - ./compile-py.sh
+    - python test/memjson_depi_server_test.py
+    - cd ../monitors
+    - pip install --upgrade pip
+    - pip install .
+    - ./compile-py.sh
+    - python test/parse_resource_group_url_test.py
+
+
+vsix-publish:
+  stage: publish
+  image: node:hydrogen
+  services:
+    - docker:dind
+  only:
+    - tags
+  before_script:
+    - npm install --global @vscode/vsce
+  script:
+    - npm --prefix ./blackboard-graph install
+    - npm --prefix ./blackboard-graph run build
+    - npm --prefix ./vscode-depi install
+    - npm --prefix ./vscode-depi run compile
+    - (cd vscode-depi && vsce package)
+  artifacts:
+    paths:
+      - ./vscode-depi/*.vsix
+
+
+docker-publish:
+    stage: publish
+    tags:
+        - ubuntu18
+    only:
+        - tags
+    before_script:
+        - docker images -a
+        - docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin <<<$CI_REGISTRY_PASSWORD
+    script:
+        - docker build -t "$CI_REGISTRY_IMAGE/depi-server:${CI_COMMIT_TAG:1}" -f ./depi/server/Dockerfile ./depi
+        - docker push "$CI_REGISTRY_IMAGE/depi-server:${CI_COMMIT_TAG:1}"
+        - docker build -t "$CI_REGISTRY_IMAGE/depi-go-server:${CI_COMMIT_TAG:1}" -f ./depi/go-impl/Dockerfile ./depi
+        - docker push "$CI_REGISTRY_IMAGE/depi-go-server:${CI_COMMIT_TAG:1}"
+        - docker build -t "$CI_REGISTRY_IMAGE/git-monitors:${CI_COMMIT_TAG:1}" -f ./depi/monitors/Dockerfile ./depi
+        - docker push "$CI_REGISTRY_IMAGE/git-monitors:${CI_COMMIT_TAG:1}"
+        - docker build -t "$CI_REGISTRY_IMAGE/depi-vsix:${CI_COMMIT_TAG:1}" .
+        - docker push "$CI_REGISTRY_IMAGE/depi-vsix:${CI_COMMIT_TAG:1}"
+    after_script:
+        - docker logout $CI_REGISTRY

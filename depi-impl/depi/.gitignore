@@ -1,0 +1,14 @@
+.idea/
+__pycache__/
+venv/
+repos
+node_modules
+depi_server.log
+.state
+.teststate
+depi_config.*.json
+depi_pb2*.py
+depi_pb2*.pyi
+
+dist/
+*.egg-info/

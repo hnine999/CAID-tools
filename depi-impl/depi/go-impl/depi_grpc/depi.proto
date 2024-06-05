@@ -1,0 +1,562 @@
+syntax = "proto3";
+option go_package="depi.grpc";
+
+enum ChangeType {
+  Added = 0;
+  Modified = 1;
+  Renamed = 2;
+  Removed = 3;
+}
+
+enum UpdateType {
+  AddResource = 0;
+  RemoveResource = 1;
+  AddLink = 2;
+  RemoveLink = 3;
+  RenameResource = 4;
+  ResourceGroupVersionChanged = 5;
+  RenameLink = 6;
+  MarkLinkClean = 7;
+  MarkLinkDirty = 8;
+  ChangeResource = 9;
+  MarkInferredLinkClean = 10;
+  RemoveResourceGroup = 11;
+  EditResourceGroup = 12;
+  AddResourceGroup = 13;
+}
+
+enum DependenciesType {
+  Dependencies = 0;
+  Dependants = 1;
+}
+
+message Resource  {
+  string toolId = 1;
+  string resourceGroupName = 2;
+  string resourceGroupURL = 3;
+  string resourceGroupVersion = 4;
+  string name = 5;
+  string URL = 6;
+  string id = 7;
+  bool deleted = 8;
+};
+
+message ResourceChange {
+  string name = 1;
+  string URL = 2;
+  ChangeType changeType = 3;
+  string id = 4;
+  string new_name = 5;
+  string new_URL = 6;
+  string new_id = 7;
+}
+
+message ResourceGroup {
+  string name = 1;
+  string toolId = 2;
+  string URL = 3;
+  string version = 4;
+  repeated Resource resources = 5;
+};
+
+message ResourceGroupChange {
+  string name = 1;
+  string toolId = 2;
+  string URL = 3;
+  string version = 4;
+  repeated ResourceChange resources = 5;
+};
+
+message ResourceGroupVersionChange {
+  string name = 1;
+  string toolId = 2;
+  string URL = 3;
+  string version = 4;
+  string new_version = 5;
+};
+
+message ResourceGroupEdit {
+  string toolId = 2;
+  string URL = 3;
+  string new_name = 5;
+  string new_toolId = 6;
+  string new_URL = 7;
+  string new_version = 8;
+};
+
+message ResourceGroupRef {
+  string toolId = 1;
+  string URL = 2;
+};
+
+message ResourceRef {
+  string toolId = 1;
+  string resourceGroupURL = 3;
+  string URL = 6;
+};
+
+message ResourceLinkRename {
+  Resource fromRes = 1;
+  Resource fromResNew = 2;
+  Resource toRes = 3;
+  Resource toResNew = 4;
+}
+
+message ResourceRefPattern {
+  string toolId = 1;
+  string resourceGroupURL = 3;
+  string URLPattern = 4;
+};
+
+message LoginRequest {
+  string user = 1;
+  string password = 2;
+  string project = 3;
+  string toolId = 4;
+};
+
+message LoginResponse {
+  bool ok = 1;
+  string msg = 2;
+  string sessionId = 3;
+  string loginToken = 4;
+  string user = 5;
+};
+
+message LoginWithTokenRequest {
+  string loginToken = 1;
+}
+
+message PingRequest {
+  string sessionId = 1;
+}
+
+message PingResponse {
+  bool ok = 1;
+  string msg = 2;
+  string loginToken = 3;
+}
+
+message LogoutRequest {
+  string sessionId = 1;
+}
+
+message GenericResponse {
+  bool ok = 1;
+  string msg = 2;
+};
+
+message RegisterCallbackRequest {
+  string sessionId = 1;
+};
+
+message ResourceUpdate {
+  ResourceRef watchedResource = 1;
+  ResourceRef updatedResource = 2;
+};
+
+message ResourcesUpdatedNotification {
+  bool ok = 1;
+  string msg = 2;
+  repeated ResourceUpdate updates = 3;
+};
+
+message WatchResourceGroupRequest {
+  string sessionId = 1;
+  string toolId = 2;
+  string URL = 3;
+};
+
+message UnwatchResourceGroupRequest {
+  string sessionId = 1;
+  string toolId = 2;
+  string URL = 3;
+};
+
+message GetLastKnownVersionRequest {
+  string sessionId = 1;
+  string toolId = 2;
+  string name = 3;
+  string URL = 4;
+};
+
+message GetLastKnownVersionResponse {
+  bool ok = 1;
+  string msg = 2;
+  string version = 3;
+};
+
+message UpdateResourceGroupRequest {
+  string sessionId = 1;
+  ResourceGroupChange resourceGroup = 2;
+  string updateBranch = 3;
+};
+
+message AddResourceGroupRequest {
+  string sessionId = 1;
+  ResourceGroup resourceGroup = 2;
+}
+
+message EditResourceGroupRequest {
+  string sessionId = 1;
+  ResourceGroupEdit resourceGroup = 2;
+}
+
+message RemoveResourceGroupRequest {
+  string sessionId = 1;
+  ResourceGroupRef resourceGroup = 2;
+}
+
+message AddResourceRequest {
+  string sessionId = 1;
+  string toolId = 2;
+  string resourceGroupURL = 3;
+  string URL = 4;
+  string name = 5;
+  string id = 6;
+}
+
+message AddResourcesToBlackboardRequest {
+  string sessionId = 1;
+  repeated Resource resources = 2;
+};
+
+message RemoveResourcesFromBlackboardRequest {
+  string sessionId = 1;
+  repeated ResourceRef resourceRefs = 2;
+};
+
+message GetBlackboardResourcesRequest {
+  string sessionId = 1;
+}
+
+message GetBlackboardResourcesResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated Resource resources = 3;
+  repeated ResourceLink links = 4;
+}
+
+message ResourceLinkRef {
+  ResourceRef fromRes = 1;
+  ResourceRef toRes = 2;
+}
+
+message InferredDirtiness {
+  Resource resource = 1;
+  string lastCleanVersion = 2;
+}
+
+message ResourceLink {
+  Resource fromRes = 1;
+  Resource toRes = 2;
+  bool deleted = 3;
+  bool dirty = 4;
+  string lastCleanVersion = 5;
+  repeated InferredDirtiness inferredDirtiness = 6;
+}
+
+message ResourceLinkPattern {
+  ResourceRefPattern fromRes = 1;
+  ResourceRefPattern toRes = 2;
+}
+
+message LinkBlackboardResourcesRequest {
+  string sessionId = 1;
+  repeated ResourceLinkRef links = 2;
+};
+
+message UnlinkBlackboardResourcesRequest {
+  string sessionId = 1;
+  repeated ResourceLinkRef links = 2;
+};
+
+message LinkResourcesRequest {
+  string sessionId = 1;
+  ResourceLinkRef link = 2;
+};
+
+message UnlinkResourcesRequest {
+  string sessionId = 1;
+  ResourceLinkRef link = 2;
+};
+
+message GetBidirectionalChangesResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated Resource resource = 3;
+};
+
+message SetBranchRequest {
+  string sessionId = 1;
+  string branch = 2;
+}
+
+message CurrentBranchRequest {
+  string sessionId = 1;
+}
+
+message CurrentBranchResponse {
+  bool ok = 1;
+  string msg = 2;
+  string branch = 3;
+}
+
+message SaveBlackboardRequest {
+  string sessionId = 1;
+}
+
+message ClearBlackboardRequest {
+  string sessionId = 1;
+}
+
+message CreateBranchRequest {
+  string sessionId = 1;
+  string branchName = 2;
+  oneof source_name {
+    string fromBranch = 3;
+    string fromTag = 4;
+  }
+}
+
+message CreateTagRequest {
+  string sessionId = 1;
+  string tagName = 2;
+  string fromBranch = 3;
+}
+
+message MarkResourcesCleanRequest {
+  string sessionId = 1;
+  repeated ResourceRef resourceRefs = 2;
+  bool propagateCleanliness = 3;
+}
+
+message MarkLinksCleanRequest {
+  string sessionId = 1;
+  repeated ResourceLinkRef links = 2;
+  bool propagateCleanliness = 3;
+}
+
+message MarkInferredDirtinessCleanRequest {
+  string sessionId = 1;
+  ResourceLinkRef link = 2;
+  ResourceRef dirtinessSource = 3;
+  bool propagateCleanliness = 4;
+}
+
+message GetResourceGroupsRequest {
+  string sessionId = 1;
+}
+
+message GetResourceGroupsForTagRequest {
+  string sessionId = 1;
+  string tag = 2;
+}
+
+message GetResourceGroupsResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated ResourceGroup resourceGroups = 3;
+}
+
+message GetResourcesRequest {
+  string sessionId = 1;
+  repeated ResourceRefPattern patterns = 2;
+  bool includeDeleted = 3;
+}
+
+message GetResourcesResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated Resource resources = 3;
+}
+
+message GetResourcesAsStreamResponse {
+  bool ok = 1;
+  string msg = 2;
+  Resource resource = 3;
+}
+
+message GetLinksRequest {
+  string sessionId = 1;
+  repeated ResourceLinkPattern patterns = 2;
+}
+
+message GetAllLinksAsStreamRequest {
+  string sessionId = 1;
+  bool includeDeleted = 2;
+}
+
+message GetLinksResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated ResourceLink resourceLinks = 3;
+}
+
+message GetLinksAsStreamResponse {
+  bool ok = 1;
+  string msg = 2;
+  ResourceLink resourceLink = 3;
+}
+
+message GetDirtyLinksRequest {
+  string sessionId = 1;
+  string toolId = 2;
+  string name = 3;
+  string URL = 4;
+  bool withInferred = 5;
+}
+
+message GetDirtyLinksResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated Resource resources = 3;
+  repeated ResourceLink links = 4;
+}
+
+message GetDirtyLinksAsStreamResponse {
+  bool ok = 1;
+  string msg = 2;
+  Resource resource = 3;
+  ResourceLink link = 4;
+}
+
+message GetDependencyGraphRequest {
+    string sessionId = 1;
+    ResourceRef resource = 2;
+    DependenciesType dependenciesType = 3;
+    int32 maxDepth = 4;
+}
+
+message GetDependencyGraphResponse {
+    bool ok = 1;
+    string msg = 2;
+    Resource resource = 3;
+    repeated ResourceLink links = 4;
+}
+
+message GetBranchListRequest {
+  string sessionId = 1;
+}
+
+message GetBranchListResponse {
+  bool ok = 1;
+  string msg = 2;
+  repeated string branches = 3;
+  repeated string tags = 4;
+}
+
+message GetBidirectionalChangesRequest {
+  string sessionId = 1;
+}
+
+message ApproveBidirectionalChangeRequest {
+  string sessionId = 1;
+  repeated ResourceRef resources = 2;
+}
+
+message InferredLinkClean {
+  ResourceLinkRef link = 1;
+  ResourceRef resource = 2;
+}
+
+message Update {
+  UpdateType updateType = 1;
+  oneof update_data {
+    Resource resource = 2;
+    ResourceLink link = 3;
+    ResourceChange rename = 4;
+    ResourceGroupVersionChange versionChange = 5;
+    ResourceLinkRename renameLink = 6;
+    ResourceLink markLinkClean = 7;
+    ResourceLinkRef markLinkDirty = 8;
+    InferredLinkClean markInferredLinkClean = 9;
+    ResourceLinkRef markInferredLinkDirty = 10;
+    ResourceGroupRef removeResourceGroup = 11;
+    ResourceGroupEdit editResourceGroup = 12;
+    ResourceLinkRef removeLink = 13;
+    ResourceGroup addResourceGroup = 14;
+  }
+}
+
+message UpdateDepiRequest {
+  string sessionId = 1;
+  repeated Update updates = 2;
+}
+
+message WatchBlackboardRequest {
+  string sessionId = 1;
+}
+
+message UnwatchBlackboardRequest {
+  string sessionId = 1;
+}
+
+message WatchDepiRequest {
+  string sessionId = 1;
+}
+
+message UnwatchDepiRequest {
+  string sessionId = 1;
+}
+
+message BlackboardUpdate {
+  bool ok = 1;
+  string msg = 2;
+  repeated Update updates = 3;
+}
+
+message DepiUpdate {
+  bool ok = 1;
+  string msg = 2;
+  repeated Update updates = 3;
+}
+
+service Depi {
+  rpc Login(LoginRequest) returns (LoginResponse) {}
+  rpc LoginWithToken(LoginWithTokenRequest) returns (LoginResponse) {}
+  rpc Logout(LogoutRequest) returns (GenericResponse) {}
+  rpc RegisterCallback(RegisterCallbackRequest) returns (stream ResourcesUpdatedNotification) {};
+  rpc WatchResourceGroup(WatchResourceGroupRequest) returns (GenericResponse) {};
+  rpc UnwatchResourceGroup(UnwatchResourceGroupRequest) returns (GenericResponse) {};
+  rpc CreateBranch(CreateBranchRequest) returns (GenericResponse) {};
+  rpc SetBranch(SetBranchRequest) returns (GenericResponse) {};
+  rpc CreateTag(CreateTagRequest) returns (GenericResponse) {};
+  rpc GetLastKnownVersion(GetLastKnownVersionRequest) returns (GetLastKnownVersionResponse) {};
+  rpc UpdateResourceGroup(UpdateResourceGroupRequest) returns (GenericResponse) {};
+  rpc AddResourcesToBlackboard(AddResourcesToBlackboardRequest) returns (GenericResponse) {};
+  rpc RemoveResourcesFromBlackboard(RemoveResourcesFromBlackboardRequest) returns (GenericResponse) {};
+  rpc LinkBlackboardResources(LinkBlackboardResourcesRequest) returns (GenericResponse) {};
+  rpc UnlinkBlackboardResources(UnlinkBlackboardResourcesRequest) returns (GenericResponse) {};
+  rpc GetBlackboardResources(GetBlackboardResourcesRequest) returns (GetBlackboardResourcesResponse) {};
+  rpc SaveBlackboard(SaveBlackboardRequest) returns (GenericResponse) {};
+  rpc ClearBlackboard(ClearBlackboardRequest) returns (GenericResponse) {};
+  rpc GetDirtyLinks(GetDirtyLinksRequest) returns (GetDirtyLinksResponse) {};
+  rpc GetDirtyLinksAsStream(GetDirtyLinksRequest) returns (stream GetDirtyLinksAsStreamResponse) {};
+  rpc MarkLinksClean(MarkLinksCleanRequest) returns (GenericResponse) {};
+  rpc MarkInferredDirtinessClean(MarkInferredDirtinessCleanRequest) returns (GenericResponse) {};
+  rpc GetBidirectionalChanges(GetBidirectionalChangesRequest) returns (GetBidirectionalChangesResponse) {};
+  rpc ApproveBidirectionalChange(ApproveBidirectionalChangeRequest) returns (GenericResponse) {};
+  rpc GetResourceGroups(GetResourceGroupsRequest) returns (GetResourceGroupsResponse) {};
+  rpc GetResources(GetResourcesRequest) returns (GetResourcesResponse) {};
+  rpc GetResourcesAsStream(GetResourcesRequest) returns (stream GetResourcesAsStreamResponse) {};
+  rpc GetLinks(GetLinksRequest) returns (GetLinksResponse) {};
+  rpc GetAllLinksAsStream(GetAllLinksAsStreamRequest) returns (stream GetLinksAsStreamResponse) {};
+  rpc GetLinksAsStream(GetLinksRequest) returns (stream GetLinksAsStreamResponse) {};
+  rpc GetDependencyGraph(GetDependencyGraphRequest) returns (GetDependencyGraphResponse) {};
+  rpc GetBranchList(GetBranchListRequest) returns (GetBranchListResponse) {};
+  rpc UpdateDepi(UpdateDepiRequest) returns (GenericResponse) {};
+  rpc WatchBlackboard(WatchBlackboardRequest) returns (stream BlackboardUpdate) {};
+  rpc WatchDepi(WatchDepiRequest) returns (stream DepiUpdate) {};
+  rpc UnwatchBlackboard(UnwatchBlackboardRequest) returns (GenericResponse) {};
+  rpc UnwatchDepi(UnwatchDepiRequest) returns (GenericResponse) {};
+  rpc AddResourceGroup(AddResourceGroupRequest) returns (GenericResponse) {};
+  rpc EditResourceGroup(EditResourceGroupRequest) returns (GenericResponse) {};
+  rpc RemoveResourceGroup(RemoveResourceGroupRequest) returns (GenericResponse) {};
+  rpc AddResource(AddResourceRequest) returns (GenericResponse) {};
+  rpc LinkResources(LinkResourcesRequest) returns (GenericResponse) {};
+  rpc UnlinkResources(UnlinkResourcesRequest) returns (GenericResponse) {};
+  rpc CurrentBranch(CurrentBranchRequest) returns (CurrentBranchResponse) {};
+  rpc GetResourceGroupsForTag(GetResourceGroupsForTagRequest) returns (GetResourceGroupsResponse) {}
+  rpc Ping(PingRequest) returns (PingResponse) {};
+}

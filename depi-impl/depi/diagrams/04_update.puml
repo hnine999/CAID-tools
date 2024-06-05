@@ -1,0 +1,27 @@
+@startuml
+actor User as user
+participant "Tool A" as toola
+participant "Tool B" as toolb
+participant "Tool C" as toolc
+participant "Depi" as depi
+
+toola -> depi : Watch resource groups
+toolb -> depi : Watch resource groups
+toolc -> depi : Watch resource groups
+user -> toola : Commit new version
+toola -> depi : Resource group has changed
+depi -> depi : Update depi version
+depi -> toolb : Resources are dirty
+depi -> toolc : Resources are dirty
+
+note right of depi
+Tools watch resource
+groups they own.
+
+Resources changed in
+Tool A are linked to
+resources belonging
+to tools B and C.
+end note
+@enduml
+

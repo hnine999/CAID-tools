@@ -1,0 +1,29 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor User
+package ToolAdaptor {
+  usecase "Add Resources to Blackboard" as addr
+  usecase "View Dirty Resources" as dirtyr
+  usecase "Mark Resource Clean" as cleanr
+}
+
+package Blackboard {
+  usecase "Link Resources" as linkr
+  usecase "Unlink Resources" as unlinkr
+  usecase "Find Resources" as findr
+  usecase "Save Blackboard" as saveb
+  usecase "Clear Blackboard" as clearb
+}
+
+User --> addr
+User --> dirtyr
+User --> cleanr
+
+User --> linkr
+User --> unlinkr
+User --> findr
+User --> saveb
+User --> clearb
+
+@enduml

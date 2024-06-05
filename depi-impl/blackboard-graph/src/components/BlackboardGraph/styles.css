@@ -1,0 +1,72 @@
+.react-flow .react-flow__edges {
+    z-index: 1 !important;
+}
+
+.handle-output-port {
+    border: unset;
+    border-radius: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #4e4e4e;
+}
+.handle-output-port:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 1px;
+}
+
+.handle-output-port-left {
+    right: -7px;
+}
+
+.handle-output-port-left:before {
+    left: 0.7px;
+}
+
+.handle-output-port-left,
+.handle-output-port-left:before {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.handle-output-port-right {
+    left: -7px;
+}
+
+.handle-output-port-right:before {
+    left: 1.3px;
+}
+
+.handle-output-port-right,
+.handle-output-port-right:before {
+    clip-path: polygon(100% 100%, 0 50%, 100% 0);
+}
+
+.handle-input-port {
+    border: unset;
+    border-radius: 0;
+    top: 14px;
+    width: 8px;
+    height: 10px;
+    background-color: #4e4e4e;
+}
+
+.handle-input-port-left {
+    right: -4px;
+}
+
+.handle-input-port-left {
+    clip-path: polygon(100% 100%, 0 50%, 100% 0);
+}
+
+.handle-input-port-right {
+    left: -4px;
+}
+
+.handle-input-port-right {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}

@@ -1,0 +1,25 @@
+Rules: rules*=Rule
+    ;
+
+Rule:
+    rule_name=ID '{'
+        rule_capabilities*=RuleCapability
+    '}'
+    ;
+
+ParameterList:
+    '(' params*=Parameter[','] ')'
+    ;
+
+Parameter:
+    param *= ParameterPart
+    | param = STRING
+    ;
+
+ParameterPart:
+    ('*' | ID )
+    ;
+
+RuleCapability:
+    cap=Parameter parameter_list=ParameterList?
+    ;

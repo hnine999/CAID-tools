@@ -1,0 +1,2791 @@
+[
+    {
+        "summary": "",
+        "name": "BTMissionExecution",
+        "id": "assumptions/BTMissionExecution",
+        "type": "Assumption",
+        "uuid": "bda66baf-f20e-4aff-a43c-40fe6c1ee1ba",
+        "info": "\"BT Mission execution working as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "DetectSensorFailure",
+        "id": "assumptions/DetectSensorFailure",
+        "type": "Assumption",
+        "uuid": "dd06035f-b020-4bb3-8f1d-417a95476971",
+        "info": "\"System can detect sensor failure\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "FDIRSatisfactory",
+        "id": "assumptions/FDIRSatisfactory",
+        "type": "Assumption",
+        "uuid": "1b122ff8-44fc-46a0-b5ce-6c951f7a4d56",
+        "info": "\"FDIR working as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "FLSSatisfactory",
+        "id": "assumptions/FLSSatisfactory",
+        "type": "Assumption",
+        "uuid": "652a7452-3438-4462-a9cc-2d3b3db5ae74",
+        "info": "\"FLS working as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "LEC2AMSatisfactory",
+        "id": "assumptions/LEC2AMSatisfactory",
+        "type": "Assumption",
+        "uuid": "df3e16a2-6b7c-4b64-bd47-cb6e421ea37b",
+        "info": "\"LEC2AM working as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "LEC3AMSatisfactory",
+        "id": "assumptions/LEC3AMSatisfactory",
+        "type": "Assumption",
+        "uuid": "c2304a14-4fbc-4875-91c6-1437516e7ef2",
+        "info": "\"LEC3AM working as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "NominalSystem",
+        "id": "assumptions/NominalSystem",
+        "type": "Assumption",
+        "uuid": "05917f00-18f6-4045-ae16-eb7fe1775e1b",
+        "info": "\"System is nominal - no degradation present\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "ObstacleAvoided",
+        "id": "assumptions/ObstacleAvoided",
+        "type": "Assumption",
+        "uuid": "734e1949-ee33-4a34-be9f-b727bb850790",
+        "info": "\"Obstacle can be avoided at a safe distance.\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "ObstacleDetected",
+        "id": "assumptions/ObstacleDetected",
+        "type": "Assumption",
+        "uuid": "2484da74-39c4-4eb3-ac96-d8c48fd5b2e1",
+        "info": "\"Obstacle is detected at a safe distance.\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "OneThrusterDegredation",
+        "id": "assumptions/OneThrusterDegredation",
+        "type": "Assumption",
+        "uuid": "2b5b5941-f654-4cae-bcdb-008a1fccefb5",
+        "info": "\"Only one thruster is degraded and FDIR is operational\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "PerceptionSatisfactory",
+        "id": "assumptions/PerceptionSatisfactory",
+        "type": "Assumption",
+        "uuid": "87a47de9-65ba-4692-8630-3fe4e7a0b2ed",
+        "info": "\"Perception subsystem is satisfactory\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "PoseSatisfactory",
+        "id": "assumptions/PoseSatisfactory",
+        "type": "Assumption",
+        "uuid": "4364d2de-d724-40ca-a625-e1856efa3be6",
+        "info": "\"Sensor/Pose subsystem is satisfactory\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "ReallocSatisfactory",
+        "id": "assumptions/ReallocSatisfactory",
+        "type": "Assumption",
+        "uuid": "da454bdb-793f-4408-8e63-2b14fb3c9590",
+        "info": "\"reallocated thrust as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "RTReachSatisfactory",
+        "id": "assumptions/RTReachSatisfactory",
+        "type": "Assumption",
+        "uuid": "e122fbc9-4230-4f11-9926-bf6ab29f614e",
+        "info": "\"HAZARDS/REALTIME_REACHABILITY is satisfactory in both nominal and degraded condition\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "SatisfactorySensors",
+        "id": "assumptions/SatisfactorySensors",
+        "type": "Assumption",
+        "uuid": "d8bd15f7-6cfd-4827-9eae-073347cddd88",
+        "info": "\"SENSORS claims are satisfactory\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "SSSSatisfactory",
+        "id": "assumptions/SSSSatisfactory",
+        "type": "Assumption",
+        "uuid": "91546a64-251f-4f4b-8ffa-8145fc0903ed",
+        "info": "\"SSS working as expected\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "SystemDegraded",
+        "id": "assumptions/SystemDegraded",
+        "type": "Assumption",
+        "uuid": "fa15b4a4-13eb-4444-9e0e-9dfcb78bd632",
+        "info": "\"System is degraded\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "GROUND_ROVER",
+        "id": "contexts/GROUND_ROVER",
+        "type": "Context",
+        "uuid": "b8516039-ee13-4cad-b1ad-a5512c08aada",
+        "info": "\"System is deployed on a ground rover. Nodes, LECs and AMs are the same, but sonar ranges, map resolutions and requirements are different from ROV\"",
+        "artifacts": [],
+        "labels": ["ROVER"]
+    },
+    {
+        "summary": "",
+        "name": "HW",
+        "id": "contexts/HW",
+        "type": "Context",
+        "uuid": "60be4b8c-3d63-4cba-a14d-a339fe3c2cbd",
+        "info": "\"This context is representing real world hardware related parts only\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "MISSION_PIPE_TRACK",
+        "id": "contexts/MISSION_PIPE_TRACK",
+        "type": "Context",
+        "uuid": "cc67da99-c925-40d1-9a1c-41db6624395a",
+        "info": "\"Current mission is pipe tracking\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "ROV",
+        "id": "contexts/ROV",
+        "type": "Context",
+        "uuid": "d3025f44-b4cf-494f-99cc-76989b3eb344",
+        "info": "\"System is deployed on an ROV - baseline setup\"",
+        "artifacts": [],
+        "labels": ["UUV"]
+    },
+    {
+        "summary": "",
+        "name": "UUV_DEGRADED",
+        "id": "contexts/UUV_DEGRADED",
+        "type": "Context",
+        "uuid": "f90115b4-18e0-49e7-a410-930dd2877aa8",
+        "info": "\"UUV has thruster degradation\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "UUV_NOMINAL",
+        "id": "contexts/UUV_NOMINAL",
+        "type": "Context",
+        "uuid": "9d3f9284-d65a-49e3-bef1-1754bbf19a16",
+        "info": "\"UUV is nominal - no thruster degradation present\"",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "BLUEROV",
+        "solvedBy": ["ns_bluerov/BLUEROV/ALL"],
+        "id": "ns_bluerov/BLUEROV",
+        "type": "Goal",
+        "uuid": "dfe5efd5-b74f-47cf-b77b-5da604cae7ad",
+        "info": "\"BlueROV system ROOT\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "ALL",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY",
+            "ns_hardware/HARDWARE",
+            "ns_mission/MISSION",
+            "ns_perception/PERCEPTION"
+        ],
+        "id": "ns_bluerov/BLUEROV/ALL",
+        "type": "Strategy",
+        "uuid": "c5c6708a-5058-44d7-85f1-68bb3f3a738f",
+        "info": "\"All goals must be valid\"",
+        "artifacts": [],
+        "labels": [],
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "CONTINGENCY",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS",
+            "ns_contingency/CONTINGENCY/SAFETY"
+        ],
+        "id": "ns_contingency/CONTINGENCY",
+        "type": "Goal",
+        "uuid": "d057fa52-09e0-4c37-8f3b-f0ce10f2b404",
+        "info": "\"Contingency management subsystem - Failsafes, hazards, safey and high level autonomy\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "HAZARDS",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER",
+            "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY",
+            "ns_contingency/CONTINGENCY/HAZARDS/SENSOR_FAILURE",
+            "ns_contingency/CONTINGENCY/HAZARDS/THRUSTER_DEGRADATION"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS",
+        "type": "Goal",
+        "uuid": "21cf8926-1876-42f7-b452-cadfecb25e28",
+        "info": "\"BT correctly prioritizes the tasks in keeping with the above goals  when multiple issues are present\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "OBSTACLE_ENCOUNTER",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/CP1_04_obstacles"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER",
+        "type": "Goal",
+        "uuid": "c1446c77-a119-4e73-85fc-d7c5dcd1f780",
+        "info": "\"Obstacle Avoidance functional requirements are satisfied\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "OBSTACLE_AVOIDANCE",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/ESTOP",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_AVOIDANCE_SNAPSHOT",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_MAPPING",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_PERCEPTION",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/REALTIME_REACHABILITY"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE",
+        "type": "Goal",
+        "uuid": "e4a163e7-f090-4202-989e-9d22da00c4e2",
+        "info": "\"Snapshot based avoidance logic based on obstacle map and UUV pose\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/FLSSatisfactory",
+            "assumptions/LEC3AMSatisfactory",
+            "assumptions/ObstacleAvoided",
+            "assumptions/ObstacleDetected",
+            "assumptions/PerceptionSatisfactory"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "ESTOP",
+        "solvedBy": ["ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/ESTOP/S"],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/ESTOP",
+        "type": "Goal",
+        "uuid": "a6c9b5e7-bb89-4378-af69-befabf06df40",
+        "info": "\"Emergency Braking works to keep the UUV safe in situations where the obstacle is not detected in advance\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/ObstacleDetected"]
+    },
+    {
+        "summary": "",
+        "name": "S",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/ESTOP/S",
+        "type": "Solution",
+        "uuid": "8d007d9e-d1d5-4fa1-a879-8842faebf175",
+        "info": "\"Gathered data and computed metrics reveal that the emergency braking operation works reasonably. E-brake tests with different obstacle density, UUV stops at a safe distance\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "OBSTACLE_AVOIDANCE_SNAPSHOT",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_AVOIDANCE_SNAPSHOT/S1",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_AVOIDANCE_SNAPSHOT/S2"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_AVOIDANCE_SNAPSHOT",
+        "type": "Goal",
+        "uuid": "e9753ea9-c431-4d2b-8848-135d1b5214a1",
+        "info": "\"Obstacle avoidance control has been implemented to account for changes in the obstacle map and avoid obstacles with sufficient separation\"",
+        "artifacts": [],
+        "labels": ["Degraded"],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/ObstacleDetected",
+            "assumptions/PerceptionSatisfactory"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "S1",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_AVOIDANCE_SNAPSHOT/S1",
+        "type": "Solution",
+        "uuid": "66dfc3b0-94d3-4fa7-bd5a-fadc0fa62580",
+        "info": "\"Gathered data and computed metrics reveal that the avoidance logic is satisfactory. Random obstacle - UUV ground truth distance considered safe / over the safety threshold\"",
+        "artifacts": [],
+        "labels": ["Nominal"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "S2",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_AVOIDANCE_SNAPSHOT/S2",
+        "type": "Solution",
+        "uuid": "2446b1f0-cbeb-4be7-99c5-86f0012cb8cb",
+        "info": "",
+        "artifacts": [],
+        "labels": ["Degraded"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "OBSTACLE_MAPPING",
+        "solvedBy": ["ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_MAPPING/S"],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_MAPPING",
+        "type": "Goal",
+        "uuid": "6079501f-c541-446d-9c0e-73b4d068d637",
+        "info": "\"Obstacle mapping is sufficiently accurate to support avoidance control\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/PerceptionSatisfactory"]
+    },
+    {
+        "summary": "",
+        "name": "S",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_MAPPING/S",
+        "type": "Solution",
+        "uuid": "871d9afa-517a-4412-87c6-564a0d3b4dc3",
+        "info": "\"Gathered data and computed metrics reveal that the obstacles mapping is accurate enough to support avoidance control. Obstacle mapping vs GT plot & metric/post process\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"Obstacle perception is satisfactory\"",
+        "name": "OBSTACLE_PERCEPTION",
+        "solvedBy": [],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/OBSTACLE_PERCEPTION",
+        "type": "Goal",
+        "uuid": "d0178e0d-2533-4dfe-a2b8-3ba4f868d5d0",
+        "info": "\"Generate scenarios and test that the obstacles are detected by the forward looking sonar (FLS) and the associated LEC (LEC3)\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/FLSSatisfactory",
+            "assumptions/LEC3AMSatisfactory",
+            "assumptions/PerceptionSatisfactory"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "REALTIME_REACHABILITY",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/REALTIME_REACHABILITY/S1",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/REALTIME_REACHABILITY/S2"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/REALTIME_REACHABILITY",
+        "type": "Goal",
+        "uuid": "d425f70c-09ab-4f21-bc6b-e7486a99618f",
+        "info": "\"RtReach performs well to perceive and avoid obstacles\"",
+        "artifacts": [],
+        "labels": ["Degraded"],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/RTReachSatisfactory"]
+    },
+    {
+        "summary": "",
+        "name": "S1",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/REALTIME_REACHABILITY/S1",
+        "type": "Solution",
+        "uuid": "a29fe8d9-d310-4479-9188-a364af30eae1",
+        "info": "\"Based on the simulation tests, the obstacle avoidance subsystem works as required. RtReach test - LongTerm RtReach is safe\"",
+        "artifacts": [],
+        "labels": ["Degraded"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "S2",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER/OBSTACLE_AVOIDANCE/REALTIME_REACHABILITY/S2",
+        "type": "Solution",
+        "uuid": "c9fd9e6e-d94a-4886-87e2-a0f225537a45",
+        "info": "",
+        "artifacts": [],
+        "labels": ["Nominal"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "REALTIME_REACHABILITY",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_DEGRADED",
+            "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY",
+        "type": "Goal",
+        "uuid": "28a77ae3-34c3-43ae-93c5-cfc790d99ee2",
+        "info": "\"RtReach is predicting UUV movement into the future and checks obstacle map \n                        for possible reachability issues, eg. collision with obstacle or breach of a no go zone\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/PoseSatisfactory"]
+    },
+    {
+        "summary": "",
+        "name": "RTREACH_DEGRADED",
+        "solvedBy": ["ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL/CP1_00_rtreach"],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_DEGRADED",
+        "type": "Goal",
+        "uuid": "681d5597-98a4-41d1-bc87-1134f6f94c36",
+        "info": "\"UUV is in degraded condition - RtReach is using FDIR information for degraded system model\"",
+        "artifacts": [],
+        "labels": ["Degraded"],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/FDIRSatisfactory",
+            "assumptions/ReallocSatisfactory",
+            "assumptions/SystemDegraded",
+            "contexts/UUV_DEGRADED"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "RTREACH_NOMINAL",
+        "solvedBy": ["ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL/CP1_00_rtreach"],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL",
+        "type": "Goal",
+        "uuid": "6720fc51-8d03-47c4-88a3-09c87add0c2c",
+        "info": "\"UUV is nomial - RtReach is using nominal system model\"",
+        "artifacts": [],
+        "labels": ["Nominal"],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/NominalSystem",
+            "contexts/UUV_NOMINAL"
+        ]
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp1_00_rtreach.sh\"",
+        "name": "CP1_00_rtreach",
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL/CP1_00_rtreach",
+        "type": "Solution",
+        "uuid": "c0230b81-58c0-4b52-80b6-c6ecc90d3e8e",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SENSOR_FAILURE",
+        "solvedBy": [],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/SENSOR_FAILURE",
+        "type": "Goal",
+        "uuid": "242b4346-9b04-459d-a65e-d0900a900ea9",
+        "info": "\"Whem sensor failure is detected UUV goes to the surface\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/DetectSensorFailure",
+            "assumptions/SatisfactorySensors"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "THRUSTER_DEGRADATION",
+        "solvedBy": ["ns_contingency/CONTINGENCY/HAZARDS/THRUSTER_DEGRADATION/FDIR"],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/THRUSTER_DEGRADATION",
+        "type": "Goal",
+        "uuid": "4e404483-ee6a-4e3a-9ad6-74479aec7b83",
+        "info": "\"Subsystem is satisfactory - FDIR can detect and react accordingly to thruster degradation\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/OneThrusterDegredation"]
+    },
+    {
+        "summary": "",
+        "name": "FDIR",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/cp2_00_single_thr_deg_no_reallocation_campaigns",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/cp2_00_wp_campaigns"
+        ],
+        "id": "ns_contingency/CONTINGENCY/HAZARDS/THRUSTER_DEGRADATION/FDIR",
+        "type": "Goal",
+        "uuid": "692ba5f7-2e76-4124-ba80-c4410fd60a15",
+        "info": "",
+        "artifacts": [],
+        "labels": ["Degraded"],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/FDIRSatisfactory",
+            "assumptions/PerceptionSatisfactory"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "SAFETY",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY",
+        "type": "Goal",
+        "uuid": "bf3564b5-f6f9-44e9-9738-576835989bac",
+        "info": "\"High level autonomy & contingency management\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "BEHAVIOR_TREE",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE",
+        "type": "Goal",
+        "uuid": "dc422189-25c4-4b07-b00d-1fcfa99743b3",
+        "info": "\"BT prioritizes tasks with the objective of doing no harm, keeping the UUV safe, completing the mission\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/QUESTION"]
+    },
+    {
+        "summary": "",
+        "name": "CONTINGENCY_MANAGEMENT",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FAILSAFES",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FDIR",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/HAZARDS"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT",
+        "type": "Goal",
+        "uuid": "8afc04aa-cfde-4d78-9799-60820fa91bd6",
+        "info": "\"BT handles hazards, failsafes and faults accordingly\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "FAILSAFES",
+        "solvedBy": ["ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FAILSAFES/CP1_05_multi_fs"],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FAILSAFES",
+        "type": "Goal",
+        "uuid": "923ac301-24c1-4dea-a1df-635942f3d99f",
+        "info": "\"Reaction to failsafes is prioritized by keeping the UUV safe in the presence of hazards\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp1_05_multi_fs.sh\"",
+        "name": "CP1_05_multi_fs",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FAILSAFES/CP1_05_multi_fs",
+        "type": "Solution",
+        "uuid": "cd9995c8-f9eb-408c-81e4-175428bea867",
+        "info": "\"Tests results and verification checks confirm that reactions to failsafes are prioritized while keeping the UUV safe from hazards\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "FDIR",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FDIR/Test_results",
+            "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/task_reallocate",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/dd_lec_task"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FDIR",
+        "type": "Goal",
+        "uuid": "cff8ee4a-d694-4463-b67a-276f5c450343",
+        "info": "\"FDIR related to UUV control is handled while dealing with failsafes and hazards\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FDIR/Test_results",
+        "type": "Solution",
+        "uuid": "449975fd-fc21-484e-bc0c-b3e367cd4039",
+        "info": "\"Tests results and verification checks confirm that FDIR for UUV control is always performed while handling other issues\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "HAZARDS",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/HAZARDS/Test_results",
+            "ns_contingency/CONTINGENCY/HAZARDS/OBSTACLE_ENCOUNTER",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/HAZARDS",
+        "type": "Goal",
+        "uuid": "2ecd0090-0e6c-401b-93a5-651bbeb2379b",
+        "info": "\"Reaction to eliminate the risk from hazards that present safety issues to UUV (e.g. avoid No-go-zones or obstacles) are prioritized over hazards that are related to mission continuation (e.g. pipe recovery)\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/HAZARDS/Test_results",
+        "type": "Solution",
+        "uuid": "9a959fda-071f-43cb-a18c-53d2abedf573",
+        "info": "\"Tests results and verification checks confirm that reactions to safety related hazards are prioritized over mission related ones\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "MISSION_EXECUTION",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION",
+        "type": "Goal",
+        "uuid": "ae393c7f-109b-45f8-89b9-c38b83989ef0",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "MISSION_LOGIC",
+        "solvedBy": ["ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC/All_scenarios1"],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC",
+        "type": "Goal",
+        "uuid": "8396f102-69e7-416b-a100-4d5a2ae4c409",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "All_scenarios1",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC/All_scenarios1",
+        "type": "Solution",
+        "uuid": "688fb2da-143d-4677-abe0-64b85be50807",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "MISSION_SERVER",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER/END_OF_MISSION_ACTION",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER/MISSION_FILE",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER/MISSION_LIMITS"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER",
+        "type": "Goal",
+        "uuid": "5cc5918f-899c-4958-8232-42b385ada77f",
+        "info": "\"Mission server node in BT can properly load and interpret missions\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "END_OF_MISSION_ACTION",
+        "solvedBy": ["ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC/All_scenarios1"],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER/END_OF_MISSION_ACTION",
+        "type": "Goal",
+        "uuid": "25f32145-884b-47ec-abbb-5ff0788070a2",
+        "info": "\"End-of-mission action is valid (eg. RTH), parameters can be loaded accordingly\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "MISSION_FILE",
+        "solvedBy": ["ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC/All_scenarios1"],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER/MISSION_FILE",
+        "type": "Goal",
+        "uuid": "56dba733-d1fd-4330-b6a7-a6cba99659e4",
+        "info": "\"Mission file is valid, parameters can be loaded accordingly\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "MISSION_LIMITS",
+        "solvedBy": ["ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_LOGIC/All_scenarios1"],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/MISSION_EXECUTION/MISSION_SERVER/MISSION_LIMITS",
+        "type": "Goal",
+        "uuid": "54bf990e-e883-4a0e-a2e7-39dbbb593024",
+        "info": "\"Mission limits (eg. geofence) are valid, parameters can be loaded accordingly\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"This probably doesn`t need children, only refs (or just solutions)\"",
+        "name": "QUESTION",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/QUESTION",
+        "type": "Assumption",
+        "uuid": "b92f50b2-1947-47ff-991d-a8cf37ba851c",
+        "info": "",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "FAILSAFES",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/ESTOP",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/LOW_BATTERY",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/PIPE_LOST",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/RETURN_TO_HOME",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SENSOR_LOSS",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SURFACE"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES",
+        "type": "Goal",
+        "uuid": "303ed766-0b66-406c-b4a8-13ab91a414c6",
+        "info": "\"Violation or Triggering of failsafes are detected and managed\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "ESTOP",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/ESTOP/Test_results",
+            "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL/CP1_00_rtreach",
+            "ns_hardware/HARDWARE/SENSORS/FLS",
+            "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/ESTOP",
+        "type": "Goal",
+        "uuid": "67d1caa1-1f03-4f95-ba50-fbff93cc493f",
+        "info": "\"Obstacle standoff failsafe is handled appropriately to keep UUV safe\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/NominalSystem",
+            "assumptions/SystemDegraded"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/ESTOP/Test_results",
+        "type": "Solution",
+        "uuid": "ffd1e365-0ea3-4e7d-9e08-990243c6d627",
+        "info": "\"Test results and verification confirm that the BT commands the UUV for emergency stop\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "GEOFENCE",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+            "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE",
+        "type": "Goal",
+        "uuid": "9ec10c13-327b-4419-bede-e01cb0ebaad9",
+        "info": "\"Geofence breach failsafe is recognized and handled appropriately\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/NominalSystem",
+            "assumptions/SystemDegraded"
+        ]
+    },
+    {
+        "summary": "\"Pipeline tracking scenario with Geofence failsafe triggering and RTH contingency action\"",
+        "name": "CP1_01_Geofence",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+        "type": "Solution",
+        "uuid": "5ebc63e6-eb8b-4b17-8d2d-29d05048b752",
+        "info": "\"Test results and verification confirm that the BT commands and guides the UUV appropriately to the geofence breach failsafehggfdgfdgf\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "LOW_BATTERY",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/LOW_BATTERY/Test_results",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_03_batt_low",
+            "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/LOW_BATTERY",
+        "type": "Goal",
+        "uuid": "aee2fde0-7cda-4c5d-8437-cb54335eb24c",
+        "info": "\"Low battery level failsafe is triggered when battery reaches critically low level, triggering automatic Surface action\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/SatisfactorySensors"]
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/LOW_BATTERY/Test_results",
+        "type": "Solution",
+        "uuid": "9b8fe678-f997-480d-ae9f-408858fa4822",
+        "info": "\"Test results and verification confirm that the BT responds appropriately to the low battery failsafe\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "PIPE_LOST",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/PIPE_LOST/Test_results",
+            "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL/CP1_00_rtreach"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/PIPE_LOST",
+        "type": "Goal",
+        "uuid": "00e6f970-71f5-4c6d-97f1-6a575c3c0061",
+        "info": "\"Loss of Pipe can be detected - Pipe perception subsystem is operational\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/LEC2AMSatisfactory",
+            "assumptions/PoseSatisfactory",
+            "assumptions/SSSSatisfactory",
+            "contexts/MISSION_PIPE_TRACK"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/PIPE_LOST/Test_results",
+        "type": "Solution",
+        "uuid": "11b4a87a-d043-426d-8973-6d3d4196bfde",
+        "info": "\"Test results and verification confirm that the BT responds appropriately to the low battery failsafe\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "RETURN_TO_HOME",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/RETURN_TO_HOME/Test_results",
+            "ns_contingency/CONTINGENCY/HAZARDS/REALTIME_REACHABILITY/RTREACH_NOMINAL/CP1_00_rtreach",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FAILSAFES/CP1_05_multi_fs",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_00",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_03_batt_low",
+            "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/CP1_04_obstacles"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/RETURN_TO_HOME",
+        "type": "Goal",
+        "uuid": "f0d8e104-fe56-40c6-9505-95b6a0e5676e",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/PoseSatisfactory"]
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/RETURN_TO_HOME/Test_results",
+        "type": "Solution",
+        "uuid": "fcaae01f-404c-4f5c-b31c-61b536e90727",
+        "info": "\"Test results and verification confirm that the BT responds appropriately to the low battery failsafe\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SENSOR_LOSS",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SENSOR_LOSS/Test_results",
+            "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SENSOR_LOSS",
+        "type": "Goal",
+        "uuid": "7f799de9-a5e1-4e54-a62f-8ee19e819499",
+        "info": "\"Sensor loss failsafe is detected and appropriate actions are taken\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/NominalSystem",
+            "assumptions/SystemDegraded"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SENSOR_LOSS/Test_results",
+        "type": "Solution",
+        "uuid": "bae9f71f-942e-44f5-85c6-20f2bc9e6198",
+        "info": "\"Test results and verification confirm that the BT commands and guides the UUV when presented with a sensor loss failsafe\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SURFACE",
+        "solvedBy": [
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SURFACE/Test_results",
+            "ns_contingency/CONTINGENCY/SAFETY/BEHAVIOR_TREE/CONTINGENCY_MANAGEMENT/FAILSAFES/CP1_05_multi_fs",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_03_batt_low",
+            "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER"
+        ],
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SURFACE",
+        "type": "Goal",
+        "uuid": "d1beed8a-db2c-4307-ae57-78358f907571",
+        "info": "\"UUV reaches the surface at the end of the mission, or after RTH, or triggered by low battery failsafe\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/NominalSystem",
+            "assumptions/SystemDegraded"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "Test_results",
+        "id": "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/SURFACE/Test_results",
+        "type": "Solution",
+        "uuid": "c5070b4a-a26d-4663-bafd-82ccdf10c034",
+        "info": "\"Test results and verification confirm that the BT responds appropriately to the surface command\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "HARDWARE",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY",
+            "ns_hardware/HARDWARE/PAYLOAD",
+            "ns_hardware/HARDWARE/PROPULSION",
+            "ns_hardware/HARDWARE/SENSORS",
+            "ns_hardware/HARDWARE/SINGLE_BOARD_COMPUTERS"
+        ],
+        "id": "ns_hardware/HARDWARE",
+        "type": "Goal",
+        "uuid": "f28884b8-0ae3-489f-b304-9b6a348b507f",
+        "info": "\"Hardware subsystem - not present in the simulation\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["contexts/HW"]
+    },
+    {
+        "summary": "",
+        "name": "HULL_INTEGRIY",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/INTERNAL_TEMPERATURE",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/PRESSURE_SENSOR",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/PRESSURE_TEST"
+        ],
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY",
+        "type": "Goal",
+        "uuid": "9e31f264-b282-4c42-8051-bbbc4774aa02",
+        "info": "\"Hull integrity satisfactory\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/General_Assumption",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/Specs_Assumption"
+        ]
+    },
+    {
+        "summary": "\"UUV is not damaged, fully operational, battery is charged, is in nominal state\"",
+        "name": "General_Assumption",
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/General_Assumption",
+        "type": "Assumption",
+        "uuid": "9e1e480a-d563-432f-80cf-cd97b63b1233",
+        "info": "",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "INTERNAL_TEMPERATURE",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/INTERNAL_TEMPERATURE",
+        "type": "Goal",
+        "uuid": "6608da62-02e5-443e-a6ad-518b1ea5ef3f",
+        "info": "\"Onboard temp sensor is operational, reading is inside valid range\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "LEAK_SENSOR",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR",
+        "type": "Goal",
+        "uuid": "dd7f33e8-b52e-49f9-8929-54c2e183873a",
+        "info": "\"Leak sensor (4-6 aux input) is operational and fast (detects water within x seconds)\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Operation_manual",
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+        "type": "Solution",
+        "uuid": "68758c28-8664-48c8-beb7-819fae9590b5",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"Pre dive checklist contains mandatory instructions to do and check before dive to ensure safe operation within specifications and limits.\"",
+        "name": "Pre_dive_checklist",
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+        "type": "Solution",
+        "uuid": "fde34f2a-7082-47ca-81e4-ae39300a452d",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"Test report - vehicle is operational as stated in the operation manual\"",
+        "name": "Test_report_solution",
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution",
+        "type": "Solution",
+        "uuid": "67853325-4a9d-482a-9364-dda934f0bfcf",
+        "info": "\"Testing HW manually\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "PRESSURE_SENSOR",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/PRESSURE_SENSOR",
+        "type": "Goal",
+        "uuid": "4170d207-f569-4611-8f14-edd465f79de2",
+        "info": "\"Onboard pressure sensor is operational - in water measurement correlates with depth sensor\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "PRESSURE_TEST",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/PRESSURE_TEST",
+        "type": "Goal",
+        "uuid": "1ce8aa32-d859-4634-83a5-83fc35438825",
+        "info": "\"Hull seal is working, does not leak\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Operation within specified limitations regarding depth and other factors\"",
+        "name": "Specs_Assumption",
+        "id": "ns_hardware/HARDWARE/HULL_INTEGRIY/Specs_Assumption",
+        "type": "Assumption",
+        "uuid": "12deedca-a6f3-4978-bd59-26aee02f21d1",
+        "info": "",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "PAYLOAD",
+        "solvedBy": ["ns_hardware/HARDWARE/PAYLOAD/ANY"],
+        "id": "ns_hardware/HARDWARE/PAYLOAD",
+        "type": "Goal",
+        "uuid": "69e8dc97-7fa6-40a3-83b8-90a851e622b2",
+        "info": "\"User-defined custom payload\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Valid if any of the subgoals are valid\"",
+        "name": "ANY",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/PAYLOAD/ANY/OPTICAL_FLOW",
+            "ns_hardware/HARDWARE/PAYLOAD/ANY/RGB_D"
+        ],
+        "id": "ns_hardware/HARDWARE/PAYLOAD/ANY",
+        "type": "Strategy",
+        "uuid": "8ca90dca-131d-4c38-a502-6960c385574b",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Optical flow sensor\"",
+        "name": "OPTICAL_FLOW",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/PAYLOAD/ANY/OPTICAL_FLOW",
+        "type": "Goal",
+        "uuid": "83271479-8837-4f24-9026-30a1503c11fa",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Depth camera\"",
+        "name": "RGB_D",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/PAYLOAD/ANY/RGB_D",
+        "type": "Goal",
+        "uuid": "ad1eb8fa-f3a2-4cce-9687-be506b6ebf40",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "PROPULSION",
+        "solvedBy": ["ns_hardware/HARDWARE/PROPULSION/ANY"],
+        "id": "ns_hardware/HARDWARE/PROPULSION",
+        "type": "Goal",
+        "uuid": "fc8cdc27-e11f-413d-a888-8a10663b0002",
+        "info": "\"Propulsion system is operational, thrusters are not in degraded state, ready to use\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Valid if any of the subgoals are valid\"",
+        "name": "ANY",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/PROPULSION/ANY/POWER_MONITOR",
+            "ns_hardware/HARDWARE/PROPULSION/ANY/RPM_MONITOR",
+            "ns_hardware/HARDWARE/PROPULSION/ANY/THRUSTER_BLADES",
+            "ns_hardware/HARDWARE/PROPULSION/ANY/VIBRATION_MONITOR"
+        ],
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY",
+        "type": "Strategy",
+        "uuid": "fc79df3e-50c6-45ca-9b3f-626e3bc63243",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "inContextOf": ["ns_hardware/HARDWARE/PROPULSION/ANY/Assumption_minimal_requirements"]
+    },
+    {
+        "summary": "\"Minimal required hardware are Power Monitor and RPM_Monitor for FDIR to be operational\"",
+        "name": "Assumption_minimal_requirements",
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY/Assumption_minimal_requirements",
+        "type": "Assumption",
+        "uuid": "3ef95697-1c82-4dd3-95db-64858f294bc7",
+        "info": "",
+        "artifacts": [],
+        "labels": []
+    },
+    {
+        "summary": "",
+        "name": "POWER_MONITOR",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY/POWER_MONITOR",
+        "type": "Goal",
+        "uuid": "f001afc3-ee06-4a85-8c50-758872de9c6b",
+        "info": "\"Power consumption is monitored during mission, to detect battery or propulsion system anomalies\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "RPM_MONITOR",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY/RPM_MONITOR",
+        "type": "Goal",
+        "uuid": "83bf37dc-0273-40ee-bbb8-8c47797a22ef",
+        "info": "\"Thruster RPMs are monitored during mission, to detect propulsion system anomalies\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "THRUSTER_BLADES",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY/THRUSTER_BLADES",
+        "type": "Goal",
+        "uuid": "75c2d974-b894-4404-9cc7-69fa67b26f50",
+        "info": "\"Thruster blades are not damaged - Nominal thruster blades required for propulsion to meet performance specifications\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "VIBRATION_MONITOR",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/PROPULSION/ANY/VIBRATION_MONITOR/Results_and_metrics",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY/VIBRATION_MONITOR",
+        "type": "Goal",
+        "uuid": "4ff238b2-32e4-4c17-92e3-ddc2738ed035",
+        "info": "\"Vibration is monitored during mission, to detect propulsion issues\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Mission results and post process metrics (HW & SW)\"",
+        "name": "Results_and_metrics",
+        "id": "ns_hardware/HARDWARE/PROPULSION/ANY/VIBRATION_MONITOR/Results_and_metrics",
+        "type": "Solution",
+        "uuid": "e3c00674-222c-4222-ae3c-8b786030c4ee",
+        "info": "\"Vibration is nominal during mission conditions - no degradation present eg. due to bearing or blade damage\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SENSORS",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/BATTERY_MONITOR",
+            "ns_hardware/HARDWARE/SENSORS/DVL",
+            "ns_hardware/HARDWARE/SENSORS/FLS",
+            "ns_hardware/HARDWARE/SENSORS/IMU_RESONANCE",
+            "ns_hardware/HARDWARE/SENSORS/INTERNAL_RESOURCE_MONITOR",
+            "ns_hardware/HARDWARE/SENSORS/POSE",
+            "ns_hardware/HARDWARE/SENSORS/SSS",
+            "ns_hardware/HARDWARE/SENSORS/THRUST_RPM_CURVE"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS",
+        "type": "Goal",
+        "uuid": "7d25478e-a778-41b9-ae85-488120b5eb06",
+        "info": "\"Sensors available for both HW and SIM work as expected\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "BATTERY_MONITOR",
+        "solvedBy": ["ns_hardware/HARDWARE/SENSORS/BATTERY_MONITOR/Test_report"],
+        "id": "ns_hardware/HARDWARE/SENSORS/BATTERY_MONITOR",
+        "type": "Goal",
+        "uuid": "3e619bfb-0a54-40bc-a56f-c5ab884233b6",
+        "info": "\"Battery monitor must be accurate to detect propulsion system issues and ensure mission and uuv safey (Battery low failsafes)\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/BATTERY_MONITOR/Test_report",
+        "type": "Solution",
+        "uuid": "e487d70b-6c96-4166-9a5c-2bdf9c5bed98",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "DVL",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/DVL/DVL_specification",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/DVL",
+        "type": "Goal",
+        "uuid": "d6ba2130-a6cc-4b9d-932b-bf21b9635920",
+        "info": "\"DVL works correctly to provide accurate depth estimates\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "DVL_specification",
+        "id": "ns_hardware/HARDWARE/SENSORS/DVL/DVL_specification",
+        "type": "Solution",
+        "uuid": "6382837a-925a-4aec-a80a-5e37087889aa",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "FLS",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/FLS/FLS_specification",
+            "ns_hardware/HARDWARE/SENSORS/FLS/forward_looking_sonar",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/FLS",
+        "type": "Goal",
+        "uuid": "dbbaef1d-082d-409c-8d5e-330a9970f1c6",
+        "info": "\"FLS works to provide timely and accurate pings from the obstacles in the cone\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "FLS_specification",
+        "id": "ns_hardware/HARDWARE/SENSORS/FLS/FLS_specification",
+        "type": "Solution",
+        "uuid": "2e88fa7f-874a-4128-b057-23ebaf6dff2a",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/vandy_bluerov/nodes/sonars/forward_looking_sonar.py\"",
+        "name": "forward_looking_sonar",
+        "id": "ns_hardware/HARDWARE/SENSORS/FLS/forward_looking_sonar",
+        "type": "Solution",
+        "uuid": "05a451e5-8f7a-4bf6-96c3-a0f385feb0eb",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "IMU_RESONANCE",
+        "solvedBy": ["ns_hardware/HARDWARE/SENSORS/IMU_RESONANCE/Test_report"],
+        "id": "ns_hardware/HARDWARE/SENSORS/IMU_RESONANCE",
+        "type": "Goal",
+        "uuid": "b58a1ca9-577f-4653-90e3-dbea85450e11",
+        "info": "\"Check IMU resonance during normal operation condition. Resonance (sensor noise) must be under threshold to ensure precise Pose estimation\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/IMU_RESONANCE/Test_report",
+        "type": "Solution",
+        "uuid": "be426910-173c-4ff7-bd73-9ae8e2ff9e1b",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "INTERNAL_RESOURCE_MONITOR",
+        "solvedBy": ["ns_hardware/HARDWARE/SENSORS/INTERNAL_RESOURCE_MONITOR/Test_report"],
+        "id": "ns_hardware/HARDWARE/SENSORS/INTERNAL_RESOURCE_MONITOR",
+        "type": "Goal",
+        "uuid": "b3f4e40f-4ff4-4734-9541-e200f1cc2411",
+        "info": "\"System has enough cpu/gpu, memory, google coral node resources left\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/INTERNAL_RESOURCE_MONITOR/Test_report",
+        "type": "Solution",
+        "uuid": "27024648-9ab5-4662-838a-94a22173e033",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "POSE",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF",
+            "ns_hardware/HARDWARE/SENSORS/POSE/ROS_EKF"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE",
+        "type": "Goal",
+        "uuid": "d2bf6d53-1974-4387-a38f-2f3569ea74dc",
+        "info": "\"IMU/EKF provides good estimate of the position and velocity of the UUV. Note: In the simulation Pixhawk emulator adds additional information to the Gazebo data. Currently in the simulation pose data comes directly from Gazebo simulator\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "PIXHAWK_EKF",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DEPTH",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DVL",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/GPS",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF",
+        "type": "Goal",
+        "uuid": "e4fe0468-b5b7-4b8d-a7f0-632e36c5618a",
+        "info": "\"Pixhawk internal EKF3 for pose estimation\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "AUX",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_A",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_B"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX",
+        "type": "Goal",
+        "uuid": "781ee939-d234-434f-b1f5-434e249191cb",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "OPTICAL_FLOW_A",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_A/Test_report",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_A",
+        "type": "Goal",
+        "uuid": "863c2049-6f02-4b14-bb07-7f6cda1d780f",
+        "info": "\"Optical flow sensor 'A' can measure x-y movement for HW robot\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_A/Test_report",
+        "type": "Solution",
+        "uuid": "0ea405f8-fad1-4a49-8cdb-40d3365063c3",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "OPTICAL_FLOW_B",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_B/Test_report",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_B",
+        "type": "Goal",
+        "uuid": "d8f2b50b-3690-49b4-8957-9049563a97a0",
+        "info": "\"Optical flow sensor 'B' can measure y-z movement for HW robot\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/AUX/OPTICAL_FLOW_B/Test_report",
+        "type": "Solution",
+        "uuid": "f9cc34e7-7b65-4932-b3e2-7f1f8b0f82e0",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "DEPTH",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DEPTH/Test_report",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DEPTH",
+        "type": "Goal",
+        "uuid": "510f365b-6c58-4658-b40e-fde2bf2865be",
+        "info": "\"Depth measurement (external pressure sensor) is satisfactory\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DEPTH/Test_report",
+        "type": "Solution",
+        "uuid": "94c0e9f2-6c23-4f4d-8c17-f15e54083dff",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "DVL",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DVL/Test_report",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DVL",
+        "type": "Goal",
+        "uuid": "3cfa6dec-86aa-4b9f-9a6c-deebc1eb9b60",
+        "info": "\"DVL measurement is accurate, pose estimation fusing DVL and IMU data with initial GPS position is satisfactory\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/DVL/Test_report",
+        "type": "Solution",
+        "uuid": "1996d787-5999-42e0-a1da-a8d39ca31711",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "GPS",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/GPS/Test_report",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/GPS",
+        "type": "Goal",
+        "uuid": "17f89129-996e-49c7-be49-9213bba528e6",
+        "info": "\"GPS position is accurate (<5m) when UUV is on the surface, GPS has enough sattelites in view, h/gdop is good\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/GPS/Test_report",
+        "type": "Solution",
+        "uuid": "0a14ff98-f2a1-475f-8f87-d0c1dd8f082f",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "IMU",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification",
+            "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/Test_report"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU",
+        "type": "Goal",
+        "uuid": "0e45f24f-6f41-4462-a404-1c33d1f2d91b",
+        "info": "\"Pixhawk IMU is accurate, drift is under threshold during mission duration\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"EKF2/3 acceptable noise values and limits specified for ArduPilot for the vehicle\"",
+        "name": "EKF_noise_specification",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/EKF_noise_specification",
+        "type": "Solution",
+        "uuid": "98594955-7a82-40c2-8088-1d38b0108f18",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/PIXHAWK_EKF/IMU/Test_report",
+        "type": "Solution",
+        "uuid": "832ee7e5-5bbc-4cc3-8722-4dbe00438047",
+        "info": "\"Mission results and post process log\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ROS_EKF",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/POSE/ROS_EKF/Accuracy",
+            "ns_hardware/HARDWARE/SENSORS/POSE/ROS_EKF/EKF_health"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/ROS_EKF",
+        "type": "Goal",
+        "uuid": "c19fea05-c527-42f0-8f74-93165a020fd6",
+        "info": "\"On the HW Robot ROS_EKF estimates pose using IMU data and HSD commands\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["contexts/HW"]
+    },
+    {
+        "summary": "",
+        "name": "Accuracy",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/ROS_EKF/Accuracy",
+        "type": "Solution",
+        "uuid": "8ed328e1-34e6-45d5-b299-7a698e672ff5",
+        "info": "\"ROS EKF based pose estimation is accurate enough based on the logs\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"EKF health calculated by the ROS localization node on the companion computer\"",
+        "name": "EKF_health",
+        "id": "ns_hardware/HARDWARE/SENSORS/POSE/ROS_EKF/EKF_health",
+        "type": "Solution",
+        "uuid": "a777b16e-ce13-4cb5-8c7b-497f21e381a9",
+        "info": "\"EKF is healthy, noise is below threshold\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"Side Scan Sonar\"",
+        "name": "SSS",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_00",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_03_batt_low",
+            "ns_hardware/HARDWARE/SENSORS/SSS/SSS_specification",
+            "ns_hardware/HARDWARE/SENSORS/SSS/side_scan_sonar_vu1",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist"
+        ],
+        "id": "ns_hardware/HARDWARE/SENSORS/SSS",
+        "type": "Goal",
+        "uuid": "1a3f1fdc-9685-4521-a3ff-dba7848870c7",
+        "info": "\"SSS (left and right) provides good coverage of the target (pipe) - sonars provide reasonable scans of the target. Performance is better when the target is in the line of motion of the UUV i.e. perpendicular to the sonars\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"/src/vandy_bluerov/scripts/cp1_00.sh\"",
+        "name": "CP1_00",
+        "id": "ns_hardware/HARDWARE/SENSORS/SSS/CP1_00",
+        "type": "Solution",
+        "uuid": "01784c51-81a0-4af5-936c-2156f34d6fef",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp1_03_batt_low.sh\"",
+        "name": "CP1_03_batt_low",
+        "id": "ns_hardware/HARDWARE/SENSORS/SSS/CP1_03_batt_low",
+        "type": "Solution",
+        "uuid": "6174cdb5-64f6-467d-af1c-6cc9d4476259",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/vandy_bluerov/nodes/sonars/side_scan_sonar_vu.py\"",
+        "name": "side_scan_sonar_vu1",
+        "id": "ns_hardware/HARDWARE/SENSORS/SSS/side_scan_sonar_vu1",
+        "type": "Solution",
+        "uuid": "146d9f1a-e55c-4f12-a20a-61f2efc5c010",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SSS_specification",
+        "id": "ns_hardware/HARDWARE/SENSORS/SSS/SSS_specification",
+        "type": "Solution",
+        "uuid": "da3dc6d5-2c31-4303-92b9-dcf8f53b076e",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "THRUST_RPM_CURVE",
+        "solvedBy": ["ns_hardware/HARDWARE/SENSORS/THRUST_RPM_CURVE/Test_report"],
+        "id": "ns_hardware/HARDWARE/SENSORS/THRUST_RPM_CURVE",
+        "type": "Goal",
+        "uuid": "8ea24f89-0c25-4d9d-9a76-78dfb42691fd",
+        "info": "\"Thrust/RPM to power curve is correct\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "Test_report",
+        "id": "ns_hardware/HARDWARE/SENSORS/THRUST_RPM_CURVE/Test_report",
+        "type": "Solution",
+        "uuid": "2808e718-96c3-4917-aac6-718b80f85d9a",
+        "info": "\"Check thrust/RPM to power curve to identify propulsion system issues - Check all 6 thrusters\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SINGLE_BOARD_COMPUTERS",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/SINGLE_BOARD_COMPUTERS/AUTOPILOT",
+            "ns_hardware/HARDWARE/SINGLE_BOARD_COMPUTERS/COMPANION_COMPUTER"
+        ],
+        "id": "ns_hardware/HARDWARE/SINGLE_BOARD_COMPUTERS",
+        "type": "Goal",
+        "uuid": "a30c96d7-7f87-4b1e-a0a3-4ae2932f25cd",
+        "info": "",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "AUTOPILOT",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/SINGLE_BOARD_COMPUTERS/AUTOPILOT",
+        "type": "Goal",
+        "uuid": "889b0676-addd-4da9-ba87-c9d67cca0b49",
+        "info": "\"ArduSub 4.x running on BeagleBoneBlue or Pixhawk - responsible for low level control and sensor interface\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "COMPANION_COMPUTER",
+        "solvedBy": [
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Operation_manual",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Pre_dive_checklist",
+            "ns_hardware/HARDWARE/HULL_INTEGRIY/LEAK_SENSOR/Test_report_solution"
+        ],
+        "id": "ns_hardware/HARDWARE/SINGLE_BOARD_COMPUTERS/COMPANION_COMPUTER",
+        "type": "Goal",
+        "uuid": "909a6b39-0fcf-463a-b81d-e559485d9c81",
+        "info": "\"High level autonomy (contingecy and mission control)\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "MISSION",
+        "solvedBy": [
+            "ns_mission/MISSION/GENERAL",
+            "ns_mission/MISSION/PIPE_TRACKING",
+            "ns_mission/MISSION/WAYPOINT_FOLLOWING"
+        ],
+        "id": "ns_mission/MISSION",
+        "type": "Goal",
+        "uuid": "1bea5ee8-b710-4365-b4f2-62bf77b3de87",
+        "info": "\"Mission execution subsystem\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "GENERAL",
+        "solvedBy": ["ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER"],
+        "id": "ns_mission/MISSION/GENERAL",
+        "type": "Goal",
+        "uuid": "da30fb66-facd-42e5-8ef1-ad965ab08bde",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "SETPOINT_CONTROLLER",
+        "solvedBy": ["ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER/CP4_05_RandomWP"],
+        "id": "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER",
+        "type": "Goal",
+        "uuid": "1eaef652-396d-4b37-ada3-fd9601d40634",
+        "info": "\"Depth and directional control meet the requirements\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/PoseSatisfactory"]
+    },
+    {
+        "summary": "\"Random Waypoint generation and execution mission plan\"",
+        "name": "CP4_05_RandomWP",
+        "id": "ns_mission/MISSION/GENERAL/SETPOINT_CONTROLLER/CP4_05_RandomWP",
+        "type": "Solution",
+        "uuid": "ce77f6a2-fde3-4b82-b2b9-74e1e322fd0f",
+        "info": "\"Mission results and post process log satisfactory\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "PIPE_TRACKING",
+        "solvedBy": [
+            "ns_mission/MISSION/PIPE_TRACKING/Mapping_metrics",
+            "ns_mission/MISSION/PIPE_TRACKING/Perception_metrics",
+            "ns_mission/MISSION/PIPE_TRACKING/Tracking_metrics"
+        ],
+        "id": "ns_mission/MISSION/PIPE_TRACKING",
+        "type": "Goal",
+        "uuid": "daaabddd-59fe-4f9c-b364-dd47e61316ba",
+        "info": "\"Pipe (Target) tracking functional requirements are satisfied\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/BTMissionExecution",
+            "assumptions/LEC2AMSatisfactory",
+            "assumptions/SSSSatisfactory"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "Mapping_metrics",
+        "id": "ns_mission/MISSION/PIPE_TRACKING/Mapping_metrics",
+        "type": "Solution",
+        "uuid": "0fee91b7-c551-4c20-a9e5-4093fca48901",
+        "info": "\"Mapping process works in a timely fashion to allow for control-guidance and target domain mapping\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "Perception_metrics",
+        "id": "ns_mission/MISSION/PIPE_TRACKING/Perception_metrics",
+        "type": "Solution",
+        "uuid": "4ecf1767-8867-4423-88b3-f32ebfb41904",
+        "info": "\"Perception of the pipe (target) position is reasonably accurate to support mapping for control-guidance and target evaluation and target localization\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "Tracking_metrics",
+        "id": "ns_mission/MISSION/PIPE_TRACKING/Tracking_metrics",
+        "type": "Solution",
+        "uuid": "2589ca40-b7ba-457d-a7e2-ccb6f43b8965",
+        "info": "\"Tracking control works as desired based on the inputs from the target mapping\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "WAYPOINT_FOLLOWING",
+        "solvedBy": ["ns_mission/MISSION/WAYPOINT_FOLLOWING/Metrics"],
+        "id": "ns_mission/MISSION/WAYPOINT_FOLLOWING",
+        "type": "Goal",
+        "uuid": "cdc118e6-11dc-436c-9d43-67f880568232",
+        "info": "\"Waypoint control works as desired based on the inputs related to the current position of the UUV and the future course\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/BTMissionExecution"]
+    },
+    {
+        "summary": "",
+        "name": "Metrics",
+        "id": "ns_mission/MISSION/WAYPOINT_FOLLOWING/Metrics",
+        "type": "Solution",
+        "uuid": "d2906600-ee65-4a4b-8e99-52257dd4d689",
+        "info": "\"Mission results and post process log satisfactory\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "PERCEPTION",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION"
+        ],
+        "id": "ns_perception/PERCEPTION",
+        "type": "Goal",
+        "uuid": "4b282974-ff3c-441a-a229-46d5050f8342",
+        "info": "\"Perception is satisfied by the LECs and AMs\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "FDIR",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR/AM_SC_DDLEC",
+            "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC"
+        ],
+        "id": "ns_perception/PERCEPTION/FDIR",
+        "type": "Goal",
+        "uuid": "fb0ec651-722f-49ad-953e-bd8fa8b83598",
+        "info": "\"Fault detection and control reallocation\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/SatisfactorySensors"]
+    },
+    {
+        "summary": "",
+        "name": "AM_SC_DDLEC",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR/AM_SC_DDLEC/TRAINING_RESULTS",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/dd_lec_task"
+        ],
+        "id": "ns_perception/PERCEPTION/FDIR/AM_SC_DDLEC",
+        "type": "Goal",
+        "uuid": "0c99b5b1-c37e-47cf-a009-c416df86c545",
+        "info": "\"Selective Classification Assurance Monitor\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Training results for FDIR (DDLEC + SC AM)\"",
+        "name": "TRAINING_RESULTS",
+        "id": "ns_perception/PERCEPTION/FDIR/AM_SC_DDLEC/TRAINING_RESULTS",
+        "type": "Solution",
+        "uuid": "9ba28926-5a24-48fa-af1f-8a86fe9ff0dd",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "CONTROL_REALLOCATION",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/DUAL_THRUSTER_DISABLE",
+            "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/SINGLE_THRUSTER_REALLOCATION",
+            "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/task_reallocate"
+        ],
+        "id": "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION",
+        "type": "Goal",
+        "uuid": "b502a764-788a-4e69-9d8a-1ee3766c1254",
+        "info": "\"FDIR successfully reallocates thrust for mild and severe thrust loss\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "DUAL_THRUSTER_DISABLE",
+        "solvedBy": ["ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns"],
+        "id": "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/DUAL_THRUSTER_DISABLE",
+        "type": "Goal",
+        "uuid": "6d6669ec-d933-4c2b-bdbd-a7f2aa4f4e82",
+        "info": "\"Disabling both degraded thruster and it`s pair on the other side\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "SINGLE_THRUSTER_REALLOCATION",
+        "solvedBy": ["ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns"],
+        "id": "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/SINGLE_THRUSTER_REALLOCATION",
+        "type": "Goal",
+        "uuid": "665d2187-425b-48a6-8547-dd7fe530b5e0",
+        "info": "\"Decrease thrust on thruster when a thruster on the other side has less then 50% thrust loss\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"src/vandy_bluerov/behaviour_tree_gen/task_reallocate_task.py\"",
+        "name": "task_reallocate",
+        "id": "ns_perception/PERCEPTION/FDIR/CONTROL_REALLOCATION/task_reallocate",
+        "type": "Solution",
+        "uuid": "beca709d-13ec-4b8c-ab96-1c72bde91830",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "DD_LEC",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/SEVERE_THRUST_LOSS",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/dd_lec_task"
+        ],
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC",
+        "type": "Goal",
+        "uuid": "9784ff13-5fbe-4874-aa48-73f1218cf78f",
+        "info": "\"LEC for detecting single thrsuter failure\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": ["assumptions/OneThrusterDegredation"]
+    },
+    {
+        "summary": "\"src/vandy_bluerov/behaviour_tree_gen/task_dd_lec_task.py\"",
+        "name": "dd_lec_task",
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC/dd_lec_task",
+        "type": "Solution",
+        "uuid": "a96a0076-2869-4d76-aad5-446818b51771",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "MILD_THRUST_LOSS",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/cp2_00_single_thr_deg_no_reallocation_campaigns",
+            "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/cp2_00_wp_campaigns"
+        ],
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS",
+        "type": "Goal",
+        "uuid": "523024b4-dc4f-4ba7-b24b-90559306e146",
+        "info": "\"Thrust loss is less then 50%\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp2_00_single_thr_deg.sh\"",
+        "name": "CP2_00_campaigns",
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns",
+        "type": "Solution",
+        "uuid": "9c5baf84-7a4e-43a3-be50-b9fa31754cb8",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp2_00_single_thr_deg_no_reallocation.sh\"",
+        "name": "cp2_00_single_thr_deg_no_reallocation_campaigns",
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/cp2_00_single_thr_deg_no_reallocation_campaigns",
+        "type": "Solution",
+        "uuid": "84d5ab04-9ef8-4e58-bf26-2807c4b8ee6d",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp2_00_wp.sh\"",
+        "name": "cp2_00_wp_campaigns",
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/cp2_00_wp_campaigns",
+        "type": "Solution",
+        "uuid": "ea33edaa-21a9-4d91-ad30-6d5396960936",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "SEVERE_THRUST_LOSS",
+        "solvedBy": ["ns_perception/PERCEPTION/FDIR/DD_LEC/MILD_THRUST_LOSS/CP2_00_campaigns"],
+        "id": "ns_perception/PERCEPTION/FDIR/DD_LEC/SEVERE_THRUST_LOSS",
+        "type": "Goal",
+        "uuid": "67c3a182-3be1-4474-beab-e4c266c8475f",
+        "info": "\"Thrust loss is at least 50%\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Generate scenarios and test that the obstacles are detected by the forward looking sonar (FLS) and the associated LEC (LEC3)\"",
+        "name": "OBSTACLE_PERCEPTION",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/AM_VAE_LEC3",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3",
+            "ns_hardware/HARDWARE/SENSORS/FLS"
+        ],
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION",
+        "type": "Goal",
+        "uuid": "f7e42dc9-bf1b-4014-9701-c354c12dd5eb",
+        "info": "\"This subtree is defined here, under the Perception\"",
+        "artifacts": [],
+        "labels": [
+            "UUV",
+            "ROVER"
+        ],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "assumptions/SatisfactorySensors",
+            "contexts/GROUND_ROVER",
+            "contexts/ROV"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "AM_VAE_LEC3",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/AM_VAE_LEC3/AM_VAE_LEC3_training_results",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/AM_VAE_LEC3/lec3_lite_am",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/CP1_04_obstacles"
+        ],
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/AM_VAE_LEC3",
+        "type": "Goal",
+        "uuid": "d9ea5c7e-d262-4ec0-b157-fa678840862f",
+        "info": "\"VAE AM for LEC3 can identify OOD input\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"Jupyter notebook containing the results\"",
+        "name": "AM_VAE_LEC3_training_results",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/AM_VAE_LEC3/AM_VAE_LEC3_training_results",
+        "type": "Solution",
+        "uuid": "40d62262-cdc1-443a-8554-0711e765e468",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/lec3lite/nodes/lec3_lite_am.py\"",
+        "name": "lec3_lite_am",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/AM_VAE_LEC3/lec3_lite_am",
+        "type": "Solution",
+        "uuid": "b5682df6-4a32-48d0-9a2f-4221ad85e3e9",
+        "info": "\"Gathered data and computed metrics reveal AM can successfully detect OOD input\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "LEC3",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/CP1_04_obstacles",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/LEC3_training_results",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/generic_artifact_0",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/generic_artifact_1",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/ground_rover_artifacts_0",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/ground_rover_artifacts_1",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/lec3_lite_node",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/rov_artifact_0",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/rov_artifact_1"
+        ],
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3",
+        "type": "Goal",
+        "uuid": "d2532782-df16-4bf1-bbda-bd903b01bc04",
+        "info": "\"LEC3 obstacle perception can identify obstacles\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"src/vandy_bluerov/scripts/cp1_04_obstacles.sh\"",
+        "name": "CP1_04_obstacles",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/CP1_04_obstacles",
+        "type": "Solution",
+        "uuid": "ab19dc67-a0ea-4c0f-91f7-1c08af945534",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "generic_artifact_0",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/generic_artifact_0",
+        "type": "Solution",
+        "uuid": "634c3ab8-8713-42d5-9556-8ac573c215b3",
+        "info": "\"Generic artifacts, valid for every context without any label\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "generic_artifact_1",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/generic_artifact_1",
+        "type": "Solution",
+        "uuid": "1bcfdceb-1ba6-4064-8ae7-a0176bda78cb",
+        "info": "\"Generic artifacts, valid for every context with ROV and GROUND_ROVER labels\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ground_rover_artifacts_0",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/ground_rover_artifacts_0",
+        "type": "Solution",
+        "uuid": "6687ce80-00ed-402a-a0df-219d9f306642",
+        "info": "\"Generic artifacts, valid for GROUND_ROVER\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ground_rover_artifacts_1",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/ground_rover_artifacts_1",
+        "type": "Solution",
+        "uuid": "c261901c-603e-4e12-82ab-8f238618805a",
+        "info": "\"Generic artifacts, valid for GROUND_ROVER\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/lec3lite/nodes/lec3_lite_node.py\"",
+        "name": "lec3_lite_node",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/lec3_lite_node",
+        "type": "Solution",
+        "uuid": "f45d35dd-f57e-45f7-af48-c394ad543340",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"Jupyter notebook containing the results\"",
+        "name": "LEC3_training_results",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/LEC3_training_results",
+        "type": "Solution",
+        "uuid": "066fd61a-bc63-4e5c-b8ac-776847be4de3",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "rov_artifact_0",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/rov_artifact_0",
+        "type": "Solution",
+        "uuid": "1958cdaf-4771-44e8-8827-5d0bad644f2a",
+        "info": "\"Generic artifacts, valid for ROV\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "rov_artifact_1",
+        "id": "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/rov_artifact_1",
+        "type": "Solution",
+        "uuid": "6ec18ddb-38fb-4f09-8976-606b3c23f5be",
+        "info": "\"Generic artifacts, valid for ROV\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "PIPE_PERCEPTION",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2",
+            "ns_hardware/HARDWARE/SENSORS/SSS"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION",
+        "type": "Goal",
+        "uuid": "65fcb2a2-a27d-4232-a164-2a69f467c9ff",
+        "info": "\"Pipe perception is satisfactory on both sides\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed",
+        "inContextOf": [
+            "contexts/GROUND_ROVER",
+            "contexts/ROV"
+        ]
+    },
+    {
+        "summary": "",
+        "name": "AM_VAE_LEC2",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_LEFT",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_RIGHT"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2",
+        "type": "Goal",
+        "uuid": "8150af71-166d-41df-9a24-4600f37ad25d",
+        "info": "\"VAE Assurance Monitor is trained and calibrated satisfactory\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "AM_VAE_LEC2_LEFT",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_LEFT/lec2lite_am",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_LEFT",
+        "type": "Goal",
+        "uuid": "a2479f03-0dd4-4b29-83b8-1d335ac378db",
+        "info": "\"VAE AM detects OOD on left side image\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "\"src/lec2lite/nodes/lec2lite_am.py\"",
+        "name": "lec2lite_am",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_LEFT/lec2lite_am",
+        "type": "Solution",
+        "uuid": "0982e395-a818-4a0f-832b-0bbdd36102bf",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "AM_VAE_LEC2_RIGHT",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_LEFT/lec2lite_am",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/AM_VAE_LEC2/AM_VAE_LEC2_RIGHT",
+        "type": "Goal",
+        "uuid": "1743bb6d-9df3-4768-b505-f43b3c8f5c9f",
+        "info": "\"VAE AM detects OOD on right side image\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "LEC2",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2",
+        "type": "Goal",
+        "uuid": "0736d829-9efc-498e-912d-b97c38ff94f9",
+        "info": "\"LEC2 can detect pipe segments on both sides\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "LEC2_LEFT",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/generic_artifact_0",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/generic_artifact_1",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/ground_rover_artifacts_0",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/ground_rover_artifacts_1",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/lec2_lite_coral_dual_node",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/lec2_lite_node",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/rov_artifact_0",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/rov_artifact_1",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_00"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT",
+        "type": "Goal",
+        "uuid": "d9f3dc9a-9367-449a-892b-1ba61299957a",
+        "info": "\"Pipe perception on SSS images\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "generic_artifact_0",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/generic_artifact_0",
+        "type": "Solution",
+        "uuid": "0e620651-b432-4f56-83cb-c03c1b2df954",
+        "info": "\"Generic artifacts, valid for every context without any label\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "generic_artifact_1",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/generic_artifact_1",
+        "type": "Solution",
+        "uuid": "00a60015-ae7a-42f3-bd54-e1af0ae629b4",
+        "info": "\"Generic artifacts, valid for every context with ROV and GROUND_ROVER labels\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ground_rover_artifacts_0",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/ground_rover_artifacts_0",
+        "type": "Solution",
+        "uuid": "88daac76-131d-415f-b976-70f49795433d",
+        "info": "\"Generic artifacts, valid for GROUND_ROVER\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ground_rover_artifacts_1",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/ground_rover_artifacts_1",
+        "type": "Solution",
+        "uuid": "a2ae3a07-31c9-4f8c-84e1-db1f3cd12cc1",
+        "info": "\"Generic artifacts, valid for GROUND_ROVER\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/lec2lite/nodes/lec2_lite_coral_dual_node.py\"",
+        "name": "lec2_lite_coral_dual_node",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/lec2_lite_coral_dual_node",
+        "type": "Solution",
+        "uuid": "b914822e-bee7-417e-ae3e-f32f7e234736",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "\"src/lec2lite/nodes/lec2_lite_node.py\"",
+        "name": "lec2_lite_node",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/lec2_lite_node",
+        "type": "Solution",
+        "uuid": "6dde9c0b-42e1-40bd-8a6e-53ac6173ef12",
+        "info": "",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "rov_artifact_0",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/rov_artifact_0",
+        "type": "Solution",
+        "uuid": "4dd2a60c-98e9-4aed-ae52-312ee121f705",
+        "info": "\"Generic artifacts, valid for ROV\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "rov_artifact_1",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/rov_artifact_1",
+        "type": "Solution",
+        "uuid": "33ff222f-aab0-49d1-8140-2023d26d5b79",
+        "info": "\"Generic artifacts, valid for ROV\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "LEC2_RIGHT",
+        "solvedBy": [
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/generic_artifact_0",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/generic_artifact_1",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/ground_rover_artifacts_0",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/ground_rover_artifacts_1",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/rov_artifact_0",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/rov_artifact_1",
+            "ns_contingency/CONTINGENCY/SAFETY/FAILSAFES/GEOFENCE/CP1_01_Geofence",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_00",
+            "ns_hardware/HARDWARE/SENSORS/SSS/CP1_03_batt_low",
+            "ns_perception/PERCEPTION/OBSTACLE_PERCEPTION/LEC3/CP1_04_obstacles",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/lec2_lite_coral_dual_node",
+            "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_LEFT/lec2_lite_node"
+        ],
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT",
+        "type": "Goal",
+        "uuid": "261b0fda-0d1c-4ab1-95ed-f2e7edadd0b5",
+        "info": "\"Pipe perception on SSS images\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed",
+        "inContextOf": []
+    },
+    {
+        "summary": "",
+        "name": "generic_artifact_0",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/generic_artifact_0",
+        "type": "Solution",
+        "uuid": "7898b438-b443-4617-92b5-52f8c55c5189",
+        "info": "\"Generic artifacts, valid for every context without any label\"",
+        "artifacts": [],
+        "labels": [],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "generic_artifact_1",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/generic_artifact_1",
+        "type": "Solution",
+        "uuid": "e190dba7-a9c1-418e-b5d1-78da06ff3ef7",
+        "info": "\"Generic artifacts, valid for every context with ROV and GROUND_ROVER labels\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ground_rover_artifacts_0",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/ground_rover_artifacts_0",
+        "type": "Solution",
+        "uuid": "2b0fb9a4-2734-4ba0-8a40-ae04662d394e",
+        "info": "\"Generic artifacts, valid for GROUND_ROVER\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "ground_rover_artifacts_1",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/ground_rover_artifacts_1",
+        "type": "Solution",
+        "uuid": "253bb868-b6eb-4187-a1c3-9c7191b89f1e",
+        "info": "\"Generic artifacts, valid for GROUND_ROVER\"",
+        "artifacts": [],
+        "labels": ["ROVER"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "rov_artifact_0",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/rov_artifact_0",
+        "type": "Solution",
+        "uuid": "911b2ae9-c56f-46ca-a82d-b8d9946ed3c0",
+        "info": "\"Generic artifacts, valid for ROV\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    },
+    {
+        "summary": "",
+        "name": "rov_artifact_1",
+        "id": "ns_perception/PERCEPTION/PIPE_PERCEPTION/LEC2/LEC2_RIGHT/rov_artifact_1",
+        "type": "Solution",
+        "uuid": "5b605901-4d21-4c1c-83dc-ff93d43f4245",
+        "info": "\"Generic artifacts, valid for ROV\"",
+        "artifacts": [],
+        "labels": ["UUV"],
+        "status": "NotReviewed"
+    }
+]

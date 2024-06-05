@@ -1,0 +1,44 @@
+{
+  "tools": {
+    "git": { "pathSeparator": "/" },
+    "webgme": { "pathSeparator": "/" },
+    "git-gsn": { "pathSeparator": "/" }
+  },
+  "db": {
+    "type": "memjson",
+    "stateDir": ".state"
+  },
+  "logging": {
+    "file": "depi_server.log",
+    "level": "DEBUG"
+  },
+  "server": {
+    "authorization_enabled": false,
+    "default_timeout": 3600,
+    "insecure_port": 5150,
+    "secure_port": 0,
+    "key_pem": "",
+    "cert_pem": ""
+  },
+  "authorization": {
+    "auth_def_file": "depi_auth.txt"
+  },
+  "users": [
+    { "name": "mark", "password": "mark",
+      "auth_rules": ["all"] },
+    { "name": "patrik", "password": "patrik",
+      "auth_rules": ["all"] },
+    { "name": "daniel", "password": "daniel",
+      "auth_rules": ["all"] },
+    { "name": "azhar", "password": "azhar",
+      "auth_rules": ["all"] },
+    { "name": "gabor", "password": "gabor",
+      "auth_rules": ["all"] },
+    { "name": "nag", "password": "nag",
+      "auth_rules": ["all"] },
+    { "name": "monitor", "password": "monitor",
+      "auth_rules": ["all"] },
+    { "name": "demo", "password": "123456",
+      "auth_rules": ["all"] }
+  ]
+}

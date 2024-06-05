@@ -1,0 +1,6 @@
+{
+    "java.compile.nullAnalysis.mode": "disabled",
+    "editor.detectIndentation": false,
+    "java.configuration.updateBuildConfiguration": "disabled",
+    "java.debug.settings.onBuildFailureProceed": true
+}

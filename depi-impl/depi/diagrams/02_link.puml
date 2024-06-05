@@ -1,0 +1,21 @@
+@startuml
+actor User as user
+participant "Tool A" as toola
+participant "Tool B" as toolb
+participant "Blackboard" as bb
+participant "Depi" as depi
+
+note right of depi
+Resources must be present in
+most recent Git commit in order
+to be added to blackboard.
+end note
+user -> toola : Add resources to blackboard
+toola -> bb : Add resources to blackboard
+user -> toolb : Add resources to blackboard
+toolb -> bb : Add resources to blackboard
+user -> bb : Link resources
+user -> bb : Save blackboard
+bb -> depi : Update dependencies
+@enduml
+

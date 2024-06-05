@@ -1,0 +1,150 @@
+{
+    "name": "depi",
+    "displayName": "DEPI Manager",
+    "description": "Dependency Intermediator",
+    "version": "0.7.7",
+    "license": "MIT",
+    "publisher": "vu-isis",
+    "icon": "images/vanderbilt.jpeg",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vu-isis/CAID-tools.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vu-isis/CAID-tools/issues"
+    },
+    "engines": {
+        "vscode": "^1.78.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "extensionDependencies": [
+        "vscode.git"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "depi.showBlackboard",
+                "category": "Depi",
+                "title": "Blackboard"
+            },
+            {
+                "command": "depi.createNewSession",
+                "category": "Depi",
+                "title": "Create new Session"
+            },
+            {
+                "command": "depi.addGitResourceToBlackboard",
+                "category": "Depi",
+                "title": "Add to Depi Blackboard"
+            },
+            {
+                "command": "depi.showDependencyGraphForGitResource",
+                "category": "Depi",
+                "title": "Show Dependency Graph"
+            },
+            {
+                "command": "depi.showDependantsGraphForGitResource",
+                "category": "Depi",
+                "title": "Show Dependants Graph"
+            },
+            {
+                "command": "depi.selectDepiResource",
+                "category": "Depi",
+                "title": "Select Depi Resource"
+            }
+        ],
+        "configuration": {
+            "title": "Depi",
+            "properties": {
+                "depi.url": {
+                    "type": "string",
+                    "default": "127.0.0.1:5150",
+                    "description": "The host and port of the Depi instance"
+                },
+                "depi.ssl_cert_path": {
+                    "type": "string",
+                    "default": "",
+                    "description": "If using unsigned TLS, absolute path to certificate (.pem) file."
+                },
+                "depi.ssl_target_name_override": {
+                    "type": "string",
+                    "default": "",
+                    "description": "If using unsigned TLS, target name expected to be in the certificate."
+                },
+                "depi.user_name": {
+                    "type": "string",
+                    "default": "demo",
+                    "description": "The name of the Depi user"
+                },
+                "depi.git_collaboration_platform": {
+                    "type": "string",
+                    "enum": [
+                        "gitea",
+                        "gitlab",
+                        "github",
+                        "other"
+                    ],
+                    "default": "gitea",
+                    "description": "Used for constructing url string for viewing a git resource."
+                },
+                "depi.depiserver_ping_interval_seconds": {
+                    "type": "number",
+                    "default": "10",
+                    "description": "Time in seconds in between pings to depi-server. Align with setting on server."
+                }
+            }
+        },
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "depi.addGitResourceToBlackboard"
+                },
+                {
+                    "command": "depi.showDependencyGraphForGitResource"
+                },
+                {
+                    "command": "depi.showDependantsGraphForGitResource"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "depi.addGitResourceToBlackboard",
+                    "when": "false"
+                },
+                {
+                    "command": "depi.selectDepiResource"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./src && echo $(date +%T)",
+        "watch": "tsc -watch -p ./src",
+        "lint": "eslint src --ext ts",
+        "test": "jest --config jest.config.js  --runInBand"
+    },
+    "devDependencies": {
+        "@types/hogan.js": "^3.0.1",
+        "@types/jest": "^29.5.7",
+        "@types/node": "16.x",
+        "@types/parse-git-config": "^3.0.1",
+        "@types/vscode": "^1.78.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
+        "@vscode/test-electron": "^2.3.0",
+        "eslint": "^8.52.0",
+        "jest": "^29.7.0",
+        "prettier": "^3.1.0",
+        "prettier-eslint": "^16.3.0",
+        "ts-jest": "^29.1.1",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "depi-node-client": "^0.10.1"
+    }
+}

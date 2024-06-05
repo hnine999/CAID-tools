@@ -1,0 +1,14 @@
+@startuml
+hide empty description
+[*] --> EmptyBlackboard
+EmptyBlackboard : no resources
+EmptyBlackboard --> WorkingBlackboard : AddNewResource
+
+WorkingBlackboard : resources and links
+WorkingBlackboard --> SavingBlackboard : SaveBlackboard
+WorkingBlackboard --> WorkingBlackboard : Modify Links
+
+SavingBlackboard : resources and links persisted to Depi
+SavingBlackboard --> WorkingBlackboard : continue
+SavingBlackboard --> EmptyBlackboard : ClearBlackboard
+@enduml

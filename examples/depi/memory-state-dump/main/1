@@ -1,0 +1,1372 @@
+{
+    "name": "main",
+    "lastVersion": 412,
+    "parentName": "",
+    "parentVersion": 0,
+    "links": [
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_wp_ctrl.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/Q/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/planner_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/world_model_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/eval_wp_ctrl.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/wp_ctrl_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/test-runs.git",
+          "URL": "/exec_scenarios.py"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/obstacle_avoidance_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/4/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/planner_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/obstacle_avoidance_results/"
+        },
+        "toRes": {
+          "toolId": "git-gsn",
+          "resourceGroupURL": "http://localhost:3000/demo/gsn.git#ansr",
+          "URL": "/UAVTargetTracking/UAVTracks/Autonomy/ObstacleAvoidance/ObstacleAvoidanceTests"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_wpcontrol/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/wp_ctrl_results/"
+        },
+        "dirty": true,
+        "deleted": true,
+        "lastCleanVersion": "d89bf8c7fef58be5703a262cce999e1b004b820f",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_obs_avoidance.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/F/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/test-runs.git",
+          "URL": "/exec_scenarios.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/battery_results/"
+        },
+        "toRes": {
+          "toolId": "git-gsn",
+          "resourceGroupURL": "http://localhost:3000/demo/gsn.git#ansr",
+          "URL": "/UAVTargetTracking/UAVTracks/Autonomy/BatteryResouceMgmt/BatteryPredictionTests"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_autonomy.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/B/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/v/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_planner/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/I/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/world_model/world_model/point_cloud_node.py"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/F/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/obstacle_avoidance_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_autonomy.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/autonomy_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/ebt/ebt/ebt_node.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/O/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/eval_planner.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/planner_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/planner/planner/planner_node.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/E/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/eval_battery.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/battery_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/autonomy_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/v/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_autonomy/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/O/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/ebt/ebt/bt/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/O/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/ebt/ebt/ebt_node.py"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/wp_ctrl_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_obstacle_avoidance/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/obstacle_avoidance_results/"
+        },
+        "dirty": true,
+        "deleted": true,
+        "lastCleanVersion": "d89bf8c7fef58be5703a262cce999e1b004b820f",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/Q/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/wp_ctrl_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/wp_ctrl_results/"
+        },
+        "toRes": {
+          "toolId": "git-gsn",
+          "resourceGroupURL": "http://localhost:3000/demo/gsn.git#ansr",
+          "URL": "/UAVTargetTracking/UAVTracks/Autonomy/WaypointControl/ControlTests"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/v/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_obstacle_avoidance/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/ebt/ebt/bt/"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/O/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/I/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/world_model/world_model/world_model_node.py"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_planner.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/4/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/v/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_battery/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/p/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/world_model_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_battery/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/battery_results/"
+        },
+        "dirty": true,
+        "deleted": true,
+        "lastCleanVersion": "d89bf8c7fef58be5703a262cce999e1b004b820f",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/B/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/autonomy_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_world_model/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/world_model_results/"
+        },
+        "dirty": true,
+        "deleted": true,
+        "lastCleanVersion": "d89bf8c7fef58be5703a262cce999e1b004b820f",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/E/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/planner/planner/planner_node.py"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/eval_autonomy.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/autonomy_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/world_model/world_model/point_cloud_node.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/I/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/v/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_wpcontrol/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/eval_world_model.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/world_model_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/eval_obs_avoidance.py"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/obstacle_avoidance_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_planner/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/planner_results/"
+        },
+        "dirty": true,
+        "deleted": true,
+        "lastCleanVersion": "d89bf8c7fef58be5703a262cce999e1b004b820f",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/uav_test_runs/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/battery_results/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/M/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/battery_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_autonomy/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/autonomy_results/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_world_model.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/p/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/src.git",
+          "URL": "/ros2_ws/src/world_model/world_model/world_model_node.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/H/v/I/"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-scripts.git",
+          "URL": "/test_battery.py"
+        },
+        "toRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/M/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/autonomy_results/"
+        },
+        "toRes": {
+          "toolId": "git-gsn",
+          "resourceGroupURL": "http://localhost:3000/demo/gsn.git#ansr",
+          "URL": "/UAVTargetTracking/UAVTracks/Autonomy/TestAutonomy"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/world_model_results/"
+        },
+        "toRes": {
+          "toolId": "git-gsn",
+          "resourceGroupURL": "http://localhost:3000/demo/gsn.git#ansr",
+          "URL": "/UAVTargetTracking/UAVTracks/Planner/WorldModel/Observations/TestModelUpdates"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/eval-results.git",
+          "URL": "/planner_results/"
+        },
+        "toRes": {
+          "toolId": "git-gsn",
+          "resourceGroupURL": "http://localhost:3000/demo/gsn.git#ansr",
+          "URL": "/UAVTargetTracking/UAVTracks/Planner/TestPlanner"
+        },
+        "dirty": false,
+        "deleted": false,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      },
+      {
+        "fromRes": {
+          "toolId": "webgme",
+          "resourceGroupURL": "http://localhost:8888/?project=guest+TestProject",
+          "URL": "/v/"
+        },
+        "toRes": {
+          "toolId": "git",
+          "resourceGroupURL": "http://localhost:3000/demo/testdata.git",
+          "URL": "/td_world_model/"
+        },
+        "dirty": false,
+        "deleted": true,
+        "lastCleanVersion": "",
+        "inferredDirtiness": []
+      }
+    ],
+    "tools": {
+      "git": {
+        "http://localhost:3000/demo/testdata.git": {
+          "name": "testdata.git",
+          "toolId": "git",
+          "URL": "http://localhost:3000/demo/testdata.git",
+          "version": "ca83d90bfb367711b5c6045b67a04cb4968785a6",
+          "resources": [
+            {
+              "name": "td_wpcontrol",
+              "id": "/td_wpcontrol/",
+              "URL": "/td_wpcontrol/",
+              "deleted": true
+            },
+            {
+              "name": "td_autonomy",
+              "id": "/td_autonomy/",
+              "URL": "/td_autonomy/",
+              "deleted": true
+            },
+            {
+              "name": "td_battery",
+              "id": "/td_battery/",
+              "URL": "/td_battery/",
+              "deleted": true
+            },
+            {
+              "name": "td_obstacle_avoidance",
+              "id": "/td_obstacle_avoidance/",
+              "URL": "/td_obstacle_avoidance/",
+              "deleted": true
+            },
+            {
+              "name": "td_planner",
+              "id": "/td_planner/",
+              "URL": "/td_planner/",
+              "deleted": true
+            },
+            {
+              "name": "td_world_model",
+              "id": "/td_world_model/",
+              "URL": "/td_world_model/",
+              "deleted": true
+            },
+            {
+              "name": "uav_test_runs",
+              "id": "/uav_test_runs/",
+              "URL": "/uav_test_runs/",
+              "deleted": false
+            }
+          ]
+        },
+        "http://localhost:3000/demo/src.git": {
+          "name": "src.git",
+          "toolId": "git",
+          "URL": "http://localhost:3000/demo/src.git",
+          "version": "2c37f77f9daffb10c9bedad1e2df29ae78c5f529",
+          "resources": [
+            {
+              "name": "world_model_predictor.py",
+              "id": "/world_model_predictor.py",
+              "URL": "/world_model_predictor.py",
+              "deleted": true
+            },
+            {
+              "name": "sensor_msgs_py",
+              "id": "/ros2_ws/src/common_interfaces/sensor_msgs_py/resource/sensor_msgs_py",
+              "URL": "/ros2_ws/src/common_interfaces/sensor_msgs_py/resource/sensor_msgs_py",
+              "deleted": false
+            },
+            {
+              "name": "__init__.py",
+              "id": "/ros2_ws/src/common_interfaces/sensor_msgs_py/sensor_msgs_py/__init__.py",
+              "URL": "/ros2_ws/src/common_interfaces/sensor_msgs_py/sensor_msgs_py/__init__.py",
+              "deleted": false
+            },
+            {
+              "name": "Empty.msg",
+              "id": "/ros2_ws/src/common_interfaces/std_msgs/msg/Empty.msg",
+              "URL": "/ros2_ws/src/common_interfaces/std_msgs/msg/Empty.msg",
+              "deleted": false
+            },
+            {
+              "name": "test.py",
+              "id": "/ros2_ws/src/ebt/ebt/bt/test.py",
+              "URL": "/ros2_ws/src/ebt/ebt/bt/test.py",
+              "deleted": true
+            },
+            {
+              "name": "waypoint_controller.py",
+              "id": "/waypoint_controller.py",
+              "URL": "/ros2_ws/src/world_model/resource/world_model",
+              "deleted": false
+            },
+            {
+              "name": "airsim_interfaces",
+              "id": "/ros2_ws/src/airsim_interfaces/",
+              "URL": "/ros2_ws/src/airsim_interfaces/",
+              "deleted": true
+            },
+            {
+              "name": "common_interfaces",
+              "id": "/ros2_ws/src/common_interfaces/",
+              "URL": "/ros2_ws/src/common_interfaces/",
+              "deleted": true
+            },
+            {
+              "name": "vanderbilt_interface",
+              "id": "/ros2_ws/src/vanderbilt_interface/",
+              "URL": "/ros2_ws/src/vanderbilt_interface/",
+              "deleted": true
+            },
+            {
+              "name": "planner",
+              "id": "/ros2_ws/src/planner/",
+              "URL": "/ros2_ws/src/planner/",
+              "deleted": false
+            },
+            {
+              "name": "vanderbilt_utils",
+              "id": "/ros2_ws/src/vanderbilt_utils/",
+              "URL": "/ros2_ws/src/vanderbilt_utils/",
+              "deleted": true
+            },
+            {
+              "name": "world_model",
+              "id": "/ros2_ws/src/world_model/",
+              "URL": "/ros2_ws/src/world_model/",
+              "deleted": false
+            },
+            {
+              "name": "world_model",
+              "id": "/ros2_ws/src/world_model/world_model/",
+              "URL": "/ros2_ws/src/world_model/world_model/",
+              "deleted": false
+            },
+            {
+              "name": "planner_node.py",
+              "id": "/ros2_ws/src/planner/planner/planner_node.py",
+              "URL": "/ros2_ws/src/planner/planner/planner_node.py",
+              "deleted": false
+            },
+            {
+              "name": "world_model_node.py",
+              "id": "/ros2_ws/src/world_model/world_model/world_model_node.py",
+              "URL": "/ros2_ws/src/world_model/world_model/world_model_node.py",
+              "deleted": false
+            },
+            {
+              "name": "point_cloud_node.py",
+              "id": "/ros2_ws/src/world_model/world_model/point_cloud_node.py",
+              "URL": "/ros2_ws/src/world_model/world_model/point_cloud_node.py",
+              "deleted": false
+            },
+            {
+              "name": "ebt_node.py",
+              "id": "/ros2_ws/src/ebt/ebt/ebt_node.py",
+              "URL": "/ros2_ws/src/ebt/ebt/ebt_node.py",
+              "deleted": false
+            },
+            {
+              "name": "bt",
+              "id": "/ros2_ws/src/ebt/ebt/bt/",
+              "URL": "/ros2_ws/src/ebt/ebt/bt/",
+              "deleted": false
+            },
+            {
+              "name": "README.md",
+              "id": "/README.md",
+              "URL": "/README.md",
+              "deleted": true
+            },
+            {
+              "name": "src",
+              "id": "/ros2_ws/src/",
+              "URL": "/ros2_ws/src/",
+              "deleted": false
+            }
+          ]
+        },
+        "http://localhost:3000/demo/eval-results.git": {
+          "name": "eval-results.git",
+          "toolId": "git",
+          "URL": "http://localhost:3000/demo/eval-results.git",
+          "version": "ee395bda375ba6bbafc95fef7b3e502e87c3f5c7",
+          "resources": [
+            {
+              "name": "wp_ctrl_results",
+              "id": "/wp_ctrl_results/",
+              "URL": "/wp_ctrl_results/",
+              "deleted": false
+            },
+            {
+              "name": "autonomy_results",
+              "id": "/autonomy_results/",
+              "URL": "/autonomy_results/",
+              "deleted": false
+            },
+            {
+              "name": "battery_results",
+              "id": "/battery_results/",
+              "URL": "/battery_results/",
+              "deleted": false
+            },
+            {
+              "name": "obstacle_avoidance_results",
+              "id": "/obstacle_avoidance_results/",
+              "URL": "/obstacle_avoidance_results/",
+              "deleted": false
+            },
+            {
+              "name": "planner_results",
+              "id": "/planner_results/",
+              "URL": "/planner_results/",
+              "deleted": false
+            },
+            {
+              "name": "world_model_results",
+              "id": "/world_model_results/",
+              "URL": "/world_model_results/",
+              "deleted": false
+            }
+          ]
+        },
+        "http://localhost:3000/demo/eval-scripts.git": {
+          "name": "eval-scripts.git",
+          "toolId": "git",
+          "URL": "http://localhost:3000/demo/eval-scripts.git",
+          "version": "56f72aaecc47cd47deb4f6117a7c2bb672f297d0",
+          "resources": [
+            {
+              "name": "test_wp_ctrl.py",
+              "id": "/test_wp_ctrl.py",
+              "URL": "/test_wp_ctrl.py",
+              "deleted": true
+            },
+            {
+              "name": "test_autonomy.py",
+              "id": "/test_autonomy.py",
+              "URL": "/test_autonomy.py",
+              "deleted": true
+            },
+            {
+              "name": "test_battery.py",
+              "id": "/test_battery.py",
+              "URL": "/test_battery.py",
+              "deleted": true
+            },
+            {
+              "name": "test_obs_avoidance.py",
+              "id": "/test_obs_avoidance.py",
+              "URL": "/test_obs_avoidance.py",
+              "deleted": true
+            },
+            {
+              "name": "test_planner.py",
+              "id": "/test_planner.py",
+              "URL": "/test_planner.py",
+              "deleted": true
+            },
+            {
+              "name": "test_world_model.py",
+              "id": "/test_world_model.py",
+              "URL": "/test_world_model.py",
+              "deleted": true
+            },
+            {
+              "name": "eval_autonomy.py",
+              "id": "/eval_autonomy.py",
+              "URL": "/eval_autonomy.py",
+              "deleted": false
+            },
+            {
+              "name": "eval_battery.py",
+              "id": "/eval_battery.py",
+              "URL": "/eval_battery.py",
+              "deleted": false
+            },
+            {
+              "name": "eval_obs_avoidance.py",
+              "id": "/eval_obs_avoidance.py",
+              "URL": "/eval_obs_avoidance.py",
+              "deleted": false
+            },
+            {
+              "name": "eval_planner.py",
+              "id": "/eval_planner.py",
+              "URL": "/eval_planner.py",
+              "deleted": false
+            },
+            {
+              "name": "eval_world_model.py",
+              "id": "/eval_world_model.py",
+              "URL": "/eval_world_model.py",
+              "deleted": false
+            },
+            {
+              "name": "eval_wp_ctrl.py",
+              "id": "/eval_wp_ctrl.py",
+              "URL": "/eval_wp_ctrl.py",
+              "deleted": false
+            }
+          ]
+        },
+        "http://localhost:3000/demo/test-runs.git": {
+          "name": "test-runs.git",
+          "toolId": "git",
+          "URL": "http://localhost:3000/demo/test-runs.git",
+          "version": "6875c92ea125b5d3121d96fdb4f2965b92add9de",
+          "resources": [
+            {
+              "name": "exec_scenarios.py",
+              "id": "/exec_scenarios.py",
+              "URL": "/exec_scenarios.py",
+              "deleted": false
+            }
+          ]
+        }
+      },
+      "webgme": {
+        "http://localhost:8888/?project=guest+TestProject": {
+          "name": "webgme:TestProject",
+          "toolId": "webgme",
+          "URL": "http://localhost:8888/?project=guest+TestProject",
+          "version": "#44523d4c447f66e487cbab6350bc3a607baded0d",
+          "resources": [
+            {
+              "name": "UAV",
+              "id": "5aa9b15d-9c36-c0f5-2783-a774278fd81e",
+              "URL": "/v/",
+              "deleted": true
+            },
+            {
+              "name": "WorldModel",
+              "id": "a996396b-3861-1476-99d5-38cd00ab1fff",
+              "URL": "/v/I/",
+              "deleted": true
+            },
+            {
+              "name": "BatteryEstimator",
+              "id": "4cd20e31-5be5-5736-ce92-6700f4b9c7b1",
+              "URL": "/v/t/",
+              "deleted": true
+            },
+            {
+              "name": "Planner",
+              "id": "f0ba659b-9dff-ae1d-10a2-7eaf20a61923",
+              "URL": "/v/E/",
+              "deleted": true
+            },
+            {
+              "name": "Autonomy",
+              "id": "d9e7da33-c1db-22b2-ee5b-4c445e862a66",
+              "URL": "/v/O/",
+              "deleted": true
+            },
+            {
+              "name": "ObstacleAvoidance",
+              "id": "266d1411-191c-099c-bc92-38cf7262b873",
+              "URL": "/v/n",
+              "deleted": true
+            },
+            {
+              "name": "EvalWorldModel",
+              "id": "2859cb03-2441-1970-f795-21a7f1be10f4",
+              "URL": "/p/",
+              "deleted": true
+            },
+            {
+              "name": "EvalPlanner",
+              "id": "425d7dfd-9d7c-0abb-dbd4-ae6847c60750",
+              "URL": "/4/",
+              "deleted": true
+            },
+            {
+              "name": "EvalObstacleAvoidance",
+              "id": "907e0e6a-6808-e38c-9628-9e4d7669725f",
+              "URL": "/F/",
+              "deleted": true
+            },
+            {
+              "name": "EvalBatteryPredictor",
+              "id": "e25c4a70-0b81-a85e-df67-2fd3a836c9bf",
+              "URL": "/M/",
+              "deleted": true
+            },
+            {
+              "name": "EvalAutonomy",
+              "id": "60522039-d7c2-4c86-1e16-14521110b11f",
+              "URL": "/B/",
+              "deleted": true
+            },
+            {
+              "name": "EvalController",
+              "id": "00135ad2-a890-ffe8-8a62-2f68affa517a",
+              "URL": "/Q/",
+              "deleted": true
+            },
+            {
+              "name": "WorldModel",
+              "id": "98291ca6-441a-a492-8435-32bb1b282df1",
+              "URL": "/H/v/I/",
+              "deleted": false
+            },
+            {
+              "name": "WaypointPlanner",
+              "id": "c1054056-e184-1ef9-0d42-74d93b252b2d",
+              "URL": "/H/v/E/",
+              "deleted": false
+            },
+            {
+              "name": "Vehicle",
+              "id": "5380445f-f925-bd89-2ae9-3905c53d1630",
+              "URL": "/H/v/",
+              "deleted": false
+            },
+            {
+              "name": "UAV",
+              "id": "6b169490-e04d-7011-3a63-ad023c0cea10",
+              "URL": "/H/",
+              "deleted": false
+            },
+            {
+              "name": "Navigation",
+              "id": "e858fffe-bda0-9256-f3bb-463245051868",
+              "URL": "/H/v/O/",
+              "deleted": false
+            },
+            {
+              "name": "Simulator",
+              "id": "5cbe5f1e-5f98-c0dd-0363-a2520d8c903e",
+              "URL": "/H/V/",
+              "deleted": true
+            }
+          ]
+        }
+      },
+      "git-gsn": {
+        "http://localhost:3000/demo/gsn.git#ansr": {
+          "name": "ansr",
+          "toolId": "git-gsn",
+          "URL": "http://localhost:3000/demo/gsn.git#ansr",
+          "version": "47f9a8e4e5ba369032f93778f65372aaf96faae0",
+          "resources": [
+            {
+              "name": "ObstacleAvoidanceTests",
+              "id": "c60f6675-7d95-4ee7-9370-74f7deeb4ceb",
+              "URL": "/UAVTargetTracking/UAVTracks/Autonomy/ObstacleAvoidance/ObstacleAvoidanceTests",
+              "deleted": false
+            },
+            {
+              "name": "BatteryPredictionTests",
+              "id": "0d0bc325-1703-4503-ba10-670ec22002e4",
+              "URL": "/UAVTargetTracking/UAVTracks/Autonomy/BatteryResouceMgmt/BatteryPredictionTests",
+              "deleted": false
+            },
+            {
+              "name": "ControlTests",
+              "id": "33275ec0-9fc3-4430-be42-205bc8ad6f80",
+              "URL": "/UAVTargetTracking/UAVTracks/Autonomy/WaypointControl/ControlTests",
+              "deleted": false
+            },
+            {
+              "name": "TestAutonomy",
+              "id": "ba306bb9-80e7-4cfc-94d3-a425f80c89b9",
+              "URL": "/UAVTargetTracking/UAVTracks/Autonomy/TestAutonomy",
+              "deleted": false
+            },
+            {
+              "name": "TestModelUpdates",
+              "id": "f08ea234-8885-405d-a591-4c6f60466fce",
+              "URL": "/UAVTargetTracking/UAVTracks/Planner/WorldModel/Observations/TestModelUpdates",
+              "deleted": false
+            },
+            {
+              "name": "TestPlanner",
+              "id": "efb3e3a2-a9d1-43f0-9231-dced729ad911",
+              "URL": "/UAVTargetTracking/UAVTracks/Planner/TestPlanner",
+              "deleted": false
+            }
+          ]
+        }
+      }
+    }
+  }

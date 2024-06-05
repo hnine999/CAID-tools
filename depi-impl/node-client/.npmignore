@@ -1,0 +1,9 @@
+.idea/
+__pycache__/
+venv/
+
+node_modules
+
+.state
+
+!src/pbs/depi_*

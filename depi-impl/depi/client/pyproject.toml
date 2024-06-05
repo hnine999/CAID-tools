@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "setuptools-grpc"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depi-client"
+version="0.7.7"
+authors = [
+    {name = "Mark Wutka", email="mark.wutka@vanderbilt.edu"},
+    {name = "Patrik Meijer", email="patrik.meijer@vanderbilt.edu"}
+]
+requires-python = ">=3.10"
+dependencies=[
+    "build==1.0.3",
+    "grpcio==1.64.0",
+    "grpcio-tools==1.64.0",
+    "protobuf==5.27.0",
+    "pylint==2.17.5",
+    "virtualenv==20.23.0",
+    "waitress==2.1.2",
+]
+
+[project.scripts]
+depi-cli="depi_client.depi_cli:run"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+depi_client = ["../depi_pb2.py", "../depi_pb2.pyi", "../depi_pb2_grpc.py", "configs/*.json"]
+depi_pb2 = []
+depi_pb2_grpc = []

@@ -1,0 +1,32 @@
+{
+  "components": {
+    "visualizers": {
+      "DepiResourceViz": {
+        "src": "panels/DepiResourceViz/DepiResourceVizPanel",
+        "title": "DepiResourceViz",
+        "panel": "src/visualizers/panels/DepiResourceViz",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/DepiResourceViz"
+      }
+    },
+    "plugins": {
+      "GatherDepiResources": {
+        "src": "src/plugins/GatherDepiResources",
+        "test": "test/plugins/GatherDepiResources"
+      }
+    },
+    "seeds": {
+        "model": {
+            "src": "src/seeds/model"
+        },
+        "TestProject": {
+            "src": "src/seeds/TestProject"
+        }
+    }
+  },
+  "dependencies": {
+    "visualizers": {},
+    "plugins": {},
+    "seeds": {}
+  }
+}

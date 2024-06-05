@@ -1,0 +1,14 @@
+.idea/
+__pycache__/
+venv/
+
+node_modules
+
+.state
+
+src/depiUtils.d.ts
+src/depiUtils.js
+
+test/cert.pem
+
+src/pbs/depi_*

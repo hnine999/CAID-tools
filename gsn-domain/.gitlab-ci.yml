@@ -1,0 +1,50 @@
+stages:
+  - test
+  - vsix-build
+  - publish
+
+vsix-build:
+  stage: vsix-build
+  image: openjdk:11
+  services:
+    - docker:dind
+  only: 
+    - tags
+  before_script:
+    - ./gsn-vscode-xtext/gradlew --project-dir ./gsn-vscode-xtext
+  script:
+    - ./gsn-vscode-xtext/gradlew --project-dir ./gsn-vscode-xtext buildVsix --no-daemon
+  artifacts:
+    paths:
+      - ./gsn-vscode-xtext/vscode-extension-self-contained/build/vscode/vscode-extension-self-contained-*.vsix
+
+docker-publish:
+  stage: publish
+  dependencies:
+    - vsix-build
+  tags:
+    - ubuntu18
+  only:
+    - tags
+  before_script:
+    - docker images -a
+    - docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin <<<$CI_REGISTRY_PASSWORD
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE/gsn-assurance-vsix:${CI_COMMIT_TAG:1}" .
+    - docker push "$CI_REGISTRY_IMAGE/gsn-assurance-vsix:${CI_COMMIT_TAG:1}"
+  after_script:
+    - docker logout $CI_REGISTRY
+
+node-tests:
+  stage: test
+  image: node:hydrogen
+  services:
+    - docker:dind
+  before_script:
+    - npm --prefix ./gsn-vscode-xtext/graph-editor install
+    - npm --prefix ./json2gsn install
+    - npm --prefix ./gsn-vscode-xtext/vscode-extension-self-contained install
+  script:
+    - npm --prefix ./gsn-vscode-xtext/graph-editor test
+    - npm --prefix ./json2gsn test
+    - npm --prefix ./gsn-vscode-xtext/vscode-extension-self-contained test

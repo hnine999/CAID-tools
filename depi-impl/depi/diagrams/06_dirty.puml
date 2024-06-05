@@ -1,0 +1,13 @@
+@startuml
+actor User as user
+participant "Tool A" as toola
+participant "Depi" as depi
+
+depi -> toola : Resources are dirty
+toola -> user : Show dirty resources
+user -> toola : Edit resources
+user -> toola : Mark link clean
+toola -> depi : Mark link clean
+
+@enduml
+

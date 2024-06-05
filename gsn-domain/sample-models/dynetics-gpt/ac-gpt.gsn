@@ -1,0 +1,200 @@
+GOALS dynetics_scenario
+    goal G1
+        uuid a312cc75-e9a9-4936-ae8a-de2f2f74dd04
+        summary "COP is valid - The drone effectively locates and identifies the target"
+        assumption A1
+            uuid 9874f652-d00c-4ded-84d2-567e7d4ac6ce
+            summary "Drone is fully operational, no degradation present, weather is within operational limits (wind and wind gusts, precipitation, fog, dust, daylight).
+
+
+Obstructions:  Trees sparsely litter search area from 20 – 80 feet tall 
+
+
+Weather:
+- Wind speed 0-5 mph, gusts 7 mph
+- Sunny day, high visibility
+
+
+People in search area: 5 per square mile"
+        assumption A2
+            uuid 53d656ba-1350-4898-be2d-f549438cbf16
+            summary "- Target is in the search area
+
+- 6-foot tall, red shirt, dark hair
+
+- 2.5 m/s max speed
+
+- Heading between -15° and 25° North"
+        context C2
+            uuid 416bc263-0f7a-4012-aef0-efab79a9aaf1
+            summary "Mission Objective: Search, identify, and track escaped
+target. Time limit based on battery life (30 minutes). 5 square miles of search area"
+        context C3
+            uuid 7ce85d4c-21da-42d9-abbd-87001100c43b
+            summary "Platform constraints:
+Battery Life
+- 30 minutes
+Flight Capabilities
+- Max Velocity: 15 m/s
+- Max Ascent: 5 m/s
+- Max Descent: 2 m/s
+- Max Altitude: 400 ft"
+        goal G14
+            uuid 91f5a974-4ba5-415f-b79f-a73801c56546
+            summary "The drone maintains precise control, responding accurately to commands"
+            goal G15
+                uuid 110a4863-3906-445e-b505-cd0420744257
+                summary "The low level control system maintains precise control, enhancing stability and maneuverability"
+                assumption A9
+                    uuid da475953-3849-4ddd-98ea-496347f80bd1
+                    summary "There is an option or way for fast(er) interaction (eg. heading change, e-stop) to support obstacle avoidance"
+                solution Sn1
+                    uuid 938e4dfb-f913-45e5-bce9-94d5558b58c2
+                    summary "Cummulative metrics about desired vs GT control data"
+            goal G6
+                uuid 4af1264c-32ec-436e-a77c-ed1270e10fc5
+                summary "The waypoint controller consistently guides the drone along predefined paths, ensuring accurate path following."
+                assumption A7
+                    uuid ed9f8613-5105-4f43-b550-dd5c07e63a55
+                    summary "Drone can be controller with a target waypoint or list of target waypoints"
+                assumption A8
+                    uuid 9bbd97ae-e9bf-4803-81bd-d6fbbfc30ae1
+                    summary "Waypoint execution can be cancelled"
+                solution Sn14
+                    uuid c79dd5b5-b700-46dd-a4f2-8e213a07a51f
+                    summary "Cummulative metrics about cross track error and heading error based on sequence of waypoints"
+        goal G18
+            uuid 3ff583f2-c9e3-49bb-9b75-d0b844ff9b69
+            summary "High level autonomy (eBT)"
+            assumption A14
+                uuid 824e856f-e117-4e3f-93e6-58468b499f40
+                summary "eBT is verified"
+            goal G19
+                uuid 51338cc0-5a58-4f90-81ff-50c877a39e83
+                summary "Mitigation actions works as expected"
+                goal G21
+                    uuid abd6b363-531c-4d9b-9761-91ec67480222
+                    summary "Area avoidance"
+                    solution Sn5
+                        uuid 54a61434-cd68-4fb5-a380-a53e658478dc
+                        summary "Cummulative metrics about area avoidance efficiency over the whore velocity range of the drone (Drone - Area GT distance)"
+                goal G22
+                    uuid dd915d68-5563-4ebc-a112-632a5f76a1a0
+                    summary "Failsafe mitigation"
+                    solution Sn4
+                        uuid 37e3aa76-ef25-4de0-8307-4da1915a8438
+                        summary "Cummulative metrics about BT contingency actions"
+            goal G20
+                uuid cc9497f1-67b4-44f8-a251-be6ccc3de094
+                summary "Mission execution works as expected"
+                goal G23
+                    uuid 8747b97e-c820-4389-8e08-bdc18dd67883
+                    summary "Waypoint follower"
+                    solution Sn3
+                        uuid 0b3e5e36-20bc-40f5-853b-ccc0f20534dc
+                        summary "Cummulative metrics about cross track error and heading error over an entire mission"
+                goal G24
+                    uuid d4a8f99a-df15-464b-ba07-12c0ca8f8f3e
+                    summary "Area survey"
+                    solution Sn2
+                        uuid 9c6664c7-99d2-46cb-8054-066cbbc5c278
+                        summary "Cummulative metrics about area coverage over an entire mission"
+        goal G2
+            uuid d08b5112-7241-4bd8-9d44-bc092466a823
+            summary "All hazards have been identified and mitigated"
+            goal G3
+                uuid c6062cb9-a229-4674-9db6-dc769953ff04
+                summary "The functionality of obstacle avoidance system has been successfully implemented and is operational."
+                assumption A3
+                    uuid 7d67f48d-d123-40de-8bf4-6aeb8099b33e
+                    summary "Obstacle perception can succesfully detect obstacles in time"
+                solution Sn11
+                    uuid 7712af8b-d358-48d0-a1ac-cbbbd310cb72
+                    summary "Cummulative metrics about object avoidance efficiency over the whore velocity range of the drone (Drone - Object GT distance)"
+            goal G4
+                uuid ad25b733-15eb-4d77-b008-95ee3b799419
+                summary "Battery management system is performing as intended, effectively managing resources"
+                assumption A4
+                    uuid 04999c98-3816-459a-b196-90ae5f3b53a3
+                    summary "Total flight path is 27km max. (Batterty life is 30 min with 15 m/s velocity)"
+                goal G16
+                    uuid 8e421810-9714-4f6e-9012-dbd3a3dd2eb8
+                    summary "RTH - Return to home"
+                    assumption A12
+                        uuid 747ff055-698f-4740-8c59-46ebd1604b16
+                        summary "Wind strength is below limits and path planner can calculate with strength & direction"
+                    context C6
+                        uuid 4ce4c7fb-709d-4958-a9da-7178635bd49a
+                        summary "Function assures safe return to home based on battery level vs home distance"
+                    solution Sn10
+                        uuid f0274ecf-8f01-495d-9a37-1fae4f4b0448
+                        summary "Cummulative metrics about remaining battery level and RTH success over different missions"
+                goal G17
+                    uuid 06ace71d-0e2f-4114-bcb0-e718a6ff26f0
+                    summary "emergency landing"
+                    assumption A13
+                        uuid d1e9fa99-3b08-4652-ad94-47d5edc37435
+                        summary "Drone is not over water"
+                    context C1
+                        uuid e4476d62-e4d0-4356-95a5-6ac399c8e8aa
+                        summary "When battery is critically low drone can do safe emergency landing"
+                    solution Sn9
+                        uuid 893fbe29-6091-45f9-be9c-a817b8c1b31b
+                        summary "Cummulative metrics about emergency landing success over different situations"
+        goal G5
+            uuid edad204f-742d-40b0-bf08-64ad99b209bd
+            summary "The embedded world model represents the belief of the environment."
+            goal G13
+                uuid 3aabee6a-2aab-4212-a76e-bccb7e7d4bc4
+                summary "The system accurately observes and correctly tracks the distribution of location and movement direction"
+                assumption A11
+                    uuid a44783c9-9c66-4a28-895d-88533270cef6
+                    summary "Position estimation (GNSS) is correct (accuracy < threshold)"
+                assumption A6
+                    uuid 4996d5e5-8c0f-4c18-be34-b264d06fc1f1
+                    summary "Initial belief map is correct"
+                solution Sn12
+                    uuid cd0f2d9b-9b00-40a4-9942-78d232a0650f
+                    summary "Cummulative metrics about belief map vs. GT data"
+        goal G7
+            uuid 9c5e813f-1978-466e-b36a-685ed9e0f284
+            summary "Optical perception system operates within expected parameters"
+            assumption A5
+                uuid 61bc71f5-8d1a-4907-b4d8-e12b4e80388f
+                summary "Camera is operational, vibrations, optical distortions are within limits"
+            goal G11
+                uuid 30ef83f7-10c6-4a4b-ab47-95f93f9b5fe5
+                summary "The obstacle perception system consistently detects obstacles, ensuring safe navigation for the drone"
+                assumption A10
+                    uuid eb9c3b1c-7134-4f38-bbea-f50188b1ba5f
+                    summary "Stereo camera can detect obstacles at a safe distance head of the drone at a given FOV"
+                context C4
+                    uuid 05874483-a624-4b51-aa5b-53be1010efdc
+                    summary "Sentinel has stereo vision based binary voxel grid environment (obstacle) representation"
+                solution Sn13
+                    uuid cb94f034-2826-490a-9184-79421ece24e6
+                    summary "Cummulative metrics about obstacle detection & perceptipn over different distances"
+            goal G12
+                uuid 299e2b89-3a62-47f2-945b-2ecb2cd5fb4a
+                summary "The target perception system performs as intended, accurately identifying the target"
+                context C5
+                    uuid 9f887843-74fe-46c9-92ef-ac201d66615d
+                    summary "Drone has high resolution camera"
+                goal G10
+                    uuid 0d5c8ad9-655a-4a1f-8b58-0def9f4cbb3a
+                    summary "The system effectively identify objects at a range of 200 m"
+                    solution Sn6
+                        uuid a00f42d3-334a-4b14-8534-9e477eaebf76
+                        summary "Cummulative metrics about object identification over different distances"
+                goal G8
+                    uuid d3147f2f-5ed0-4dd0-8efc-c0dea871bce6
+                    summary "The system effectively detects objects at a range of 1800 m"
+                    solution Sn8
+                        uuid 99b66720-1a01-4d35-9064-625935ee1eac
+                        summary "Cummulative metrics about object detection over different distances"
+                goal G9
+                    uuid c1d18a28-f454-4683-af74-dd20a45c9999
+                    summary "The system effectively recognize objects at a range of 450 m"
+                    solution Sn7
+                        uuid 9b2e84a9-fdfd-4327-a8b3-83af0000f062
+                        summary "Cummulative metrics about object recognization over different distances"

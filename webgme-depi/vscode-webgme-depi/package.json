@@ -1,0 +1,82 @@
+{
+    "name": "webgme-depi",
+    "displayName": "WebGME Depi",
+    "description": "Wrapper around a webgme instance providing depi functionality",
+    "version": "0.2.5",
+    "publisher": "vu-isis",
+    "icon": "images/webgme-icon.png",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vu-isis/CAID-tools.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vu-isis/CAID-tools.git"
+    },
+    "engines": {
+        "vscode": "^1.82.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "depi": {
+        "toolId": "webgme",
+        "revealCmd": "webgme-depi.revealDepiResource"
+    },
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "webgme-depi.modelingEditor",
+                "category": "WebGME",
+                "title": "Modeling Editor"
+            },
+            {
+                "command": "webgme-depi.revealTest",
+                "category": "WebGME",
+                "title": "Reveal Test"
+            }
+        ],
+        "configuration": {
+            "title": "WebGME",
+            "properties": {
+                "webgme-depi.urls": {
+                    "type": "array",
+                    "default": [
+                        "http://127.0.0.1:8888/?project=guest%2BdepiTest"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of urls to webgme instances"
+                },
+                "webgme-depi.depiserver_ping_interval_seconds": {
+                    "type": "number",
+                    "default": 20,
+                    "description": "Time in seconds in between pings to depi-server."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/node": "18.x",
+        "@types/vscode": "^1.82.0",
+        "@typescript-eslint/eslint-plugin": "^6.7.3",
+        "@typescript-eslint/parser": "^6.7.3",
+        "eslint": "^8.50.0",
+        "glob": "^10.3.3",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "depi-node-client": "^0.10.1"
+    }
+}

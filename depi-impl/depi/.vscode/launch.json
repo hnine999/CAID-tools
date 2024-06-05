@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "node",
+            "name": "depi_client_js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/node_client/src/client.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "node",
+            "name": "dump-load",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dump-load/index.js"
+        }
+    ]
+}

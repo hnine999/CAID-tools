@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "/home/pmeijer/.nvm/versions/node/v18.16.0/bin/node",
+            "name": "monitor",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/webgme_monitor.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "/home/pmeijer/.nvm/versions/node/v18.16.0/bin/node",
+            "name": "simpleGit",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/test/simpleGitTest.js"
+        }
+    ]
+}

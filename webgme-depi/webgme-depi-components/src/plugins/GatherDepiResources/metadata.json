@@ -1,0 +1,48 @@
+{
+  "id": "GatherDepiResources",
+  "name": "Data Generation Mock-up",
+  "version": "0.1.0",
+  "description": "Traverses model and collects linked source-files and outputs an artifact that is pushed into git-repo.",
+  "icon": {
+    "class": "glyphicon glyphicon-cog",
+    "src": ""
+  },
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": true,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": [
+    {
+        "name": "targetRepoUrl",
+        "displayName": "Target Repository",
+        "description": "Url of git repository where to put output.",
+        "value": "http://127.0.0.1:3001/patrik/Evidence.git",
+        "valueType": "string",
+        "readOnly": false
+    },
+    {
+        "name": "targetRepoBranch",
+        "displayName": "Target Repository Branch",
+        "description": "Branch of target repository.",
+        "value": "main",
+        "valueType": "string",
+        "readOnly": false
+    },
+    {
+        "name": "targetRepoUser",
+        "displayName": "Target Repository User",
+        "description": "Credentials for Repository",
+        "value": "patrik",
+        "valueType": "string",
+        "readOnly": false
+    },
+    {
+        "name": "targetRepoPassword",
+        "displayName": "Target Repository Password",
+        "description": "Credentials for Repository",
+        "value": "password",
+        "valueType": "string",
+        "readOnly": false
+    }
+  ]
+}

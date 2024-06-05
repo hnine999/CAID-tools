@@ -1,0 +1,70 @@
+{
+	"name": "Assurance",
+    "scopeName": "text.gsn",
+    "fileTypes": [
+        "gsn"
+    ],
+    "repository": {
+        "general": {
+            "patterns": [
+                {
+                    "include": "#linecomment"
+                },
+                {
+                    "include": "#blockcomment"
+                },
+                {
+                    "include": "#text"
+                },
+                {
+                    "include": "#keyword1"
+                },
+                {
+                    "include": "#keyword2"
+                },
+                {
+                    "include": "#keyword3"
+                }
+
+            ]
+        },
+        "linecomment": {
+            "name": "comment.line.double-dash.gsn",
+            "begin": "(^[ \\t]+)?(?=//)",
+			"end": "(?=$)"
+        },
+        "blockcomment": {
+            "name": "comment.block.gsn",
+            "begin": "/\\*(\\*)?(?!/)",
+			"end": "\\*/"
+        },
+        "text": {
+            "name" : "string.quoted.double.gsn",
+            "begin": "\"",
+            "end": "\""
+        },
+        "keyword1": {
+            "name": "keyword.control.gsn",
+            "match": "\\b(GOALS|STRATEGIES|CONTEXTS|ASSUMPTIONS|JUSTIFICATIONS|SOLUTIONS)\\b"
+
+        },
+        "keyword2": {
+            "name": "keyword.control.gsn",
+            "match": "\\b(ref_goal|ref_strategy|ref_solution|ref_context|ref_assumption|ref_justification|artifact|label|summary|info|uuid|status)\\b"
+
+        },
+        "keyword3": {
+            "name": "keyword.control.gsn",
+            "match": "\\b(goal|strategy|solution|assumption|context|justification)\\b"
+
+        }
+        
+
+    },
+    "patterns": [
+        {
+            "include": "#general"
+        }
+    ],
+    "uuid": "8383e49a-fa0d-4bb5-827b-10e8abb294ca"
+}

@@ -1,0 +1,109 @@
+# Make sure you have a gitlab token for your gitlab user with read_registry access
+# https://git.isis.vanderbilt.edu/-/user_settings/personal_access_tokens
+#
+# docker login git.isis.vanderbilt.edu:5050 -u <username> -p <personal_access_token>
+# docker-compose up
+
+version: "3"
+
+# The use of multiple networks is only for documentation purposes.
+networks:
+  depi-net:
+    driver: bridge
+  gitea-net:
+    driver: bridge
+  mongo-net:
+    driver: bridge
+  webgme-net:
+    driver: bridge
+
+services:
+  dolt-server:
+    image: dolthub/dolt-sql-server:latest
+    container_name: dolt-server
+    restart: always
+    volumes:
+      - ./depi:/var/lib/dolt/depi-example
+    networks:
+      - depi-net
+    ports:
+      - 3306:3306
+    command: /var/lib/dolt/depi-example/start-dolt.sh
+  depi-server:
+    image: git.isis.vanderbilt.edu:5050/aa-caid/depi-impl/depi-go-server:0.7.6
+    container_name: depi-server
+    restart: always
+    volumes:
+      - ./depi:/app/depi-example
+    networks:
+      - depi-net
+    ports:
+      - 5150:5150
+    command: /app/depi-example/start-depi.sh
+  git-monitor:
+    image: git.isis.vanderbilt.edu:5050/aa-caid/depi-impl/git-monitors:0.7.6
+    container_name: git-monitor
+    restart: always
+    command: python -u ./src/depi_monitors/git_monitor.py --depi depi-server:5150 --user monitor --password monitor --toolid git --port 3003
+    networks:
+      - depi-net
+      - gitea-net
+  gsn-monitor:
+    image: git.isis.vanderbilt.edu:5050/aa-caid/depi-impl/git-monitors:0.7.6
+    container_name: gsn-monitor
+    restart: always
+    command: python -u ./src/depi_monitors/git_monitor.py --depi depi-server:5150 --user monitor --password monitor --toolid git-gsn --port 3002
+    networks:
+      - depi-net
+      - gitea-net
+  webgme-server:
+    image: git.isis.vanderbilt.edu:5050/aa-caid/webgme-depi:0.2.5
+    container_name: webgme-server
+    restart: always
+    environment:
+      - NODE_ENV=docker
+      - GME_PUBLIC_HOST=${HOST}
+    networks:
+      - webgme-net
+      - mongo-net
+    ports:
+      - 8888:8888
+  webgme-monitor:
+    image: git.isis.vanderbilt.edu:5050/aa-caid/webgme-depi:0.2.5
+    container_name: webgme-monitor
+    restart: always
+    command: npm run monitor
+    environment:
+      - NODE_ENV=docker
+      - GME_HOST=webgme
+    networks:
+      - webgme-net
+      - depi-net
+      - mongo-net
+  mongo:
+    image: mongo:4.2
+    container_name: mongo
+    restart: always
+    volumes:
+      - ./webgme/data:/data/db
+      - ./webgme/dumps:/dumps
+    environment:
+      - NODE_ENV=docker
+    networks:
+      - mongo-net
+  gitea:
+    image: gitea/gitea:latest-rootless
+    container_name: gitea
+    restart: always
+    volumes:
+      - ./gitea/data:/var/lib/gitea
+      - ./gitea/config:/etc/gitea
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - GITEA__REPOSITORY__ENABLE_PUSH_CREATE_USER=true
+      - GITEA__webhook__ALLOWED_HOST_LIST=git-monitor,gsn-monitor
+    networks:
+      - gitea-net
+    ports:
+      - 3000:3000

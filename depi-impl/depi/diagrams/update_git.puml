@@ -1,0 +1,33 @@
+@startuml
+actor User as user
+participant "User Local Git" as git_local
+participant "Git Server" as git_server
+participant "Server Git Plugin" as git_server_plugin
+participant "Depi" as depi
+
+user -> git_local : Commit new version
+user -> git_local : Push
+git_local -> git_server : Push commits
+git_server -> git_server_plugin : Run on Commit
+git_server_plugin -> depi : Get Last Known Version
+depi -> git_server_plugin : Last Known Version
+
+note right of depi
+Git server plugin sends
+only resources that changed
+since last known commit.
+The Depi ignores any of
+these resources that don't
+participate in a link.
+end note
+
+git_server_plugin -> depi : Update Resources in Group
+depi -> depi : Update depi version
+
+note right of depi
+Depi marks links as dirty if
+their source is a resource
+in the resource group being updated.
+end note
+@enduml
+

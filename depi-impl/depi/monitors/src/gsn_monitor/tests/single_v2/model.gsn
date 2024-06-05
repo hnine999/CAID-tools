@@ -1,0 +1,73 @@
+GOALS g00
+{
+    goal ga1
+    {
+        uuid:"affadaca-393e-4a61-b116-aea6868c4cfc" ;
+        summary: '''The root Goal of the tree''';
+        info: '''This is the very root of the model and if valid we are good''';
+        context c1
+        {
+            uuid:"b7bde2d8-7126-4d2c-bc4f-3636cfbe9493" ;
+            summary: '''Contextual info inlined''';
+            info:  '''An inlined context''';
+        }
+        assumption a1
+        {
+            uuid:"6e1975bb-de18-43e4-999c-889cb87204cd" ;
+            summary: '''Assumption info inlined''';
+            info: '''Another assumption made''';
+        }
+        goal g11
+        {
+            uuid:"62c6fb57-fa52-4434-acc1-6611d27311c1" ;
+            summary: '''Direct child of root''';
+            info: '''Some random info''';
+            goal g111
+            {
+                uuid:"50038e61-bbb3-444e-a3c2-45282c4b07f6" ;
+                summary: '''Child of a child.''';
+                info: '''Some random info''';
+                solution s2
+                {
+                    uuid:"104d5f44-caec-463a-839c-885ea1072e72" ;
+                    summary: '''Solution Summary 2''';
+                    info: '''Info about solution2''';
+                    status: Approved;
+                }
+            }
+        }
+        goal g12
+        {
+            uuid:"604d5f44-caec-463a-839c-885ea1072e72" ;
+            summary: '''Sum summary''';
+            info: '''Some random info''';
+            ref_context ga1.c1;
+            solution s1
+            {
+                uuid:"504d5f44-caec-463a-839c-885ea1072e72" ;
+                summary: '''Solution Summary''';
+                info: '''Info about solution''';
+            }
+        }
+    }
+}
+
+CONTEXTS c0
+{
+    context c1
+    {
+        uuid:"b6234a1a-87f8-4650-8c5d-891e513b39da" ;
+        summary: '''Contextual info''';
+        info: '''In the context of the node itself''';
+    }
+}
+
+ASSUMPTIONS a0
+{
+    assumption a1
+    {
+        uuid:"b4729199-e64c-4ee0-8607-ae17af0b8cc3" ;
+        summary: '''An assumpation''';
+        info: '''Under certain conditions assumed to hold''';
+    }
+}

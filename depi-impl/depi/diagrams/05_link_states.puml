@@ -1,0 +1,10 @@
+@startuml
+hide empty description
+[*] --> CreateLink
+CreateLink --> Link : Create link from resource to resource
+Link : from -> to
+Link --> FromChanged : "from" resource changes
+FromChanged --> LinkDirty : Link is dirty
+LinkDirty --> Link : Mark link clean
+Link --> LinkDeleted : Unlink resources
+@enduml

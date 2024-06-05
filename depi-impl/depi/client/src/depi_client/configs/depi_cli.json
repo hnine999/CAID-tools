@@ -1,0 +1,8 @@
+{
+  "host": "localhost",
+  "port": 5150,
+  "cert": "",
+  "user": "mark",
+  "password": "mark",
+  "project": "gittest"
+}

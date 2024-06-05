@@ -1,0 +1,35 @@
+{
+  "name": "depi-node-client",
+  "version": "0.10.1",
+  "description": "GRPC Client for communicating with depi from node in typescript or javascript",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://git.isis.vanderbilt.edu/aa-caid/depi-impl.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./compile-proto.sh && node ./generateAsyncTypes.js",
+    "prepublishOnly": "./compile-proto.sh && node ./generateAsyncTypes.js && tsc -p .",
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p ."
+  },
+  "keywords": [
+    "depi",
+    "grpc"
+  ],
+  "author": "meijerop",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.13",
+    "@types/google-protobuf": "^3.15.6",
+    "google-protobuf": "^3.21.2"
+  },
+  "devDependencies": {
+    "grpc-tools": "^1.11.2",
+    "ts-file-parser": "^0.0.21",
+    "ts-protoc-gen": "^0.15.0",
+    "typescript": "^5.2.2"
+  }
+}

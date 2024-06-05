@@ -1,0 +1,105 @@
+GOALS str_scenario
+    goal G1
+        uuid ecb3b0b7-e4d4-4d50-94de-f7f7058db314
+        summary "COP is valid - Drone can locate and identify target(s)"
+        assumption A1
+            uuid 45d49c89-db44-44f5-a488-a2c6d25ea26b
+            summary "Drone is fully operational, no degradation present, weather is within operational limits (wind and wind gusts, precipitation, fog, dust, daylight)."
+        context C1
+            uuid 0bc5e669-8601-4119-bc29-db4cd776d905
+            summary "Monitor, identify, and characterize
+suspicious behaviors. Stay out of
+range/sight of suspicious persons w/ guns."
+        context C2
+            uuid a20e48a9-e89b-4e55-bb65-26893e906a71
+            summary "Search for suspicious activity in
+designated areas of interest along red
+route. Maintain safe distance from
+buildings, obstacles (trees), persons, cars."
+        goal G14
+            uuid b648f600-12f9-445a-b7aa-4879052fecd3
+            summary "Drone is controllable"
+            goal G15
+                uuid 2d755b64-b6ae-4b66-a0cc-9436dca9baee
+                summary "Low(er) level control  is working as expected (?)"
+                assumption A9
+                    uuid 5a75d9f0-429f-49e1-922a-7c0d1e0388e0
+                    summary "There is an option or way for fast(er) interaction (eg. heading change, e-stop) to support obstacle avoidance"
+            goal G6
+                uuid a5be2d4e-7cf6-4671-97d8-24bda7dcd7e9
+                summary "Waypoint controller is working as expected"
+                assumption A7
+                    uuid 88e45400-7f6d-4d4f-9fd2-01d34da1787f
+                    summary "Drone can be controller with a target waypoint or list of target waypoints"
+                assumption A8
+                    uuid f7a32d96-4aab-4fc9-8553-1ca075e20c04
+                    summary "Waypoint execution can be cancelled"
+        goal G2
+            uuid 26d544a7-8891-4c56-b64f-ce67108025fe
+            summary "All hazards have been elimiated"
+            goal G17
+                uuid 4f89084c-eb0f-409e-9931-1a5f64e5bb60
+                summary "Drone can avoid direct line of sight (eg. partial coverage by obstacle)"
+                assumption A11
+                    uuid 082ee9f0-f385-4469-97b9-5935c6674342
+                    summary "Drone can operate relative close to obstacles while avoiding collision"
+            goal G3
+                uuid d3e2d0fa-eca8-4663-98f0-8f7cc5ede09e
+                summary "Obstacle avoidance is operational"
+                assumption A3
+                    uuid e1922b94-644f-4c6e-96e5-0acfd5868b6d
+                    summary "Obstacle perception can succesfully detect obstacles in time"
+            goal G4
+                uuid a4c3c14b-6a5b-4095-bb7b-0cc55b426c9c
+                summary "Battery/Resource management is working as expected"
+                assumption A4
+                    uuid 9594be71-d414-4722-91b0-60caf1e72843
+                    summary "Total flight path is 27km max. (Batterty life is 30 min with 15 m/s velocity)"
+        goal G5
+            uuid 4fe8ccab-80c5-45cc-bf77-261877858544
+            summary "Probability map is correct"
+            goal G13
+                uuid da753464-05cb-4d24-bd3b-d074980ce190
+                summary "Observations are correct - Distribution of location and movement direction"
+                assumption A2
+                    uuid 209c794b-a519-4a6b-b21e-cfd8289dde66
+                    summary "POI regions are correct"
+                assumption A6
+                    uuid 9a9e9df7-82f8-4f2e-924f-79b3b9cc8bac
+                    summary "Initial belief map is correct"
+        goal G7
+            uuid 3028821c-61d1-4315-a514-d343fe9c6831
+            summary "Camera Perception - Single optical sensor is working as expected"
+            assumption A5
+                uuid f9682dcd-9e86-4d2d-b54e-d31ac8db75b4
+                summary "Camera is operational, vibrations, optical distortions are within limits"
+            goal G11
+                uuid c55c924f-047c-4521-ad9b-f914ae5ea65a
+                summary "Obstacle perception is working as expected"
+                assumption A10
+                    uuid d95b6442-ae2c-4efe-bbd0-f196d61ec9f4
+                    summary "Stereo camera can detect obstacles at a safe distance head of the drone at a given FOV"
+                context C4
+                    uuid 3e13621c-406a-4e0c-a6b8-61b185d265bd
+                    summary "Sentinel has stereo vision based binary voxel grid environment (obstacle) representation"
+            goal G12
+                uuid 05b30298-b9b5-4553-953f-6127a811e754
+                summary "Target perception is working as expected"
+                context C5
+                    uuid aaba5170-d774-4608-8338-0a4c82693a1e
+                    summary "Drone has high resolution camera"
+                goal G10
+                    uuid 02988be6-4c19-4d14-8451-13d6e0163cd4
+                    summary "Identification at Z m"
+                goal G8
+                    uuid ded19d2d-1fe1-45ac-9901-a15f0a286f30
+                    summary "Detection at X m"
+                goal G9
+                    uuid 326aee05-141b-4e68-96dd-cd70045a7846
+                    summary "Recognition at Y m"
+            goal G16
+                uuid aafb77a2-1735-4dd7-b5e5-72027a578b98
+                summary "Activity perception is working as expected"
+                assumption A12
+                    uuid 81a76661-2c0a-4052-88fa-16754e937da0
+                    summary "Symbolic data is correct"

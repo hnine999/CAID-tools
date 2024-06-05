@@ -1,0 +1,78 @@
+GOALS UAVTargetTracking
+    goal UAVTracks
+        uuid ecb3b0b7-e4d4-4d50-94de-f7f7058db314
+        summary "COP is valid - Drone can 
+
+locate target(s)
+"
+        assumption DroneEnv
+            uuid 45d49c89-db44-44f5-a488-a2c6d25ea26b
+            summary "Drone is fully operational, no degradation present, weather is within operational limits (wind and wind gusts, precipitation, fog, dust, daylight)."
+        context MissionContext
+            uuid a20e48a9-e89b-4e55-bb65-26893e906a71
+            summary "Search for target(s) in
+designated areas of interest. Maintain safe distance from
+any obstacles. "
+        goal Autonomy
+            uuid 26d544a7-8891-4c56-b64f-ce67108025fe
+            summary "High-level autonomy (EBT) works satisafactorily. "
+            goal ObstacleAvoidance
+                uuid d3e2d0fa-eca8-4663-98f0-8f7cc5ede09e
+                summary "Obstacle avoidance is operational "
+                assumption ObstaclePerception
+                    uuid e1922b94-644f-4c6e-96e5-0acfd5868b6d
+                    summary "Obstacle perception can succesfully detect obstacles in time "
+                solution ObstacleAvoidanceTests
+                    uuid c60f6675-7d95-4ee7-9370-74f7deeb4ceb
+                    summary "Performance results based on multiple scenarios (with and without hazards). Each test gathers information related to uuv-position(s), waypoint(s), battery charge over the mission "
+            goal BatteryResouceMgmt
+                uuid a4c3c14b-6a5b-4095-bb7b-0cc55b426c9c
+                summary "Battery/Resource management is working as expected "
+                assumption BatteryStrength
+                    uuid 9594be71-d414-4722-91b0-60caf1e72843
+                    summary "Total flight path is 27km max. (Batterty life is 30 min with 15 m/s velocity) "
+                solution BatteryPredictionTests
+                    uuid 0d0bc325-1703-4503-ba10-670ec22002e4
+                    summary "RUL prediction based on multiple scenarios - each test gathers state of the uuv and battery charge over the mission "
+            goal WaypointControl
+                uuid a5be2d4e-7cf6-4671-97d8-24bda7dcd7e9
+                summary "Waypoint controller is working as expected "
+                assumption DroneControlInputs
+                    uuid 88e45400-7f6d-4d4f-9fd2-01d34da1787f
+                    summary "Drone can be controller with a target waypoint or list of target waypoints "
+                assumption DroneControlFeature
+                    uuid f7a32d96-4aab-4fc9-8553-1ca075e20c04
+                    summary "Waypoint execution can be cancelled "
+                solution ControlTests
+                    uuid 33275ec0-9fc3-4430-be42-205bc8ad6f80
+                    summary "Performance results based on comparison of uuv-position and commanded way-points over multiple missions "
+        goal CameraPerception
+            uuid 3028821c-61d1-4315-a514-d343fe9c6831
+            summary "Camera Perception is working as expected "
+            justification GroundTruthOutputs
+                uuid f9682dcd-9e86-4d2d-b54e-d31ac8db75b4
+                summary "This operation is currently based on ground truth and is considered fully operational. "
+        goal Planner
+            uuid b648f600-12f9-445a-b7aa-4879052fecd3
+            summary "Planner works satisafactorily "
+            goal WorldModel
+                uuid 4fe8ccab-80c5-45cc-bf77-261877858544
+                summary "World Model is correct "
+                goal Observations
+                    uuid da753464-05cb-4d24-bd3b-d074980ce190
+                    summary "Observations (updates) are correct "
+                    assumption InitialCondition
+                        uuid 9a9e9df7-82f8-4f2e-924f-79b3b9cc8bac
+                        summary "Initial belief map is correct "
+                    assumption POIs
+                        uuid 209c794b-a519-4a6b-b21e-cfd8289dde66
+                        summary "Point of Interest regions are correct "
+                    assumption NoGoZones
+                        uuid 2a9fefd6-db00-4975-b0e1-e2008c0501b2
+                        summary "NoGo zones are marked in the world model. "
+                    solution TestModelUpdates
+                        uuid f08ea234-8885-405d-a591-4c6f60466fce
+                        summary "Evaluation based on comparing ground-truth against predictions based on uuv-state, commands to uuv, camera inputs over multiple missions "
+            solution TestPlanner
+                uuid efb3e3a2-a9d1-43f0-9231-dced729ad911
+                summary "Evaluation of planner outputs based on updates to the world-model for multiple scenarios. "
