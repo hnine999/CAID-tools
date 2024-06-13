@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
-import { depiUtils, DepiSession } from 'depi-node-client';
-import DepiExtensionApi from './depiExtensionApi';
+import { DepiExtensionApi, depiUtils, DepiSession } from 'depi-node-client';
 /**
  * State wrt to depi integration.
  * One instance is created and kept alive as long as the panel is.

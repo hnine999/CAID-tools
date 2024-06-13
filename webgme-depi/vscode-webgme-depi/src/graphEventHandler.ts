@@ -1,13 +1,11 @@
 import * as vscode from 'vscode';
 import CONSTANTS from './CONSTANTS';
-import DepiExtensionApi from './depiExtensionApi';
-import { Resource, ResourceRef, ResourcePattern, depiUtils } from 'depi-node-client';
+import { depiUtils, Resource, ResourceRef, ResourcePattern } from 'depi-node-client';
 import DepiState from './DepiState';
 
 const { EVENTS } = CONSTANTS;
 
-export async function getGraphEventHandler(panel: vscode.WebviewPanel, depiState: DepiState, branchName: string, log: Function) {
-    const depiExtApi = new DepiExtensionApi(log);
+export async function getGraphEventHandler(panel: vscode.WebviewPanel, depiState: DepiState|null, branchName: string, log: Function) {
     const eventJobQueue: any[] = [];
     let working = false;
     async function processNextJob() {
@@ -21,18 +19,24 @@ export async function getGraphEventHandler(panel: vscode.WebviewPanel, depiState
         setTimeout(processNextJob);
     }
 
-    if (branchName !== 'main') {
-        await depiState.switchBranch(branchName);
+    if (depiState) {
+        if (branchName !== 'main') {
+            await depiState.switchBranch(branchName);
+        }
+        
+        await depiState.addDepiWatcher(function onUpdate() {
+            panel.webview.postMessage({ type: CONSTANTS.EVENTS.DEPI_UPDATED });
+        });
     }
-
-    await depiState.addDepiWatcher(function onUpdate() {
-        panel.webview.postMessage({ type: CONSTANTS.EVENTS.DEPI_UPDATED });
-    });
 
     async function processMessage(message: any) {
         const { commandId, type, data } = message;
         try {
             log(`\nGot message from graph-editor: ${JSON.stringify(message)}`);
+            if (!depiState) {
+                throw new Error('Depi is not enabled, set the configuration "webgme-depi.enableDepi": true');
+            }
+
             switch (type) {
                 case EVENTS.GET_BRANCH_NAME:
                     await panel.webview.postMessage({ commandId, result: branchName });
@@ -47,19 +51,19 @@ export async function getGraphEventHandler(panel: vscode.WebviewPanel, depiState
                     await panel.webview.postMessage({ commandId, result: resources });
                     break;
                 case EVENTS.SHOW_DEPENDENCY_GRAPH:
-                    await depiExtApi.showDependencyGraph(data);
+                    await depiState.depiExtApi.showDependencyGraph(data);
                     await panel.webview.postMessage({ commandId });
                     break;
                 case EVENTS.SHOW_DEPENDANTS_GRAPH:
-                    await depiExtApi.showDependantsGraph(data);
+                    await depiState.depiExtApi.showDependantsGraph(data);
                     await panel.webview.postMessage({ commandId });
                     break;
                 case EVENTS.SHOW_BLACKBOARD:
-                    await depiExtApi.showBlackboard();
+                    await depiState.depiExtApi.showBlackboard();
                     await panel.webview.postMessage({ commandId });
                     break;
                 case EVENTS.REVEAL_RESOURCE:
-                    await depiExtApi.revealDepiResource(data);
+                    await depiState.depiExtApi.revealDepiResource(data);
                     await panel.webview.postMessage({ commandId });
                     break;
                 case EVENTS.GET_DEPENDENCY_GRAPH:
@@ -81,7 +85,7 @@ export async function getGraphEventHandler(panel: vscode.WebviewPanel, depiState
                 // Edit calls
                 case EVENTS.ADD_AS_RESOURCE:
                     await depiUtils.addResourcesToBlackboard(await depiState.getDepiSession(), [data]);
-                    await depiExtApi.showBlackboard();
+                    await depiState.depiExtApi.showBlackboard();
                     await panel.webview.postMessage({ commandId });
                     break;
                 case EVENTS.REMOVE_AS_RESOURCE:
@@ -91,7 +95,7 @@ export async function getGraphEventHandler(panel: vscode.WebviewPanel, depiState
                     break;
                 case EVENTS.ADD_DEPENDANT:
                 case EVENTS.ADD_DEPENDENCY:
-                    const otherResource = await depiExtApi.selectDepiResource();
+                    const otherResource = await depiState.depiExtApi.selectDepiResource();
                     if (!otherResource) {
                         await panel.webview.postMessage({ commandId });
                     }

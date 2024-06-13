@@ -1,4 +1,4 @@
-# GSN Assurance VSCode
+# GSN Editor
 
 This extension includes a grammar and a corresponding language server that facilitates syntax highlighting, grammar checks, and code completion for the GSN Assurance Language. This language is a Domain Specific Language (DSL) based on Goal Structuring Notation (GSN).
 

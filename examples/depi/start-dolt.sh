@@ -1,4 +1,5 @@
 #!/bin/sh
+cd /var/lib/dolt/depi-example
 dolt config --global -add user.email depi@vanderbilt.edu
 dolt config --global -add user.name Depi
 dolt sql-server -H 0.0.0.0 &

@@ -1,8 +1,8 @@
 {
     "name": "webgme-depi",
-    "displayName": "WebGME Depi",
+    "displayName": "WebGME Client",
     "description": "Wrapper around a webgme instance providing depi functionality",
-    "version": "0.2.5",
+    "version": "0.2.9",
     "publisher": "vu-isis",
     "icon": "images/webgme-icon.png",
     "license": "MIT",
@@ -11,7 +11,7 @@
         "url": "https://github.com/vu-isis/CAID-tools.git"
     },
     "bugs": {
-        "url": "https://github.com/vu-isis/CAID-tools.git"
+        "url": "https://github.com/vu-isis/CAID-tools/issues"
     },
     "engines": {
         "vscode": "^1.82.0"
@@ -31,11 +31,6 @@
                 "command": "webgme-depi.modelingEditor",
                 "category": "WebGME",
                 "title": "Modeling Editor"
-            },
-            {
-                "command": "webgme-depi.revealTest",
-                "category": "WebGME",
-                "title": "Reveal Test"
             }
         ],
         "configuration": {
@@ -50,6 +45,11 @@
                         "type": "string"
                     },
                     "description": "List of urls to webgme instances"
+                },
+                "webgme-depi.enableDepi": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true will enable depi."
                 },
                 "webgme-depi.depiserver_ping_interval_seconds": {
                     "type": "number",
@@ -77,6 +77,6 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "depi-node-client": "^0.10.1"
+        "depi-node-client": "^1.0.3"
     }
 }

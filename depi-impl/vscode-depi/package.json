@@ -1,8 +1,8 @@
 {
     "name": "depi",
-    "displayName": "DEPI Manager",
-    "description": "Dependency Intermediator",
-    "version": "0.7.7",
+    "displayName": "Depi Browser",
+    "description": "Provides a GUI for Depi Blackboard and Dependency Graph and a way to add git resources to Depi.",
+    "version": "0.8.1",
     "license": "MIT",
     "publisher": "vu-isis",
     "icon": "images/vanderbilt.jpeg",

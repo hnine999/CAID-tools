@@ -2,10 +2,10 @@
 This is where the example models live. These are a combination of states from:
  - git repositories with source code and gsn-assurance models (see `./repos`)
  - system models from webgme in the form of exported mongo documents (`./webgme`)
- - finally an exported snapshot of the depi data-base itself (`./depi`) which groups and links the resources together
+ - finally an exported snapshot of the depi data-base itself (`./depi`) which groups and links the resources from the other tools together
 
-## Building Running the Example Models
-In addition to the models this repostiory also contains the neccessary resources for building and/or running the example system using docker. If you are new to these tools and want to try out them quickly we recommend using the monolithic docker-images exaplined and referenced in the root of this repository. (Note that the utilities for building those images and the models states reside here.)
+## Building and Running the Example Models
+In addition to the models this repository also contains the neccessary resources for building and/or running the example system using docker. If you are new to these tools and want to try out them quickly we recommend using the monolithic docker-images exaplined and referenced in the root of this repository. (Note that the utilities for building those images and the models states reside here.)
 
 If you are further along and are considering hosting some of the services from this example and maybe integrate some of your own services (e.g. existing repositories at gitlab or github) - the `docker-compose.yml` is a good start. Below follows the steps needs to run it and initiate it with the state mentioned above.
 
@@ -104,10 +104,10 @@ First of all [download and install vscode >= 1.82](https://code.visualstudio.com
 
 Install the linked vscode-extensions by searching for their name in the extensions menu under market place in your vscode instance.
 
-- Depi Manager
-- WebGME Depi
-- GSN Assurance
-  - This extension requires java 8+ [for more details about this extenion click here.](https://github.com/vu-isis/gsn-domain/tree/main/gsn-vscode-xtext/vscode-extension-self-contained#gsn-assurance-vscode)
+- Depi Browser
+- WebGME Client
+- GSN Editor
+  - This extension requires java 8+ [for more details about this extenion click here.](../gsn-domain/gsn-vscode-xtext/vscode-extension-self-contained/README.md)
 
 #### Settings
  - To edit the user settings JSON do `Ctrl/Cmd + Shift + P` and start typing `Open User Settings (JSON)`. Invoke the command and paste the following into the JSON file.
@@ -120,6 +120,7 @@ IMPORTANT! Replace `<HOST>` with the same host configured for the depi-services.
     "depi.url": "<HOST>:5150",
     "depi.user_name": "demo",
     "webgme-depi.urls": ["http://<HOST>:8888/"],
+    "webgme-depi.enableDepi": true,
     "gsnGraph.enableDepi": true
     ...
 ```

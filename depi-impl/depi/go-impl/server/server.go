@@ -187,8 +187,8 @@ func NewServer() *Server {
 	return &server
 }
 
-func (server *Server) generateToken(sessionId string, userName string) string {
-	userInfo := []byte(fmt.Sprintf("%s;%s;%d;", sessionId, userName, time.Now().Unix()))
+func (server *Server) generateToken(userName string) string {
+	userInfo := []byte(fmt.Sprintf("%s;%d;", userName, time.Now().Unix()))
 	blockLen := aes.BlockSize + aes.BlockSize*(1+(len(userInfo)-1)/aes.BlockSize)
 	iv := make([]byte, aes.BlockSize)
 	padded := make([]byte, blockLen-aes.BlockSize)
@@ -204,7 +204,7 @@ func (server *Server) generateToken(sessionId string, userName string) string {
 	return base64.StdEncoding.EncodeToString(dst)
 }
 
-func (server *Server) decodeToken(token string) (string, string, int64, error) {
+func (server *Server) decodeToken(token string) (string, int64, error) {
 	ciphertext, err := base64.StdEncoding.DecodeString(token)
 
 	iv := ciphertext[:aes.BlockSize]
@@ -212,23 +212,23 @@ func (server *Server) decodeToken(token string) (string, string, int64, error) {
 	cbc := cipher.NewCBCDecrypter(*server.loginTokenKey, iv)
 	cbc.CryptBlocks(ciphertext, ciphertext)
 	parts := strings.Split(string(ciphertext), ";")
-	if len(parts) < 3 {
-		return "", "", 0, errors.New("Corrupted token")
+	if len(parts) < 2 {
+		return "", 0, errors.New("Corrupted token")
 	}
-	timestamp, err := strconv.ParseInt(parts[2], 10, 64)
+	timestamp, err := strconv.ParseInt(parts[1], 10, 64)
 	if err != nil {
-		return "", "", 0, errors.New("Corrupted token")
+		return "", 0, errors.New("Corrupted token")
 	}
-	return parts[0], parts[1], timestamp, nil
+	return parts[0], timestamp, nil
 }
 
 func (server *Server) refreshToken(token string) string {
-	sessionId, user, _, err := server.decodeToken(token)
+	user, _, err := server.decodeToken(token)
 	if err != nil {
 		log.Printf("Error decoding token: %+v\n", err)
 		return token
 	}
-	return server.generateToken(sessionId, user)
+	return server.generateToken(user)
 }
 
 func (server *Server) Start() error {
@@ -440,7 +440,7 @@ func (server *Server) Login(ctx context.Context, request *depi_grpc.LoginRequest
 				if !ok {
 					server.blackboards[request.User] = NewBlackboard()
 				}
-				token := server.generateToken(sessionId, request.User)
+				token := server.generateToken(request.User)
 				return server.printGRPC(
 					&depi_grpc.LoginResponse{Ok: true, Msg: "", SessionId: sessionId, LoginToken: token, User: request.User}).(*depi_grpc.LoginResponse), nil
 			} else {
@@ -455,7 +455,7 @@ func (server *Server) Login(ctx context.Context, request *depi_grpc.LoginRequest
 func (server *Server) LoginWithToken(ctx context.Context, request *depi_grpc.LoginWithTokenRequest) (*depi_grpc.LoginResponse, error) {
 	server.printGRPC(request)
 
-	sessionId, userName, timeout, err := server.decodeToken(request.LoginToken)
+	userName, timeout, err := server.decodeToken(request.LoginToken)
 	if err != nil {
 		log.Printf("Error decoding token: %+v\n", err)
 		return server.printGRPC(
@@ -467,22 +467,19 @@ func (server *Server) LoginWithToken(ctx context.Context, request *depi_grpc.Log
 	}
 	user, ok := server.logins[userName]
 	if ok {
-		existingSession := server.getSession(sessionId)
-		if existingSession == nil {
-			sessionId = uuid.New().String()
-			mainBranch, err := server.db.GetBranch("main")
-			if err == nil {
-				server.addSession(
-					NewSession(sessionId, user, mainBranch))
-				_, ok := server.blackboards[userName]
-				if !ok {
-					server.blackboards[userName] = NewBlackboard()
-				}
-			} else {
-				return nil, err
+		sessionId := uuid.New().String()
+		mainBranch, err := server.db.GetBranch("main")
+		if err == nil {
+			server.addSession(
+				NewSession(sessionId, user, mainBranch))
+			_, ok := server.blackboards[userName]
+			if !ok {
+				server.blackboards[userName] = NewBlackboard()
 			}
+		} else {
+			return nil, err
 		}
-		token := server.generateToken(sessionId, userName)
+		token := server.generateToken(userName)
 		return server.printGRPC(
 			&depi_grpc.LoginResponse{Ok: true, Msg: "", SessionId: sessionId, LoginToken: token, User: userName}).(*depi_grpc.LoginResponse), nil
 	}
@@ -2924,7 +2921,7 @@ func (server *Server) Ping(ctx context.Context, request *depi_grpc.PingRequest) 
 			LoginToken: "",
 		}, nil
 	}
-	token := server.generateToken(session.SessionId, session.User.Name)
+	token := server.generateToken(session.User.Name)
 	return &depi_grpc.PingResponse{
 		Ok: true, Msg: "", LoginToken: token,
 	}, nil

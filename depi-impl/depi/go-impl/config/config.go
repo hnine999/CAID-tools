@@ -54,7 +54,7 @@ type UserConfig struct {
 type Config struct {
 	ToolConfig          map[string]ToolConfig `json:"tools"`
 	DBConfig            DBConfig              `json:"db"`
-	LoggingConfig       LoggingConfig         `jsong:"logging"`
+	LoggingConfig       LoggingConfig         `json:"logging"`
 	AuditConfig         AuditConfig           `json:"audit"`
 	ServerConfig        ServerConfig          `json:"server"`
 	AuthorizationConfig AuthorizationConfig   `json:"authorization"`

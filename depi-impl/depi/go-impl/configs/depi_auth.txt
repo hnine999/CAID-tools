@@ -1,0 +1,57 @@
+all_rg {
+  CapResGroup*(*,*)
+  CapResource*(*,*,*)
+}
+
+all_res {
+  CapResource*(*,*,*)
+}
+
+all_links {
+  CapLink*(*,*,*,*,*,*)
+}
+
+all_depi {
+  CapDepi*
+}
+
+all_branch {
+  CapBranch*
+}
+
+all {
+  all_rg
+  all_res
+  all_links
+  all_depi
+  all_branch
+}
+
+readonly_rg {
+  CapResGroupRead(*,*)
+}
+
+readonly_res {
+  CapResGroupRead(*,*)
+  CapResourceRead(*,*,*)
+}
+
+readonly_git {
+  CapResGroupRead(git,*)
+  CapResourceRead(git,*,*)
+}
+
+readonly_link {
+  CapLink(*,*,*,*,*,*)
+}
+
+readonly_branch {
+  CapBranchSwitch
+}
+
+readonly_all {
+  readonly_rg
+  readonly_res
+  readonly_link
+  readonly_branch
+}

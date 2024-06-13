@@ -8,6 +8,8 @@ node_modules
 
 src/depiUtils.d.ts
 src/depiUtils.js
+src/depiExtensionApi.d.ts
+src/depiExtensionApi.js
 
 test/cert.pem
 

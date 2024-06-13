@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "depi-monitors"
-version="0.7.7"
+version="0.8.1"
 authors = [
     {name = "Mark Wutka", email="mark.wutka@vanderbilt.edu"},
     {name = "Patrik Meijer", email="patrik.meijer@vanderbilt.edu"}

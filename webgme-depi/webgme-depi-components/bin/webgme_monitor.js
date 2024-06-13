@@ -60,7 +60,7 @@ async function handleRequest(payload) {
     }
 
     const [userName, password] = config.depi.token.split(':'); // TODO: Actual token.
-    const depiSession = await depiUtils.logInDepiClient(config.depi.url, config.depi.project, userName, password);
+    const depiSession = await depiUtils.logInDepiClient(config.depi.url, userName, password);
 
     const { userId } = payload.data;
 

@@ -27,4 +27,7 @@ RUN mkdir /home/project/.theia
 COPY --chown=theia examples/client/settings.json /home/project/.theia/settings.json
 COPY --chown=theia examples/client/clone_repos.sh /home/project/clone_repos.sh
 
+RUN git config --global user.email "demo@mail.com"
+RUN git config --global user.name "demo"
+
 CMD [ "/home/project", "--hostname=0.0.0.0", "--port=4000" ]

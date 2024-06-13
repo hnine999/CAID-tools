@@ -3,6 +3,8 @@ import * as depi from './src/pbs/depi_pb';
 import { DepiClient } from './src/pbs/depi_grpc_pb';
 import { addAsyncMethods } from './src/pbs/addAsyncMethods';
 import depiUtils, { DepiSession } from './src/depiUtils';
+import DepiExtensionApi, { TokenLoginData } from './src/depiExtensionApi';
+
 import {
     ResourcePattern,
     Resource,
@@ -22,6 +24,8 @@ export {
     DepiClient,
     addAsyncMethods,
     depiUtils,
+    DepiExtensionApi,
+    TokenLoginData,
     DepiSession,
     ResourcePattern,
     Resource,

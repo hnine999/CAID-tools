@@ -45,6 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     async function displayWebGMEPanel(webgmeUrl: string, depiBranchName = 'main') {
         let configuration = vscode.workspace.getConfiguration('webgme-depi');
+        const enableDepi = configuration.get<boolean>('enableDepi', false);
         if (!webgmeUrl) {
             const urls = configuration.get<string[]>('urls') as string[];
             if (!urls || urls.length === 0) {
@@ -82,7 +83,7 @@ export function activate(context: vscode.ExtensionContext) {
             await disposeOfState();
         }
 
-        depiState = new DepiState(log);
+        depiState = enableDepi ? new DepiState(log) : null;
         panel = vscode.window.createWebviewPanel(
             'graph',
             'WebGME Editor',

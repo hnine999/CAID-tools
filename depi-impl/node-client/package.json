@@ -1,6 +1,6 @@
 {
   "name": "depi-node-client",
-  "version": "0.10.1",
+  "version": "1.0.3",
   "description": "GRPC Client for communicating with depi from node in typescript or javascript",
   "main": "index.js",
   "types": "index.d.ts",
@@ -27,6 +27,7 @@
     "google-protobuf": "^3.21.2"
   },
   "devDependencies": {
+    "@types/vscode": "^1.78.0",
     "grpc-tools": "^1.11.2",
     "ts-file-parser": "^0.0.21",
     "ts-protoc-gen": "^0.15.0",

@@ -1,8 +1,46 @@
 # DEPI NodeJS Client
 
-This is published [as depi-node-client at npmjs](https://www.npmjs.com/package/depi-node-client) and contains the classes (plus functions at a higher level of abstraction) for the gRPC [protocol buffers for depi.](../depi/proto/depi.proto)
+This is published [as depi-node-client at npmjs](https://www.npmjs.com/package/depi-node-client) and contains the classes, plus utility functions at a higher level of abstraction, for the gRPC [protocol buffers for depi.](../depi/proto/depi.proto)
 
-## Generating Classes and Resources from .proto
+The most stright forward way to communicate with depi is by using the `depiUtils` as shown below. If you are writing a vscode extension then look at the next section of how to obtain a session.
+
+```typescript
+import { depiUtils } from 'depi-node-client';
+const url = '127.0.0.1:5051';
+const userName = 'demo';
+const password = '123456';
+// Start out by logging in.
+const depiSession = await depiUtils.logInDepiClient(url, userName, password);
+// Each call takes a session as first argument
+const resourceGroups = await depiUtils.getResourceGroups(depiSession);
+resourceGroups.forEach(rg => console.log(JSON.stringify(rg)));
+// Finally logOut.. 
+await logOut(depiSession);
+```
+
+### Methods for VS-code Extension 
+This node-module also provides a set of calls into the [Depi Browser](vscode:extension/vu-isis.depi) vscode extension. These provide a way to reuse the server url, login credentials, etc. from the one depi extension, call out and reuse generic depi GUI functionality and a way to communicate (revealing resources) across extensions for differnet depi tools.
+
+```typescript
+import { DepiExtensionApi, depiUtils } from 'depi-node-client';
+const depiExtApi = new DepiExtensionApi(console.log);
+
+// Each call will force the depi-extension to login in case it hasn't already.
+await depiExtApi.showBlackboard();
+// This will also force the depi-extension to login and additionally create a session tied to this instance of depiExtApi.
+const depiSession =  await depiExtApi.getDepiSession(); 
+
+// Once the session is obtained the functions from depiUtils can be used right away.
+const resourceGroups = await depiUtils.getResourceGroups(depiSession);
+resourceGroups.forEach(rg => console.log(JSON.stringify(rg)));
+
+// Finally logout and destroy the session
+await depiExtApi.destroy();
+```
+
+## Developer
+
+### Generating Classes and Resources from .proto
 
 Install dependencies:
 
@@ -36,15 +74,7 @@ const req = new depi.LoginRequest();
 const loginResponse = await client.loginAsync(req);
 ```
 
-Note that the recommended way to communicate with depi is thru the utility methods in `src/depiUtils.ts`.
-
-```typescript
-import { depiUtils } from 'depi-node-client';
-
-const depiSession = await depiUtils.logInDepiClient(url, userName, password, null, options);
-const resourceGroups = await depiUtils.getResourceGroups(depiSession);
-
-```
+Note that the recommended way to communicate with depi is thru the higher level methods from `src/depiUtils.ts`.
 
 ### Publish a Release
 

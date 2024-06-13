@@ -1,7 +1,10 @@
 import * as vscode from 'vscode';
-import { depiUtils, Resource, DepiSession } from 'depi-node-client';
+import { Resource } from './@types/depi';
+import { DepiSession, logInDepiClientWithToken, logOut } from './depiUtils';
 
-interface TokenLoginData {
+const DEPI_EXTENSION_ID = 'vu-isis.depi';
+
+export interface TokenLoginData {
     userName: string;
     token: string;
     url: string;
@@ -21,9 +24,9 @@ export default class DepiExtensionApi {
 
     private tryActivateDepiExtension = async () => {
         try {
-            let depiExtension = vscode.extensions.getExtension('vanderbilt.depi');
+            let depiExtension = vscode.extensions.getExtension(DEPI_EXTENSION_ID);
             if (!depiExtension) {
-                throw new Error('Could not find "vanderbilt.depi" extension');
+                throw new Error(`Could not find "${DEPI_EXTENSION_ID}" extension`);
             }
 
             if (depiExtension.isActive) {
@@ -46,24 +49,32 @@ export default class DepiExtensionApi {
         }
     }
 
-    async getDepiToken() : Promise<TokenLoginData> {
+    /**
+     * Get the login data for the current user.
+     * @returns 
+     */
+    async getDepiToken(): Promise<TokenLoginData> {
         await this.ensureDepiExtensionAvailable();
         return await vscode.commands.executeCommand('depi.getDepiToken');
     }
 
+    /**
+     * Get the current depi-session or login and create a new one if none available.
+     * @param forceNew - destory current session and create a new one.
+     * @returns 
+     */
     async getDepiSession(forceNew: boolean = false): Promise<DepiSession> {
         if (this.session && !forceNew) {
             return this.session;
         }
 
         if (forceNew) {
-            await depiUtils.logOut(this.session as DepiSession);
-            this.session = null;
+            await this.destroy();
         }
 
         const tokenLogin = await this.getDepiToken();
 
-        this.session = await depiUtils.logInDepiClientWithToken(
+        this.session = await logInDepiClientWithToken(
             tokenLogin.url,
             tokenLogin.token,
             tokenLogin.certificate,
@@ -72,15 +83,18 @@ export default class DepiExtensionApi {
         return this.session;
     }
 
+    /**
+     * Logout and destroy session.
+     */
     async destroy() {
         if (this.session) {
-            await depiUtils.logOut(this.session);
+            await logOut(this.session);
             this.session = null;
         }
     }
 
     /**
-     * 
+     * Brings up the blackboard view.
      * @param branchName - optionally pass if you don't want to use the branch in the depi-session.
      */
     async showBlackboard(branchName?: string) {
@@ -94,7 +108,12 @@ export default class DepiExtensionApi {
         await vscode.commands.executeCommand('depi.showBlackboard', branch);
     }
 
-    async showDependencyGraph (resource: Resource, branchName?: string) {
+    /**
+     * Bring ups the dependency graph for the given resource.
+     * @param resource 
+     * @param branchName 
+     */
+    async showDependencyGraph(resource: Resource, branchName?: string) {
         await this.ensureDepiExtensionAvailable();
         let branch = branchName;
         if (!branch) {
@@ -105,6 +124,11 @@ export default class DepiExtensionApi {
         await vscode.commands.executeCommand('depi.showDependencyGraph', resource, branch);
     }
 
+    /**
+     * Bring ups the dependants graph (reverse dependency graph) for the given resource.
+     * @param resource 
+     * @param branchName 
+     */
     async showDependantsGraph(resource: Resource, branchName?: string) {
         await this.ensureDepiExtensionAvailable();
         let branch = branchName;
@@ -116,11 +140,20 @@ export default class DepiExtensionApi {
         await vscode.commands.executeCommand('depi.showDependantsGraph', resource, branch);
     }
 
+    /**
+     * Lets the user select a resource from a list by first selecting resource group and then resource.
+     * @returns A resource if one was selected, otherwise null.
+     */
     async selectDepiResource(): Promise<Resource | null> {
         await this.ensureDepiExtensionAvailable();
         return await vscode.commands.executeCommand('depi.selectDepiResource');
     }
 
+    /**
+     * Calls out to reveal a resource and the depi-extension delegates this to any installed extension that matches the
+     * resource tool of the resource. (If the tool is git, the depi-extension will handle it directly.)
+     * @param resource 
+     */
     async revealDepiResource(resource: Resource) {
         await this.ensureDepiExtensionAvailable();
         await vscode.commands.executeCommand('depi.revealDepiResource', resource);

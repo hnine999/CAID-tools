@@ -1,10 +1,9 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { depiUtils, Resource, ResourceGroup, ResourceLink, DepiSession } from 'depi-node-client';
+import { DepiExtensionApi, depiUtils, Resource, ResourceGroup, ResourceLink, DepiSession } from 'depi-node-client';
 
 import { API as GitAPI } from './@types/git';
 import { getGitResourceInfoFromPath, parseResourceGroupUrl } from './gitUtils';
-import DepiExtensionApi from './depiExtensionApi';
 import CONSTANTS from './CONSTANTS';
 
 /**

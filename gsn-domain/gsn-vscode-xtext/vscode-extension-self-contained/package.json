@@ -1,8 +1,8 @@
 {
     "name": "gsn-assurance",
-    "displayName": "GSN Assurance",
+    "displayName": "GSN Editor",
     "description": "GSN based Assurance DSL and Graphical Editor for VS Code",
-    "version": "0.14.9",
+    "version": "0.14.11",
     "publisher": "vu-isis",
     "icon": "images/vanderbilt.jpeg",
     "license": "MIT",
@@ -230,7 +230,7 @@
         "use-debounce": "^9.0.3"
     },
     "dependencies": {
-        "depi-node-client": "^0.10.1",
+        "depi-node-client": "^1.0.2",
         "diff-match-patch": "^1.0.5",
         "fast-fuzzy": "^1.12.0",
         "json2gsn": "^1.0.1",
