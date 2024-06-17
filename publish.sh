@@ -2,7 +2,8 @@
 
 # git clone git@git.isis.vanderbilt.edu:aa-caid/caid-tools.git
 # cd caid-tools
-# ./publish.sh 1.0.0
+# git tag -> to check latest tag
+# ./publish.sh x.y.x
 
 git submodule update --init
 

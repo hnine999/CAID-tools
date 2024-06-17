@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "depi-client"
-version="0.8.1"
+version="0.8.2"
 authors = [
     {name = "Mark Wutka", email="mark.wutka@vanderbilt.edu"},
     {name = "Patrik Meijer", email="patrik.meijer@vanderbilt.edu"}

@@ -91,7 +91,7 @@ Once up and running go to: [http://localhost:4000](http://localhost:4000) using 
 To install the extensions you can either [search for them from within vscode](https://code.visualstudio.com/docs/editor/extension-marketplace) or simply click on the links above. Once installed you need to configure the extensions which is [explained here](examples/README.md#settings), (the monolithic service image only works with `localhost` as host).
 
 If using a local copy of vscode, for the example do the following before going thru on Using the UI.
-- clone this repo
+- clone this repo (or simply `examples/client/clone_repos.sh`)
 - cd to `examples/client/`
 - run the script `clone_repos.sh`
 - open a vscode instance and open the folder `examples/client`

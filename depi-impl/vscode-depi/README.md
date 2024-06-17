@@ -1,4 +1,4 @@
-# Depi vscode extension
+# Depi Browser
 This is the main extension for Depi in vscode. In addition to providing the GUIs for viewing the resources and links in Depi and manage them via the Blackboard, it provides built-in functionality for handling resources for `git`.
 
 To bring up the Blackboard press `Ctrl/Cmd + Shift + P` and start typing `Depi: Blackboard` and select the command. This will prompt you for a password to log into Depi as the configured user.
