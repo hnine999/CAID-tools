@@ -20,9 +20,9 @@ name of a renamed resource), and also calculates what linked resources need to b
 
 | Tool | Resource-Group | Resources | Monitor | GUI / vscode-extension |
 | --- | --- | --- | --- | --- |
-| git | Git repository | File, Directory | git-monitor (git webhooks)| [Depi Browser](vscode:extension/vu-isis.depi) |
-| git-gsn | GSN model directory inside a git repository | Solution nodes | git-gsn-monitor (git webhooks) | [GSN Editor](vscode:extension/vu-isis.gsn-assurance) |
-| webgme | A WebGME project at a WebGME server instance | Model | webgme-monitor (webgme storage events) | [WebGME Client](vscode:extension/vu-isis.webgme-depi) |
+| git | Git repository | File, Directory | git-monitor (git webhooks)| [Depi Browser](https://marketplace.visualstudio.com/items?itemName=vu-isis.depi) |
+| git-gsn | GSN model directory inside a git repository | Solution nodes | git-gsn-monitor (git webhooks) | [GSN Editor](https://marketplace.visualstudio.com/items?itemName=vu-isis.gsn-assurance) |
+| webgme | A WebGME project at a WebGME server instance | Model | webgme-monitor (webgme storage events) | [WebGME Client](https://marketplace.visualstudio.com/items?itemName=vu-isis.webgme-depi) |
 
 
 ## Repository structure
@@ -32,10 +32,19 @@ name of a renamed resource), and also calculates what linked resources need to b
 - `webgme-depi` contains a vscode extension wrapping a webgme instance (and webgme components providing the interface between these two)
 
 ## Getting started
+To try out the tool-chain we suggest using the prepared docker images, built to contain not only the software services but also the different resources for a small demo model of a UAV. If you haven't already, [install docker](https://docs.docker.com/engine/install/ubuntu/) - this has been tested with `Docker version 25.0.3, build 4debf41` on `Ubuntu 22.04`.
+
+The docker image for the services referenced here is not made for production purposes for the following reasons:
+ - The services and data is configured to be accessed via `localhost`
+ - All data is persisted inside the container (if the container is removed all data is lost)
+ - It goes againast [Docker's recommendation](https://docs.docker.com/config/containers/multi-service_container/) of only running one service per container
+
+These are addressde in the [docker-compose.yml in the examples folder](/examples/docker-compose.yml). This can also more easily be modified to work with existing services (e.g. gitlab or github etc.) too.
+
 ### TL;DR
 Back-end services:
 ```
-docker run --rm --name caid -p 3000:3000 -p 8888:8888 -p 5150:5150 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:latest
+docker run --rm --name caid -p 3000:3000 -p 5150:5150 -p 8888:8888 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:latest
 ```
 Front-end services:
 ```
@@ -44,8 +53,6 @@ docker run --rm --name caid-fe -p 4000:4000 --network="host" git.isis.vanderbilt
 Visit `http://localhost:4000` from your browser.
 
 ### Docker Images
-If you haven't already, [install docker](https://docs.docker.com/engine/install/ubuntu/) - this has been tested with `Docker version 25.0.3, build 4debf41` on `Ubuntu 22.04`.
-
 The fasted way to get started is to use the monolithic docker image, `caid-tools`, that contains all the necessary back-end services for the provided example. For the user-interface, you can either [install vscode](https://code.visualstudio.com/download) directly on your machine or use the `caid-front-end` docker image that is using [theia](https://theia-ide.org/) (a server/web-browser based version of vscode) and already prepared with the extensions. 
 
 ![Docker services](examples/images/docker-services.png)
@@ -53,7 +60,7 @@ The fasted way to get started is to use the monolithic docker image, `caid-tools
 ### Back-end Services
 Start the back-end services first using the monolithic docker-image based on the `Dockerfile` here in this directory.
 ```
-docker run --rm --name caid -p 3000:3000 -p 8888:8888 -p 5150:5150 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:latest
+docker run --rm --name caid -p 3000:3000 -p 5150:5150 -p 8888:8888 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:latest
 ```
 The following services are running within the monolithic caid-tools container (see `examples/docker-compose.yml` for a more realistic deployment setup with individual containers for the different services).
 
@@ -67,9 +74,9 @@ The following services are running within the monolithic caid-tools container (s
 ### Front-end/User Interface
 For the client user interface, you can either [install vscode](https://code.visualstudio.com/download) and then install the vscode extensions below (click link) or use the `caid-front-end` docker image below that is using [theia](https://theia-ide.org/) and already prepared with the extensions.
 
-- [Depi Browser](vscode:extension/vu-isis.depi)
-- [WebGME Client](vscode:extension/vu-isis.webgme-depi)
-- [GSN Editor](vscode:extension/vu-isis.gsn-assurance)
+- [Depi Browser](https://marketplace.visualstudio.com/items?itemName=vu-isis.depi)
+- [WebGME Client](https://marketplace.visualstudio.com/items?itemName=vu-isis.webgme-depi)
+- [GSN Editor](https://marketplace.visualstudio.com/items?itemName=vu-isis.gsn-assurance)
   - This extension requires java 8+
 
 #### Theia based image
@@ -83,7 +90,14 @@ Once up and running go to: [http://localhost:4000](http://localhost:4000) using 
 #### VS-Code
 To install the extensions you can either [search for them from within vscode](https://code.visualstudio.com/docs/editor/extension-marketplace) or simply click on the links above. Once installed you need to configure the extensions which is [explained here](examples/README.md#settings), (the monolithic service image only works with `localhost` as host).
 
-### Using the UI
+If using a local copy of vscode, for the example do the following before going thru on Using the UI.
+- clone this repo
+- cd to `examples/client/`
+- run the script `clone_repos.sh`
+- open a vscode instance and open the folder `examples/client`
+- follow the instructions as mentioned for theia (docker-based)
+
+## Using the UI
 
 Start out by cloning all the git-repositories that are part of this example. From the terminal in the bottom of the screen, invoke the `clone_repos.sh` script. 
 ![Clone Repositories](examples/images/01-clone-repos.png)
@@ -96,14 +110,14 @@ To view the current state of the example system press `Ctrl/Cmd + Shift + P` and
 
 ![Resource Groups](examples/images/blackboard-resource-groups.png)
 
-#### Reveal Resources
+### Reveal Resources
 With _Resources_ added to Depi, it is possible to navigate (granted the _Tool_ supports) to the actual implementation of that resource. For example, by selecting the Vehicle in the `webgme` _Resource Group_. 
 ![WebGME Reveal](examples/images/depi-blackboard-webgme.png)
 Expanding the side-menu, click the three lines to right-corner and then clicking the boxed arrow in the top right corner the Vehicle model is opened up in the WebGME model editor.
 ![WebGME Reveal](examples/images/webgme-model.png)
 You can do the same thing for the git-based _Resources_ and if the repository is cloned locally it will open up the file in the vscode-editor (or expand and highlight the folder in the explorer).
 
-#### Show evidence and dependency chain
+### Show evidence and dependency chain
 With the `.gsn`-file opened in the editor press `Ctrl/Cmd + Shift + P` and start typing `GSN: Graph View` and select the command. Expand the tree and navigate to the `TestPlanner` solution node.
 ![GSN Graph View](examples/images/02-gsn-graph-view.png)
 

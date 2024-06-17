@@ -11,11 +11,6 @@ If you are further along and are considering hosting some of the services from t
 
 Note that in order to access these docker images you'll need to request access at https://git.isis.vanderbilt.edu/. 
 
-## Overview of services
-The diagram below shows the different software pieces that are part of a general Depi system. In this example we have three tools, `git`, `git-gsn` and `webgme` all with corresponding GUIs `git` is built-in with the generic vscode depi extension. For a more detailed 
-
-![Depi architecture](images/depi-architecture.jpg)
-
 ## Initial setup
 Do these only the first time
 
