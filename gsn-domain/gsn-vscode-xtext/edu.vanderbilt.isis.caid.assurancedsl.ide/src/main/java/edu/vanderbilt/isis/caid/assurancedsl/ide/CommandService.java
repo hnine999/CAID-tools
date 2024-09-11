@@ -184,15 +184,24 @@ public class CommandService implements IExecutableCommandService {
         switch (attr) {
             case "summary": {
                 String updatedValue = newValue.toString();
-                //updatedValue= "\""+String.format(updatedValue.replace("\n", System.lineSeparator()))+"\"";
+                if (updatedValue.indexOf("\"")==-1)
+                {
+                    updatedValue= "\""+updatedValue+"\"";
+                }
+                
+                //
                 updatedValue= String.format(updatedValue.replace("\n", System.lineSeparator()));
                 newValue = updatedValue;
                 break;
             }
             case "info": {
                 String updatedValue = newValue.toString();
-                //updatedValue= "\""+String.format(updatedValue.replace("\n", System.lineSeparator()))+"\"";
+                if (updatedValue.indexOf("\"")==-1)
+                {
+                    updatedValue= "\""+updatedValue+"\"";
+                }
                 updatedValue= String.format(updatedValue.replace("\n", System.lineSeparator()));
+                //updatedValue= String.format(updatedValue.replace("\n", System.lineSeparator()));
                 newValue = updatedValue;
                 break;
             }

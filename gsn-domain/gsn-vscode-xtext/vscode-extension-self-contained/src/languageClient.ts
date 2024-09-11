@@ -5,7 +5,7 @@ import * as path from 'path';
 
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient/node';
 
-export function initializeLanguageClient(context: vscode.ExtensionContext) : LanguageClient {
+export function initializeLanguageClient(context: vscode.ExtensionContext): LanguageClient {
     let clientOptions: LanguageClientOptions = {
         documentSelector: ['gsn'],
         synchronize: {
@@ -32,11 +32,18 @@ export function initializeLanguageClient(context: vscode.ExtensionContext) : Lan
         };
     } else {
         // The server is a locally installed in src/gsn
-        let launcher = os.platform() === 'win32' ? 'gsn-standalone.bat' : 'gsn-standalone';
+        let launcher = 'gsn-standalone';
+        let options = {};
+
+        if (os.platform() === 'win32') {
+            launcher = 'gsn-standalone.bat';
+            options = { shell: true };
+        }
+
         let script = context.asAbsolutePath(path.join('src', 'gsn', 'bin', launcher));
 
         serverOptions = {
-            run: { command: script },
+            run: { command: script, options },
             debug: { command: script, args: [], options: { env: createDebugEnv() } },
         };
     }

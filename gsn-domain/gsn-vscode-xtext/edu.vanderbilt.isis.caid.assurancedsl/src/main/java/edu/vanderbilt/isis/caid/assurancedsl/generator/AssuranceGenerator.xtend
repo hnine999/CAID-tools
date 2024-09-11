@@ -149,8 +149,13 @@ class AssuranceGenerator extends AbstractGenerator {
 	def String getParsedInfo(String d)
 	{
 		//return d.substring(d.indexOf(':')+1, d.lastIndexOf(';')).trim()
-		return d.substring(d.indexOf('\"')+1, d.lastIndexOf('\"')).trim()
-		//return d.trim()
+        if (d.indexOf("\"") > -1)
+        {
+		    return d.substring(d.indexOf('\"')+1, d.lastIndexOf('\"')).trim()
+        }
+        else {
+        	return d.trim()
+        }
 	}
 	    
 	def String dumpNodeInfo(EList<BaseNode> details)

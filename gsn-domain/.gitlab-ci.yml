@@ -23,7 +23,7 @@ docker-publish:
   dependencies:
     - vsix-build
   tags:
-    - ubuntu18
+    - ubuntu22
   only:
     - tags
   before_script:
