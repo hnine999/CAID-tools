@@ -1,0 +1,16 @@
+services:
+  novnc-caid:
+    image: novnc:caid
+    ports:
+     - 8090:8090
+
+  caid-tools:
+    image: "git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools"
+    network_mode: "service:novnc-caid"
+
+  caid-front-end:
+    image: "git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-front-end"
+    depends_on:
+      - "caid-tools"
+    network_mode: "service:novnc-caid"
+
