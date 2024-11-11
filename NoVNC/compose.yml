@@ -1,6 +1,6 @@
 services:
   novnc-caid:
-    image: novnc:caid
+    image: git.isis.vanderbilt.edu:5050/vortex/docker-novnc/novnc:caid
     ports:
      - 8090:8090
 
