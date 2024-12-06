@@ -12,3 +12,4 @@ depi_pb2*.pyi
 
 dist/
 *.egg-info/
+build/

@@ -21,14 +21,20 @@ config.plugin.webgmeBaseUrl = webgmeBaseUrl;
 config.plugin.webgmePublicUrl = webgmePublicUrl;
 config.plugin.allowServerExecution = true;
 
+const depiHost = process.env.DEPI_HOST || 'depi-server';
+const depiPort = process.env.DEPI_PORT || '5150';
+const hookHost = process.env.DEPI_HOOK_HOST || 'webgme-monitor';
+const hookPort = process.env.DEPI_HOOK_PORT || '9000';
+
+
 const depiHookConfig = {
     webgmeBaseUrl,
     "toolId": "webgme",
-    "port": 9000,
+    "port": hookPort,
     "path": '/webhook',
     "maxAttempts": 1,
     "depi": {
-        "url": "depi-server:5150",
+        "url": `${depiHost}:${depiPort}`,
         "project": "TestProject",
         "token": "patrik:patrik"
     }
@@ -37,7 +43,7 @@ const depiHookConfig = {
 config.webhooks.defaults['depi'] = {
     description: 'Events generated for depi monitor',
     events: ['TAG_CREATED', 'BRANCH_HASH_UPDATED'],
-    url: `http://webgme-monitor:${depiHookConfig.port}${depiHookConfig.path}`,
+    url: `http://${hookHost}:${hookPort}${depiHookConfig.path}`,
     options: depiHookConfig
 };
 

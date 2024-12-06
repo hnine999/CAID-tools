@@ -44,11 +44,11 @@ These are addressde in the [docker-compose.yml in the examples folder](/examples
 ### TL;DR
 Back-end services:
 ```
-docker run -d --name caid -p 3000:3000 -p 5150:5150 -p 8888:8888 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:0.2.5
+docker run -d --name caid -p 3000:3000 -p 5150:5150 -p 8888:8888 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:latest
 ```
 Front-end services:
 ```
-docker run -d --name caid-fe -p 4000:4000 --network="host" git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-front-end:0.2.6
+docker run -d --name caid-fe -p 4000:4000 --network="host" git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-front-end:latest
 ```
 Visit `http://localhost:4000` from your browser.
 
@@ -60,7 +60,7 @@ The fasted way to get started is to use the monolithic docker image, `caid-tools
 ### Back-end Services
 Start the back-end services first using the monolithic docker-image based on the `Dockerfile` here in this directory.
 ```
-docker run -d --name caid -p 3000:3000 -p 5150:5150 -p 8888:8888 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:0.2.5
+docker run -d --name caid -p 3000:3000 -p 5150:5150 -p 8888:8888 git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-tools:latest
 ```
 
 (To stop and restart the service `docker stop caid` and `docker start caid` respectively.)
@@ -85,7 +85,7 @@ For the client user interface, you can either [install vscode](https://code.visu
 #### Theia based image
 Then the theia IDE with the extensions.
 ```
-docker run -d --name caid-fe -p 4000:4000 --network="host" git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-front-end:0.2.6
+docker run -d --name caid-fe -p 4000:4000 --network="host" git.isis.vanderbilt.edu:5050/aa-caid/caid-tools/caid-front-end:latest
 ```
 
 Once up and running go to: [http://localhost:4000](http://localhost:4000) using your browser (tested with Chrome).
