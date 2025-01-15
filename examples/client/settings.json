@@ -1,7 +1,8 @@
 {
+    "depi.password": "123456",
     "depi.url": "localhost:5150",
     "depi.user_name": "demo",
-    "webgme-depi.urls": ["http://localhost:8888/?project=guest%2BTestProject"],
+    "gsnGraph.enableDepi": true,
     "webgme-depi.enableDepi": true,
-    "gsnGraph.enableDepi": true
+    "webgme-depi.urls": ["http://localhost:8888/?project=guest%2BTestProject"],
 }
