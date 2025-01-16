@@ -2,7 +2,7 @@
     "name": "depi",
     "displayName": "Depi Browser",
     "description": "Provides a GUI for Depi Blackboard and Dependency Graph and a way to add git resources to Depi.",
-    "version": "0.8.2",
+    "version": "0.8.3",
     "license": "MIT",
     "publisher": "vu-isis",
     "icon": "images/vanderbilt.jpeg",

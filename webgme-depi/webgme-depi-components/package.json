@@ -6,7 +6,7 @@
     "test": "node ./node_modules/mocha/bin/mocha --recursive test",
     "monitor": "node ./bin/webgme_monitor.js"
   },
-  "version": "0.2.9",
+  "version": "0.2.10",
   "peerDependencies": {
     "webgme": "^2.46.0"
   },

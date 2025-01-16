@@ -2,7 +2,7 @@
     "name": "webgme-depi",
     "displayName": "WebGME Client",
     "description": "Wrapper around a webgme instance providing depi functionality",
-    "version": "0.2.9",
+    "version": "0.2.10",
     "publisher": "vu-isis",
     "icon": "images/webgme-icon.png",
     "license": "MIT",

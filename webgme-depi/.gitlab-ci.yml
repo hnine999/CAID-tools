@@ -32,7 +32,7 @@ vsix-publish:
 docker-publish:
     stage: publish
     tags:
-        - ubuntu18
+        - ubuntu22
     only:
         - tags
     before_script:
