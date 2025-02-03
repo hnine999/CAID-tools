@@ -8,7 +8,7 @@ USERNAME='demo'
 repos=("eval-results" "eval-scripts" "gsn" "src" "test-runs" "testdata")
 
 for repo_name in "${repos[@]}"; do
-    until git clone http://$HOST:3000/$USERNAME/$repo_name.git; do
+    until git clone http://demo:123456@$HOST:3000/$USERNAME/$repo_name.git; do
       sleep 1
     done
 done
