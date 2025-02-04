@@ -9,6 +9,33 @@ A table of terms used in this tutorial is below:
 | GSN    | Goal Structured Notation                    |
 | WebGME | Web-based Generic Modeling Environment tool |
 
+## Table of Contents
+
+<!-- TOC -->
+* [Introduction to CAID](#introduction-to-caid)
+* [Starting the CAID Demo](#starting-the-caid-demo)
+* [The Depi](#the-depi)
+  * [The Depi Blackboard](#the-depi-blackboard)
+  * [The Dependency Graph](#the-dependency-graph)
+* [Visualizing Dependencies using the `Depi`](#visualizing-dependencies-using-the-depi)
+  * [Goal Structured Notation](#goal-structured-notation)
+    * [The Text Representation of GSN Models](#the-text-representation-of-gsn-models)
+      * [The Language Server](#the-language-server)
+    * [The Graph Representation of GSN models](#the-graph-representation-of-gsn-models)
+      * [Alternate Views of the GSN Model](#alternate-views-of-the-gsn-model)
+        * [Table view](#table-view)
+        * [Radial View](#radial-view)
+        * [Cluster View](#cluster-view)
+    * [Synchrony between the Text and Graph Representations of the GSN Model](#synchrony-between-the-text-and-graph-representations-of-the-gsn-model)
+  * [Working with Dependencies](#working-with-dependencies)
+    * [Finding the Dependencies of a Project Resource](#finding-the-dependencies-of-a-project-resource)
+    * [Updating a Resource when its Dependencies Change](#updating-a-resource-when-its-dependencies-change)
+      * [Modifying the `eval_obs_avoidance.py` Dependency](#modifying-the-eval_obs_avoidancepy-dependency)
+      * [Committing the Modification](#committing-the-modification)
+      * [Bringing the Resources into Synchrony](#bringing-the-resources-into-synchrony)
+* [CAID and WebGME](#caid-and-webgme)
+<!-- TOC -->
+
 ## Introduction to CAID
 
 When developing a control system, it is necessary to use different tools to
@@ -622,7 +649,7 @@ for both of these forms of dirtiness to complete our dependency review:
 
 ![CAID Dependency Review Complete](Images/CAIDDependencyReviewComplete.png "CAID Dependency Review Complete")
 
-### CAID and WebGME
+## CAID and WebGME
 
 WebGME can be used to model control systems graphically.  The advantage of WebGME is that interpreters can be written,
 in JavaScript or Python, to traverse a WebGME model and program code that implements the
