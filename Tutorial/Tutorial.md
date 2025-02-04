@@ -543,7 +543,7 @@ Now, click on the `Depi` tab in the right sub-pane of the `Editor` pane:
 
 The dependency graph for the `ObstacleAvoidanceTests` `solution` node is again displayed.
 
-> NOTE: To see the whole graph, you can click on the`Dependency Info` button
+> NOTE: To see the whole graph, you can click on the `Dependency Info` button
 > ![CAID GSN Graph View Dependency Info Button](Images/CAIDGSNGraphViewDependencyInfoButton.png "CAID GSN Graph View Dependency Info Button")
 > at the upper right of the graph to hide the information pane at the right.
 > 
@@ -622,3 +622,91 @@ for both of these forms of dirtiness to complete our dependency review:
 
 ![CAID Dependency Review Complete](Images/CAIDDependencyReviewComplete.png "CAID Dependency Review Complete")
 
+### CAID and WebGME
+
+WebGME can be used to model control systems graphically.  The advantage of WebGME is that interpreters can be written,
+in JavaScript or Python, to traverse a WebGME model and program code that implements the
+model.  This code is then stored in one or more files.  To learn more about WebGME, click
+[this link](https://webgme.org/).
+
+WebGME is integrated into CAID so that it can be executed and used in the `Editor` pane, and, as well, the 
+dependencies between WebGME model components and the code files it generates can be managed.
+
+The following example shows one means of accessing WebGME using CAID.
+
+Open the `Depi Blackboard` as we did in [The Depi Blackboard Section](#The Depi Blackboard) above,
+with all of the dependency links displayed, and notice that the dependencies between resources in the
+`webgme:TestProject` WebGME model and the `src.git` repository:
+
+![CAID Dependency Graph WebGME Dependencies](Images/CAIDDependencyGraphWebGMEDependencies.png "CAID Dependency Graph WebGME Dependencies")
+
+Note that these are _circular_ dependencies, i.e. a resource in the `src.git` repository
+(e.g. the `planner_node.py` file) has a resource in the `webgme:TestProject` WebGME model
+(e.g. the `WaypointPlanner` component) as a dependency, and this same resource in the
+`webgme:TestProject` WebGME model has the same resource in `src.git` as a dependency.
+
+This is because the WebGME model, which is of a control system, is used to generate source code into
+`src.git` that implements this control system.  If a WebGME model component changes, the file that
+contains the code it generates needs to be updated so that they remain in synchrony.
+
+As well, if a file is updated (independently, i.e. not due to a change in the WebGME model), the corresponding
+component in the WebGME model should be updated.
+
+We can view the dependency graph a particular component/file pair by expanding the `src` repository in the
+`Explorer` pane until we can see one of the source files.  For this tutorial, we will use `planner_node.py`.
+
+> NOTE:  Click on the Explorer Button
+![CAID Explorer Button](Images/CAIDExplorerButton.png "CAID Explorer Button")
+near the top left corner of the browser window to view the `Explorer` pane.
+
+Click on this file using the secondary mouse button, and in the resulting pop-up menu, select
+`Show Dependency Graph`
+
+![CAID Planner Node Dependency Graph Selection](Images/CAIDPlannerNodeDependencyGraphSelection.png "CAID Planner Node Dependency Graph Selection")
+
+The dependency graph will appear in the right sub-pane of the `Editor` pane.  To launch WebGME and view the
+`WaypointPlanner` component of the WebGME model:
+* Click on the `WebpointPlanner` node in the dependency graph (it will turn blue to indicate that it is selected)
+* Click on the `Dependency Info` button
+  ![CAID Dependency Info Button](Images/CAIDDependencyInfoButton.png "CAID Dependency Info Button")
+  at the upper right of the dependency graph 
+* In the `Dependency Info` pane, click the `Reveal resource` button
+  ![CAID Dependency Graph Reveal Resource Button](Images/CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button")
+
+![CAID Reveal WebGME Waypoint Planner Resource](Images/CAIDRevealWebGMEWaypointPlannerResource.png "CAID Reveal WebGME Waypoint Planner Resource")
+
+The WebGME Editor, with `WaypointPlanner` seleced, will appear in the right sub-pane of the `Editor` pane:
+
+![CAID WebGME Waypoint Planner Component](Images/CAIDWebGMEWaypointPlannerComponent.png "CAID WebGME Waypoint Planner Component")
+
+To modify the `WaypointPlanner`, click on the name of the WebGME model, `TestProject` for this example, at the
+top of the WebGME Editor.  In the resulting drop-down menu, click on `ProjectHistory`:
+
+![CAID WebGME Waypoint Planner Project History](Images/CAIDWebGMEWaypointPlannerProjectHistory.png "CAID WebGME Waypoint Planner Project History")
+
+In the pop-up window, click on `master`:
+
+![CAID WebGME Select Master Branch](Images/CAIDWebGMESelectMasterBranch.png "CAID WebGME Select Master Branch")
+
+Then click the `Close` button in the lower right corner:
+
+![CAID WebGME Click Close](Images/CAIDWebGMEClickClose.png "CAID WebGME Select Click Close")
+
+Now, modify the `WaypointPlanner` component of the WebGME model by clicking and dragging a `Port`
+![CAID WebGME Waypoint Planner Port](Images/CAIDWebGMEWaypointPlannerPort.png "CAID WebGME Waypoint Planner Port")
+from the `Part List` on the left into the `WaypointPlanner` sub-pane:
+
+![CAID WebGME Waypoint Planner Drag Port](Images/CAIDWebGMEWaypointPlannerDragPort.png "CAID WebGME Waypoint Planner Drag Port")
+
+Now that the `WaypointPlanner` has been modified, click on the `Depi` tab on the right sub-pane of the `Editor`
+pane:
+
+![CAID WebGME Dependency Graph Modification](Images/CAIDWebGMEDependencyGraphModification.png "CAID WebGME Dependency Graph Modification")
+
+Notice that the dependency links in the dependency graph are now red to indicate that the `planner_node.py` file
+may need to be modified to bring it into synchrony with the `WaypointPlanner` component of the WebGME model.  This
+situation can be managed as in the
+[Updating a Resource when its Dependencies Change](#Updating a Resource when its Dependencies Change) section.
+
+> NOTE:  WebGME can be executed at any time by entering `>WebGME: Modeling Editor` into the `Command Palette`:
+> ![CAID WebGME Command Palette](Images/CAIDWebGMECommandPalette.png "CAID WebGME Command Palette")
