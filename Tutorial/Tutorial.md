@@ -634,7 +634,7 @@ dependencies between WebGME model components and the code files it generates can
 
 The following example shows one means of accessing WebGME using CAID.
 
-Open the `Depi Blackboard` as we did in [The Depi Blackboard Section](#The Depi Blackboard) above,
+Open the `Depi Blackboard` as we did in [The Depi Blackboard Section](#the-depi-blackboard) above,
 with all of the dependency links displayed, and notice that the dependencies between resources in the
 `webgme:TestProject` WebGME model and the `src.git` repository:
 
@@ -706,7 +706,7 @@ pane:
 Notice that the dependency links in the dependency graph are now red to indicate that the `planner_node.py` file
 may need to be modified to bring it into synchrony with the `WaypointPlanner` component of the WebGME model.  This
 situation can be managed as in the
-[Updating a Resource when its Dependencies Change](#Updating a Resource when its Dependencies Change) section.
+[Updating a Resource when its Dependencies Change Section](#updating-a-resource-when-its-dependencies-change) section.
 
 > NOTE:  WebGME can be executed at any time by entering `>WebGME: Modeling Editor` into the `Command Palette`:
 > ![CAID WebGME Command Palette](Images/CAIDWebGMECommandPalette.png "CAID WebGME Command Palette")
