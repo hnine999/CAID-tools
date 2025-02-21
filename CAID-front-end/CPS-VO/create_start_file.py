@@ -11,7 +11,15 @@ theia_docker = os.getenv("theiaDocker")
 print(f"theia_docker = {theia_docker}\n")
 docker_client = docker.from_env()
 
-docker_client.images.pull(theia_docker)
+docker_not_present = True
+for docker_image in docker_client.images.list():
+    if theia_docker in docker_image.tags:
+        docker_not_present = False
+        break
+
+
+if docker_not_present:
+    docker_client.images.pull(theia_docker)
 
 theia_image = docker_client.images.get(theia_docker)
 
