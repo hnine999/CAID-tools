@@ -522,16 +522,41 @@ Note that, once you've made this modification:
    This is to indicate that the `eval_obs_avoidance.py` file has been modified.
 1. The `eval-scripts` folder item in the `Explorer` pane has a red dot on its right side.  This is to indicate that
    one or more files in this folder have been modified.
+
+###### Committing the Modification
+
+We must now commit our modification of the `eval_obs_avoidance.py` file to the `eval-scripts` git repository.
+
+In order to work this `eval-scripts` repository, we must select it by clicking on the repository selection button
+![CAID Repository Selection Button](Images/CAIDRepositorySelectionButton.png "CAID Repository Selection Button").
+at the lower left corner of the browser window.
+
+> NOTE:  There will be text on this button that indicates the currently selected `git` repository.
+
+Pressing this button will is cause a repository selection sub-window to appear in the top middle of the browser window:
+
+![CAID Repository Selection Window](Images/CAIDRepositorySelectionWindow.png "CAID Repository Selection Window")
+
+In this sub-window, select the `eval-scripts` git repository by typing its name in the text-box, or by clicking
+on its name:
+
+![CAID Select Eval Scripts Git Repository](Images/CAIDSelectEvalScriptsGitRepository.png "CAID Select Eval Scripts Git Repository")
+
+Now that the `eval-scripts` git repository is selected, note that:
+
+![CAID Eval Scripts Git Repository Selected](Images/CAIDEvalScriptsGitRepositorySelected.png "CAID Eval Scripts Git Repository Selected")
+
+1. The text on the repository selection button
+   ![CAID Repository Selection Button](Images/CAIDRepositorySelectionButton.png "CAID Repository Selection Button") is now `eval-scripts`.
 1. The `Source Control` button
    ![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button")
    near the upper left corner of the browser has a blue dot with a `1` in it at its lower right corner.  This
    is to indicate that `1` file has been modified in the `eval-scripts.git` repository, of which the `eval-scripts`
    folder is the root folder.
 
-##### Committing the Modification
-
-To commit the change to the `eval-scripts.git` repository, click on the `Source Control` button.  This will cause
-the `SOURCE CONTROL: GIT` pane to appear on the left side of the browser window:
+Click on the `Source Control`
+![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button")
+button.  This will cause the `SOURCE CONTROL: GIT` pane to appear on the left side of the browser window:
 
 ![CAID Modify Eval Obs Avoidance Py File Source Control](Images/CAIDModifyEvalObsAvoidancePyFileSourceControl.png "CAID Modify Eval Obs Avoidance Py File Source Control")
 
@@ -555,12 +580,18 @@ located to the right of the `Commit` button, and in the resulting drop-down menu
 
 ![CAID Modify Eval Obs Avoidance Py File Push](Images/CAIDModifyEvalObsAvoidancePyFilePush.png "CAID Modify Eval Obs Avoidance Py File Push")
 
-In the resulting pop-up menu, select the `eval-scripts` repository:
+In the resulting sub-window, select the `eval-scripts` repository:
 
 ![CAID Modify Eval Obs Avoidance Py File Choose A Repository](Images/CAIDModifyEvalObsAvoidancePyFileChooseARepository.png "CAID Modify Eval Obs Avoidance Py File Choose A Repository")
 
 Again, a thin blue line will appear above the `Message` textbox for a few seconds.  Once it is no longer visible, the
 push is complete.
+
+> NOTE:  A small sub-window may appear at the lower right corner of the browser that reads:
+> ```
+> Would you like the Theia IDE to periodically run "git fetch"?
+> ```
+> Just click "No" in this sub-window
 
 ##### Bringing the Resources into Synchrony
 
@@ -571,7 +602,7 @@ Now, click on the `Depi` tab in the right sub-pane of the `Editor` pane:
 The dependency graph for the `ObstacleAvoidanceTests` `solution` node is again displayed.
 
 > NOTE: To see the whole graph, you can click on the `Dependency Info` button
-> ![CAID GSN Graph View Dependency Info Button](Images/CAIDGSNGraphViewDependencyInfoButton.png "CAID GSN Graph View Dependency Info Button")
+> ![CAID Dependency Info Button](Images/CAIDDependencyInfoButton.png "CAID Dependency Info Button")
 > at the upper right of the graph to hide the information pane at the right.
 > 
 > If you do this, be sure to click it again to display the information pane.  We will need this for what follows.
@@ -614,7 +645,25 @@ To bring the data in `obstacle_avoidance_results` into synchrony with the `eval_
 ![CAID Dependency Graph Obstacle Avoidance Results Modify](Images/CAIDDependencyGraphObstacleAvoidanceResultsModify.png "CAID Dependency Graph Obstacle Avoidance Results Modify")
 
 We will also commit and push this modification to the `main` branch of the `eval-results` repository in the same
-way as the `eval_obs_avoidance.py` file above (use an appropriate commit message):
+way as with `eval_obs_avoidance.py` of the `eval-scripts` repository (see above).  To do this:
+
+1. Click the repository selection button
+   ![CAID Repository Selection Button](Images/CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
+   in the lower left corner of the browser window.
+2. Select the `eval-results` repository in the resulting sub-window.
+3. Click the source control button
+   ![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button"),
+   which should have a blue circle with a `1` in it at its lower right corner.
+4. Click the `Stage all Changes`
+   ![CAID Stage All Changes Button](Images/CAIDStageAllChangesButton.png "CAID Stage All Changes Button")
+   button in the `CHANGES` line of the `SOURCE CONTROL: GIT` pane.
+5. Enter an appropriate commit message in the `Message` textbox.
+6. Click on the `Commit` button
+   ![CAID Commit Button](Images/CAIDCommitButton.png "CAID Commit Button").
+7. Once the thin blue line above the `Message` textbox is no longer visible, click the `More Actions` button
+   ![CAID More Actions Button](Images/CAIDMoreActionsButton.png "CAID More Actions Button").
+8. Select 'Push' from the resulting drop-down menu.
+9. Select `eval-results` in the resulting sub-window.
 
 ![CAID Dependency Graph Obstacle Avoidance Results Push](Images/CAIDDependencyGraphObstacleAvoidanceResultsPush.png "CAID Dependency Graph Obstacle Avoidance Results Push")
 
