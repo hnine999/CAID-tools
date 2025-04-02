@@ -63,17 +63,17 @@ This tutorial demonstrates the functionality of CAID.
 When you first start the CAID demo, you may see what looks like a rocket ship.  This means the system
 is still initializing:
 
-![CAID Rocket](Images/CAIDRocket.png "CAID Rocket")
+![CAID Rocket](Images/01_CAIDRocket.png "CAID Rocket")
 
 When the system is done initializing, you will see this initial `Welcome` screen:
 
-![CAID Initial Screen](Images/CAIDInitialScreen.png "CAID Initial Screen")
+![CAID Initial Screen](Images/02_CAIDInitialScreen.png "CAID Initial Screen")
 
 Open the `Explorer` pane by clicking on the Explorer Button
-![CAID Explorer Button](Images/CAIDExplorerButton.png "CAID Explorer Button")
+![CAID Explorer Button](Images/Button_CAIDExplorerButton.png "CAID Explorer Button")
 near the top left corner of the window:
 
-![CAID Explorer](Images/CAIDExplorer.png "CAID Explorer")
+![CAID Explorer](Images/03_CAIDExplorer.png "CAID Explorer")
 
 The `Explorer` pane will appear on the left side of your browser window.
 
@@ -85,7 +85,7 @@ contents are interdependent.  The `clone_repos.sh` script was run in order to cr
 repository server (a gitea instance).  You can see the contents of the `clone_repos.sh` script by clicking on it
 in the `Explorer`:
 
-![CAID Clone Repos](Images/CAIDCloneRepos.png "CAID Clone Repos")
+![CAID Clone Repos](Images/04_CAIDCloneRepos.png "CAID Clone Repos")
 
 The repositories are listed in the below table:
 
@@ -119,10 +119,10 @@ for inspection and manual update. Because of this, the user can now keep track o
 
 The dependencies between the various resources in the various git repositories can be viewed on the
 `Depi Blackboard`.  To see the blackboard, click on the `Command Palette` button
-![CAID Command Button](Images/CAIDCommandButton.png "CAID Command Button")
+![CAID Command Button](Images/Button_CAIDCommandButton.png "CAID Command Button")
 in the upper right corner of your browser window:
 
-![CAID Enter Command](Images/CAIDEnterCommand.png "CAID Enter Command")
+![CAID Enter Command](Images/05_CAIDEnterCommand.png "CAID Enter Command")
 
 In the resulting text field type the text below and press `<enter>`:
 
@@ -141,11 +141,11 @@ In the resulting text field type the text below and press `<enter>`:
 > followed by the `<enter>` key, or click on the `Depi: Blackboard` selection with your primary mouse
 > button when it appears.
 
-![CAID Depi Blackboard Selection](Images/CAIDDepiBlackboardSelection.png "CAID Depi Blackboard Selection")
+![CAID Depi Blackboard Selection](Images/06_CAIDDepiBlackboardSelection.png "CAID Depi Blackboard Selection")
 
 The `Depi Blackboard` will be displayed in a sub-pane in the right side of the `Editor` pane:
 
-![CAID Depi Blackboard](Images/CAIDDepiBlackboard.png "CAID Depi Blackboard")
+![CAID Depi Blackboard](Images/07_CAIDDepiBlackboard.png "CAID Depi Blackboard")
 
 In the `Depi Blackboard`, you will see rectangles that correspond to each of the repositories listed
 above.
@@ -155,27 +155,27 @@ Note that there is one rectangle that does not correspond to any of the above re
 In particular, it models all of the components of the UAV, e.g. rotors, batteries.
 
 Clicking on the `expand` button
-(![CAID Expand Button](Images/CAIDExpandButton.png "CAID Expand Button"))
+(![CAID Expand Button](Images/Button_CAIDExpandButton.png "CAID Expand Button"))
 in any of these rectangles will reveal some content of the corresponding repository.  The `expand` button will
 appear next to revealed content, and clicking on it here will reveal more content.
 
-![CAID Depi Blackboard Expand](Images/CAIDDepiBlackboardExpand.png "CAID Depi Blackboard Expand")
+![CAID Depi Blackboard Expand](Images/08_CAIDDepiBlackboardExpand.png "CAID Depi Blackboard Expand")
 
 ### The Dependency Graph
 
 To see a graph of the dependencies between all of the resources in all of the repositories, click on the
 `expand all resource groups` button
-(![CAID Expand All Resource Groups Button](Images/CAIDExpandAllResourceGroupsButton.png "CAID Expand All Resource Groups Button"))
+(![CAID Expand All Resource Groups Button](Images/Button_CAIDExpandAllResourceGroupsButton.png "CAID Expand All Resource Groups Button"))
 near the lower left corner of the `Depi Blackboard` sub-pane:
 
-![CAID Depi Blackboard Show All Dependencies](Images/CAIDDepiBlackboardShowAllDependencies.png "CAID Depi Blackboard Show All Dependencies")
+![CAID Depi Blackboard Show All Dependencies](Images/09_CAIDDepiBlackboardShowAllDependencies.png "CAID Depi Blackboard Show All Dependencies")
 
 Currently, you show only be able to see a segment of the dependency graph shown in the sub-pane.  To
 see the entire graph, click the `fit view` button
-(![CAID Fit View Button](Images/CAIDFitViewButton.png "CAID Fit View Button"))
+(![CAID Fit View Button](Images/Button_CAIDFitViewButton.png "CAID Fit View Button"))
 near the lower left corner of the sub-pane:
 
-![CAID Depi Blackboard Show All Dependencies Fit View](Images/CAIDDepiBlackboardShowAllDependenciesFitView.png "CAID Depi Blackboard Show All Dependencies Fit View")
+![CAID Depi Blackboard Show All Dependencies Fit View](Images/10_CAIDDepiBlackboardShowAllDependenciesFitView.png "CAID Depi Blackboard Show All Dependencies Fit View")
 
 From this graph, we can see that, indeed:
 1. A script in `test-runs` depends on the code in `src`
@@ -193,7 +193,7 @@ Here, we will visualize the dependencies of a `solution` node in a GSN (Goal Str
 Before we do this, please click on the `clone_repos.sh` tab at the upper left corner of the left
 sub-pane of the `Editor` pane:
 
-![CAID Click On clone_repos.sh](Images/CAIDClickOnCloneRepos.png "CAID Click On clone_repos.sh")
+![CAID Click On clone_repos.sh](Images/11_CAIDClickOnCloneRepos.png "CAID Click On clone_repos.sh")
 
 This will cause new information in the next section of this tutorial to appear in the left sub-pane
 of the `Editor` pane, leaving visible the Dependency Graph in the right sub-pane.
@@ -212,7 +212,7 @@ GSN models.  This includes:
 By clicking on `gsn` in the `Explorer`, and then clicking on `ansr` underneath it, you'll expose the
 `ac.gsn` file.  Click on this file to show its contents in the left sub-pane of `Editor` pane.
 
-![CAID ac.gsn](Images/CAIDacgsn.png "CAID ac.gsn")
+![CAID ac.gsn](Images/12_CAIDacgsn.png "CAID ac.gsn")
 
 `ac.gsn` contains the text representation of a `GSN` model used to evaluate the functionality and safety
 of a software system.  Such a model is called an _assurance case_.  This representation consists of
@@ -239,11 +239,11 @@ One feature of CAID is that, when editing the text representation of a `GSN` mod
 will indicate the locations of syntax errors and suggest completions for words when
 `Ctrl-SPACE` is pressed on the keyboard, as indicated by the red arrows in the figure below:
 
-![CAID GSN Text Language Server](Images/CAIDGSNTextLanguageServer.png "CAID GSN Text Language Server")
+![CAID GSN Text Language Server](Images/13_CAIDGSNTextLanguageServer.png "CAID GSN Text Language Server")
 
 Suggestions also appear after you type one or more characters:
 
-![CAID GSN Text Language Server Characters](Images/CAIDGSNTextLanguageServerCharacters.png "CAID GSN Text Language Server Characters")
+![CAID GSN Text Language Server Characters](Images/14_CAIDGSNTextLanguageServerCharacters.png "CAID GSN Text Language Server Characters")
 
 > NOTE: Do not make the above modifications.  If you did, please undo them.  They are shown only for
 > demonstration.
@@ -251,7 +251,7 @@ Suggestions also appear after you type one or more characters:
 #### The Graph Representation of GSN models
 
 To see a graphical depiction of this GSN model, click on the
-![CAID Command Button](Images/CAIDCommandButton.png "CAID Command Button")
+![CAID Command Button](Images/Button_CAIDCommandButton.png "CAID Command Button")
 at the top right of the browser window as was done to launch the `Depi Server` above,
 and in the resulting text field, enter the following text and press the `<enter>` key:
 
@@ -261,17 +261,17 @@ and in the resulting text field, enter the following text and press the `<enter>
 
 > NOTE:  Again, the right chevron `>` in the above text is VERY IMPORTANT.
 
-![CAID GSN Graph View Selection](Images/CAIDGSNGraphViewSelection.png "CAID GSN Graph View Selection")
+![CAID GSN Graph View Selection](Images/15_CAIDGSNGraphViewSelection.png "CAID GSN Graph View Selection")
 
 The GSN Graph View will appear in the left sub-pane of the `Editor` pane:
 
-![CAID GSN Graph View](Images/CAIDGSNGraphView.png "CAID GSN Graph View")
+![CAID GSN Graph View](Images/16_CAIDGSNGraphView.png "CAID GSN Graph View")
 
 To make more room for the GSN model graph, click on the `Info` button
-![CAID GSN Graph View Info Button](Images/CAIDGSNGraphViewInfoButton.png "CAID GSN Graph View Info Button")
+![CAID GSN Graph View Info Button](Images/Button_CAIDGSNGraphViewInfoButton.png "CAID GSN Graph View Info Button")
 at the upper right corner of this sub-pane:
 
-![CAID GSN Graph View Large](Images/CAIDGSNGraphViewLarge.png "CAID GSN Graph View Large")
+![CAID GSN Graph View Large](Images/17_CAIDGSNGraphViewLarge.png "CAID GSN Graph View Large")
 
 What is shown is not the whole tree of the GSN model, but only the root node.  For this or any node
 displayed in the graph view, the upper yellow number indicates the number of assumptions, contexts,
@@ -280,21 +280,21 @@ sub-goals and solutions, the node has.
 
 The graph view is interactive, so to see the assumptions and contexts, click on the yellow number:
 
-![CAID GSN Graph View Root Assumptions](Images/CAIDGSNGraphViewRootAssumptions.png "CAID GSN Graph View Root Assumptions")
+![CAID GSN Graph View Root Assumptions](Images/18_CAIDGSNGraphViewRootAssumptions.png "CAID GSN Graph View Root Assumptions")
 
 Click on the same spot (now cyan with a dash `-` in it) to hide the assumptions and contexts.
 
 To see the node's children, click on the blue number:
 
-![CAID GSN Graph View Root Children](Images/CAIDGSNGraphViewRootChildren.png "CAID GSN Graph View Root Children")
+![CAID GSN Graph View Root Children](Images/19_CAIDGSNGraphViewRootChildren.png "CAID GSN Graph View Root Children")
 
 As with the assumptions, you can click on the same spot to hide the children.
 
 To see the entire tree of the GSN model, click on the `Expand Tree` button
-(![CAID Expand All Resource Groups Button](Images/CAIDExpandAllResourceGroupsButton.png "CAID Expand All Resource Groups Button"))
+(![CAID Expand All Resource Groups Button](Images/Button_CAIDExpandAllResourceGroupsButton.png "CAID Expand All Resource Groups Button"))
 at the lower left corner of the `Editor` pane:
 
-![CAID GSN Graph View Expand Tree](Images/CAIDGSNGraphViewExpandTree.png "CAID GSN Graph View Expand Tree")
+![CAID GSN Graph View Expand Tree](Images/20_CAIDGSNGraphViewExpandTree.png "CAID GSN Graph View Expand Tree")
 
 In this model, a `solution` node (purple rectangle) represents evidence that supports their parent `goal`
 (`claim`) node. One or more `goal` nodes that are siblings in the tree support their parent `goal` node.  The
@@ -319,23 +319,23 @@ are presented below.
 ###### Table view
 
 To see the table view of the GSN model, click on the `Review Table` button
-![CAID GSN Review Table Button](Images/CAIDGSNReviewTableButton.png "CAID GSN Review Table Button") near the
+![CAID GSN Review Table Button](Images/Button_CAIDGSNReviewTableButton.png "CAID GSN Review Table Button") near the
 right top corner of the `Editor` pane:
 
-![CAID GSN Review Table](Images/CAIDGSNReviewTable.png "CAID GSN Review Table")
+![CAID GSN Review Table](Images/21_CAIDGSNReviewTable.png "CAID GSN Review Table")
 
 You can see a table of goals (claims) for this GSN model, or, as can be seen in the upper right corner
 of this view, by clicking the selector button for `Solution` you can see a table of solutions.
 
-![CAID GSN Review Table Solution](Images/CAIDGSNReviewTableSolution.png "CAID GSN Review Table Solution")
+![CAID GSN Review Table Solution](Images/22_CAIDGSNReviewTableSolution.png "CAID GSN Review Table Solution")
 
 ###### Radial View
 
 The radial view of the GSN model can be seen by clicking on the `Radial Visualization` button
-![CAID GSN Radial Visualization Button](Images/CAIDGSNRadialVisualizationButton.png "CAID GSN Radial Visualization Button")
+![CAID GSN Radial Visualization Button](Images/Button_CAIDGSNRadialVisualizationButton.png "CAID GSN Radial Visualization Button")
 to the right of the `Review Table` button:
 
-![CAID GSN Radial Visualization](Images/CAIDGSNRadialVisualization.png "CAID GSN Radial Visualization")
+![CAID GSN Radial Visualization](Images/23_CAIDGSNRadialVisualization.png "CAID GSN Radial Visualization")
 
 In this view, the root node of the GSN model is in the middle, and the descendant nodes radiate out
 from the root node.
@@ -343,10 +343,10 @@ from the root node.
 ###### Cluster View
 
 To see the cluster view of the GSN mode, click on the `Cluster Visualization` button
-![CAID GSN Cluster Visualization Button](Images/CAIDGSNClusterVisualizationButton.png "CAID GSN Cluster Visualization Button")
+![CAID GSN Cluster Visualization Button](Images/Button_CAIDGSNClusterVisualizationButton.png "CAID GSN Cluster Visualization Button")
 to right of the `Radial Visualization` button:
 
-![CAID GSN Cluster Visualization](Images/CAIDGSNClusterVisualization.png "CAID GSN Cluster Visualization")
+![CAID GSN Cluster Visualization](Images/24_CAIDGSNClusterVisualization.png "CAID GSN Cluster Visualization")
 
 The cluster view is similar to the radial view inasmuch as the root node of the GSN model is displayed
 in the middle, and the descendant nodes radiate out from the root node.  However, the descendant nodes,
@@ -356,13 +356,13 @@ The default `Clustering Depth` is 2, as shown in the above figure.  However, you
 different clustering depth at the lower left corner of the `Editor` pane.  Below is a cluster view
 of the GSN model with a clustering depth of 4:
 
-![CAID GSN Cluster Visualization Depth 3](Images/CAIDGSNClusterVisualizationDepth3.png "CAID GSN Cluster Visualization Depth 3")
+![CAID GSN Cluster Visualization Depth 3](Images/25_CAIDGSNClusterVisualizationDepth3.png "CAID GSN Cluster Visualization Depth 3")
 
 To get back to the tree view, click on the `Tree Graph Visualization` button
-![CAID GSN Tree Graph Visualization Button](Images/CAIDGSNTreeGraphVisualizationButton.png "CAID GSN Tree Graph Visualization Button")
+![CAID GSN Tree Graph Visualization Button](Images/Button_CAIDGSNTreeGraphVisualizationButton.png "CAID GSN Tree Graph Visualization Button")
 to left of the `Review Table` button:
 
-![CAID GSN Tree Graph Visualization](Images/CAIDGSNTreeGraphVisualization.png "CAID GSN Tree Graph Visualization")
+![CAID GSN Tree Graph Visualization](Images/26_CAIDGSNTreeGraphVisualization.png "CAID GSN Tree Graph Visualization")
 
 #### Synchrony between the Text and Graph Representations of the GSN Model
 
@@ -373,39 +373,39 @@ To demonstrate this, click on the `ac.gsn` tab at the top left of the `Editor` p
 text representation of the GSN model.  Then, scroll down to expose the `WaypointControl` node starting
 at line 29.
 
-![CAID GSN Text WaypointControl](Images/CAIDGSNTextWaypointControl.png "CAID GSN Text WaypointControl")
+![CAID GSN Text WaypointControl](Images/27_CAIDGSNTextWaypointControl.png "CAID GSN Text WaypointControl")
 
 Now, click the `GSN-Graph` tab to show the graph representation again.  Locate the `WaypointControl`
 node, and click on it with your primary mouse button so that it is highlighted:
 
-![CAID GSN Graph View Highlight Waypoint Control](Images/CAIDGSNGraphViewHighlightWaypointControl.png "CAID GSN Graph View Highlight Waypoint Control")
+![CAID GSN Graph View Highlight Waypoint Control](Images/28_CAIDGSNGraphViewHighlightWaypointControl.png "CAID GSN Graph View Highlight Waypoint Control")
 
 Then click on the `info` button
-![CAID GSN Graph View Info Button](Images/CAIDGSNGraphViewInfoButton.png "CAID GSN Graph View Info Button")
+![CAID GSN Graph View Info Button](Images/Button_CAIDGSNGraphViewInfoButton.png "CAID GSN Graph View Info Button")
 at the upper right corner of the Graph View.
 
 A sub-pane pertaining to the `WaypointControl` node will appear on the right of the Graph View:
 
-![CAID GSN Graph Waypoint SubPane](Images/CAIDGSNGraphWaypointSubPane.png "CAID GSN Graph Waypoint SubPane")
+![CAID GSN Graph Waypoint SubPane](Images/29_CAIDGSNGraphWaypointSubPane.png "CAID GSN Graph Waypoint SubPane")
 
 Scroll down to the bottom of this sub-pane and click on `+ Goal`.  A new goal (blue rectangle)
 labeled `G1` will appear below the `WaypointControl` node in the Graph View:
 
-![CAID GSN Graph Waypoint New Goal](Images/CAIDGSNGraphWaypointNewGoal.png "CAID GSN Graph Waypoint New Goal")
+![CAID GSN Graph Waypoint New Goal](Images/30_CAIDGSNGraphWaypointNewGoal.png "CAID GSN Graph Waypoint New Goal")
 
 Clicking again on the `ac.gsn` tab, we see in the text representation that a new goal called `G1` has
 appeared in the contents of the `WaypointControl` node:
 
-![CAID GSN Text Waypoint New Goal](Images/CAIDGSNTextWaypointNewGoal.png "CAID GSN Text Waypoint New Goal")
+![CAID GSN Text Waypoint New Goal](Images/31_CAIDGSNTextWaypointNewGoal.png "CAID GSN Text Waypoint New Goal")
 
 Select this new `G1` goal and its contents with your mouse and press the `delete` key on your keyboard
 to delete it:
 
-![CAID GSN Text Waypoint New Goal Select](Images/CAIDGSNTextWaypointNewGoalSelect.png "CAID GSN Text Waypoint New Goal Select")
+![CAID GSN Text Waypoint New Goal Select](Images/32_CAIDGSNTextWaypointNewGoalSelect.png "CAID GSN Text Waypoint New Goal Select")
 
 Select the `GSN-Graph` tab again, and notice the `G1` goal has been deleted from the tree as well.
 
-![CAID GSN Graph Waypoint New Goal Deleted](Images/CAIDGSNGraphWaypointNewGoalDeleted.png "CAID GSN Graph Waypoint New Goal Deleted")
+![CAID GSN Graph Waypoint New Goal Deleted](Images/33_CAIDGSNGraphWaypointNewGoalDeleted.png "CAID GSN Graph Waypoint New Goal Deleted")
 
 ### Working with Dependencies
 
@@ -436,25 +436,25 @@ Firstly, make sure the `GSN-Graph` tab is selected in the left sub-pane of the `
 
 Click on the `ObstacleAvoidanceTests` `solution` node in the GSN graph -- we will find the dependencies of this node.
 
-![CAID GSN Graph View Obstacle Avoidance Tests](Images/CAIDGSNGraphViewObstacleAvoidanceTests.png "CAID GSN Graph View Obstacle Avoidance Tests")
+![CAID GSN Graph View Obstacle Avoidance Tests](Images/34_CAIDGSNGraphViewObstacleAvoidanceTests.png "CAID GSN Graph View Obstacle Avoidance Tests")
 
 A sub-pane to the right of the graph should now contain information about the `ObstacleAvoidanceTests`
 node.
 
 > NOTE:  If the sub-pane is not visible, click on the `info` button
-> ![CAID GSN Graph View Info Button](Images/CAIDGSNGraphViewInfoButton.png "CAID GSN Graph View Info Button")
+> ![CAID GSN Graph View Info Button](Images/Button_CAIDGSNGraphViewInfoButton.png "CAID GSN Graph View Info Button")
 > at the upper right corner of Graph View.
 
 > NOTE:  Scroll to the top of this sub-pane if needed to see that its information pertains to the
 > `ObstacleAvoidanceTests` node.
 
 Scroll down to the bottom of this sub-pane to reveal the `Show Dependency Graph` button
-![CAID GSN Graph Show Dependency Graph Button](Images/CAIDGSNGraphViewShowDependencyGraphButton.png "CAID GSN Graph Show Dependency Graph Button").
+![CAID GSN Graph Show Dependency Graph Button](Images/Button_CAIDGSNGraphViewShowDependencyGraphButton.png "CAID GSN Graph Show Dependency Graph Button").
 
 Click on this button to display the dependency graph for the ObstacleAvoidanceTests `solution` node.
 This graph will appear in its own sub-pane on the right of the `Editor` pane:
 
-![CAID GSN Graph View Show Dependency Graph](Images/CAIDGSNGraphViewShowDependencyGraph.png "CAID GSN Graph View Show Dependency Graph")
+![CAID GSN Graph View Show Dependency Graph](Images/35_CAIDGSNGraphViewShowDependencyGraph.png "CAID GSN Graph View Show Dependency Graph")
 
 In this graph, we see that the ObstacleAvoidanceTest `solution` node at the left, which is in the `gsn.git` repository,
 depends on other resources in our project that are contained in other git repositories.  This is indicated by
@@ -471,26 +471,26 @@ the arrowed lines:
 Click the `eval_obs_avoidance.py` dependency, and it will turn blue to show that it is selected.  Note that this
 is an _inferred_ (indirect) dependency of the ObstacleAvoidanceTest `solution` node.
 
-![CAID Dependency Graph Select Eval Obs Avoidance Node](Images/CAIDDependencyGraphSelectEvalObsAvoidanceNode.png "CAID Dependency Graph Select Eval Obs Avoidance Node")
+![CAID Dependency Graph Select Eval Obs Avoidance Node](Images/36_CAIDDependencyGraphSelectEvalObsAvoidanceNode.png "CAID Dependency Graph Select Eval Obs Avoidance Node")
 
 Then, click on the `Dependency Info` button
-![CAID Dependency Info Button](Images/CAIDDependencyInfoButton.png "CAID Dependency Info Button")
+![CAID Dependency Info Button](Images/Button_CAIDDependencyInfoButton.png "CAID Dependency Info Button")
 at the upper right of the dependency graph:
 
-![CAID Dependency Graph Eval Obs Avoidance Info](Images/CAIDDependencyGraphEvalObsAvoidanceInfo.png "CAID Dependency Graph Eval Obs Avoidance Info")
+![CAID Dependency Graph Eval Obs Avoidance Info](Images/37_CAIDDependencyGraphEvalObsAvoidanceInfo.png "CAID Dependency Graph Eval Obs Avoidance Info")
 
 The resulting sub-pane shows information about the `eval_obs_avoidance.py` dependency. In this sub-pane,
 click the `Reveal resource` button
-![CAID Dependency Graph Reveal Resource Button](Images/CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button")
+![CAID Dependency Graph Reveal Resource Button](Images/Button_CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button")
 at the upper right:
 
-![CAID Dependency Graph Eval Obs Avoidance Reveal Resource Button](Images/CAIDDependencyGraphEvalObsAvoidanceRevealResourceButton.png "CAID Dependency Graph Eval Obs Avoidance Reveal Resource Button")
+![CAID Dependency Graph Eval Obs Avoidance Reveal Resource Button](Images/38_CAIDDependencyGraphEvalObsAvoidanceRevealResourceButton.png "CAID Dependency Graph Eval Obs Avoidance Reveal Resource Button")
 
 This will display the contents of the `eval_obs_avoidance.py` file in the right sub-pane of the `Editor` pane.  It
 also highlights the `eval_obs_avoidance.py` file as part of the `eval-scripts` git repository in the `Project` pane
 at the left of the window.
 
-![CAID Dependency Graph Eval Obs Avoidance Reveal Resource](Images/CAIDDependencyGraphEvalObsAvoidanceRevealResource.png "CAID Dependency Graph Eval Obs Avoidance Reveal Resource")
+![CAID Dependency Graph Eval Obs Avoidance Reveal Resource](Images/39_CAIDDependencyGraphEvalObsAvoidanceRevealResource.png "CAID Dependency Graph Eval Obs Avoidance Reveal Resource")
 
 The other dependencies of the `ObstacleAvoidanceTests` `solution` node of the GSN model as shown in the
 dependency graph can be viewed using this same procedure.
@@ -515,7 +515,7 @@ Continuing from the last section, in the right sub-pane of the `Editor` pane, ma
 tab is selected.  Suppose `eval_obs_avoidance.py` is modified to include enhancements and bug fixes.  We will
 not actually make such modifications here, but will instead add a comment to represent such changes:
 
-![CAID Modify Eval Obs Avoidance Py File](Images/CAIDModifyEvalObsAvoidancePyFile.png "CAID Modify Eval Obs Avoidance Py File")
+![CAID Modify Eval Obs Avoidance Py File](Images/40_CAIDModifyEvalObsAvoidancePyFile.png "CAID Modify Eval Obs Avoidance Py File")
 
 Note that, once you've made this modification:
 
@@ -525,7 +525,7 @@ Note that, once you've made this modification:
 1. The `eval-scripts` folder item in the `Explorer` pane has a red dot on its right side.  This is to indicate that
    one or more files in this folder have been modified.
 1. The `Source Control` button  
-   ![CAID Source Control Button]![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button")  
+   ![CAID Source Control Button]![CAID Source Control Button](Images/Button_CAIDSourceControlButton.png "CAID Source Control Button")  
    near the upper left corner of the browser has a blue dot with a `1` in it at its lower right corner.
    This is to indicate that `1` file has been modified in the `eval-scripts.git` repository, of which the
    `eval-scripts` folder is the root folder.
@@ -535,62 +535,62 @@ Note that, once you've made this modification:
 We must now commit our modification of the `eval_obs_avoidance.py` file to the `eval-scripts` git repository.
 
 In order to work this `eval-scripts` repository, we must select it by clicking on the repository selection button
-![CAID Repository Selection Button](Images/CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
+![CAID Repository Selection Button](Images/Button_CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
 at the lower left corner of the browser window.
 
 > NOTE:  There will be text on this button that indicates the currently selected `git` repository.
 
 Pressing this button will is cause a repository selection sub-window to appear in the top middle of the browser window:
 
-![CAID Repository Selection Window](Images/CAIDRepositorySelectionWindow.png "CAID Repository Selection Window")
+![CAID Repository Selection Window](Images/41_CAIDRepositorySelectionWindow.png "CAID Repository Selection Window")
 
 In this sub-window, select the `eval-scripts` git repository by typing its name in the text-box, or by clicking
 on its name:
 
-![CAID Select Eval Scripts Git Repository](Images/CAIDSelectEvalScriptsGitRepository.png "CAID Select Eval Scripts Git Repository")
+![CAID Select Eval Scripts Git Repository](Images/42_CAIDSelectEvalScriptsGitRepository.png "CAID Select Eval Scripts Git Repository")
 
 Now that the `eval-scripts` git repository is selected, note that:
 
-![CAID Eval Scripts Git Repository Selected](Images/CAIDEvalScriptsGitRepositorySelected.png "CAID Eval Scripts Git Repository Selected")
+![CAID Eval Scripts Git Repository Selected](Images/43_CAIDEvalScriptsGitRepositorySelected.png "CAID Eval Scripts Git Repository Selected")
 
 1. The text on the repository selection button
-   ![CAID Repository Selection Button](Images/CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
+   ![CAID Repository Selection Button](Images/Button_CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
    is now `eval-scripts`.
 1. The `Source Control` button
-   ![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button")
+   ![CAID Source Control Button](Images/Button_CAIDSourceControlButton.png "CAID Source Control Button")
    near the upper left corner of the browser has a blue dot with a `1` in it at its lower right corner.  This
    is to indicate that `1` file has been modified in the `eval-scripts.git` repository, of which the `eval-scripts`
    folder is the root folder.
 
 Click on the `Source Control`
-![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button")
+![CAID Source Control Button](Images/Button_CAIDSourceControlButton.png "CAID Source Control Button")
 button.  This will cause the `SOURCE CONTROL: GIT` pane to appear on the left side of the browser window:
 
-![CAID Modify Eval Obs Avoidance Py File Source Control](Images/CAIDModifyEvalObsAvoidancePyFileSourceControl.png "CAID Modify Eval Obs Avoidance Py File Source Control")
+![CAID Modify Eval Obs Avoidance Py File Source Control](Images/44_CAIDModifyEvalObsAvoidancePyFileSourceControl.png "CAID Modify Eval Obs Avoidance Py File Source Control")
 
 By hovering over the `CHANGES` line in this pane, the `Stage All Changes` button
-![CAID Stage All Changes Button](Images/CAIDStageAllChangesButton.png "CAID Stage All Changes Button")
+![CAID Stage All Changes Button](Images/Button_CAIDStageAllChangesButton.png "CAID Stage All Changes Button")
 will appear.  Click on this button to stage the modification to the `eval_obs_avoidance.py` file:
 
-![CAID Modify Eval Obs Avoidance Py File Stage All Changes](Images/CAIDModifyEvalObsAvoidancePyFileStageAllChanges.png "CAID Modify Eval Obs Avoidance Py File Stage All Changes")
+![CAID Modify Eval Obs Avoidance Py File Stage All Changes](Images/45_CAIDModifyEvalObsAvoidancePyFileStageAllChanges.png "CAID Modify Eval Obs Avoidance Py File Stage All Changes")
 
 Enter a commit message in the `Message` textbox, and then click on the `Commit` button
-![CAID Commit Button](Images/CAIDCommitButton.png "CAID Commit Button"):
+![CAID Commit Button](Images/Button_CAIDCommitButton.png "CAID Commit Button"):
 
-![CAID Modify Eval Obs Avoidance Py File Commit](Images/CAIDModifyEvalObsAvoidancePyFileCommit.png "CAID Modify Eval Obs Avoidance Py File Commit")
+![CAID Modify Eval Obs Avoidance Py File Commit](Images/46_CAIDModifyEvalObsAvoidancePyFileCommit.png "CAID Modify Eval Obs Avoidance Py File Commit")
 
 A thin blue line will appear above the `Message` textbox for a few seconds.  Once it is no longer visible, the
 commit is complete.
 
 Now, click on the `More Actions ...` button
-![CAID More Actions Button](Images/CAIDMoreActionsButton.png "CAID More Actions Button")
+![CAID More Actions Button](Images/Button_CAIDMoreActionsButton.png "CAID More Actions Button")
 located to the right of the `Commit` button, and in the resulting drop-down menu, select 'Push':
 
-![CAID Modify Eval Obs Avoidance Py File Push](Images/CAIDModifyEvalObsAvoidancePyFilePush.png "CAID Modify Eval Obs Avoidance Py File Push")
+![CAID Modify Eval Obs Avoidance Py File Push](Images/47_CAIDModifyEvalObsAvoidancePyFilePush.png "CAID Modify Eval Obs Avoidance Py File Push")
 
 In the resulting sub-window, select the `eval-scripts` repository:
 
-![CAID Modify Eval Obs Avoidance Py File Choose A Repository](Images/CAIDModifyEvalObsAvoidancePyFileChooseARepository.png "CAID Modify Eval Obs Avoidance Py File Choose A Repository")
+![CAID Modify Eval Obs Avoidance Py File Choose A Repository](Images/48_CAIDModifyEvalObsAvoidancePyFileChooseARepository.png "CAID Modify Eval Obs Avoidance Py File Choose A Repository")
 
 Again, a thin blue line will appear above the `Message` textbox for a few seconds.  Once it is no longer visible, the
 push is complete.
@@ -605,12 +605,12 @@ push is complete.
 
 Now, click on the `Depi` tab in the right sub-pane of the `Editor` pane:
 
-![CAID Dependency Graph Eval Obs Avoidance Dirty](Images/CAIDDependencyGraphEvalObsAvoidanceDirty.png "CAID Dependency Graph Eval Obs Avoidance Dirty")
+![CAID Dependency Graph Eval Obs Avoidance Dirty](Images/49_CAIDDependencyGraphEvalObsAvoidanceDirty.png "CAID Dependency Graph Eval Obs Avoidance Dirty")
 
 The dependency graph for the `ObstacleAvoidanceTests` `solution` node is again displayed.
 
 > NOTE: To see the whole graph, you can click on the `Dependency Info` button
-> ![CAID Dependency Info Button](Images/CAIDDependencyInfoButton.png "CAID Dependency Info Button")
+> ![CAID Dependency Info Button](Images/Button_CAIDDependencyInfoButton.png "CAID Dependency Info Button")
 > at the upper right of the graph to hide the information pane at the right.
 > 
 > If you do this, be sure to click it again to display the information pane.  We will need this for what follows.
@@ -623,7 +623,7 @@ reviewed and perhaps modified to bring them in synchrony with the modified `eval
 If you click on the dependency link between the `obstacle_avoidance_results` and `eval_obs_avoidance.py` nodes,
 it will turn light-blue, and information about the dependency will appear in the information sub-pane to the right:
 
-![CAID Dependency Graph Eval Obs Avoidance Dirty Info](Images/CAIDDependencyGraphEvalObsAvoidanceDirtyInfo.png "CAID Dependency Graph Eval Obs Avoidance Dirty Info")
+![CAID Dependency Graph Eval Obs Avoidance Dirty Info](Images/50_CAIDDependencyGraphEvalObsAvoidanceDirtyInfo.png "CAID Dependency Graph Eval Obs Avoidance Dirty Info")
 
 This information shows that there is a direct dependency between `obstacle_avoidance_results` and
 `eval_obs_avoidance.py`, and that it is `Dirty`.
@@ -632,64 +632,64 @@ If we click on the link between `ObstacleAvoidanceTests` and `obstacle_avoidance
 `Dirty` due to the modified `eval_obs_avoidance.py` file, but that the dirtiness is indirect, or _inferred_,
 through `obstacle_avoidance_results`.
 
-![CAID Dependency Graph Eval Obs Avoidance Inferred Dirty Info](Images/CAIDDependencyGraphEvalObsAvoidanceInferredDirtyInfo.png "CAID Dependency Graph Eval Obs Avoidance Inferred Dirty Info")
+![CAID Dependency Graph Eval Obs Avoidance Inferred Dirty Info](Images/51_CAIDDependencyGraphEvalObsAvoidanceInferredDirtyInfo.png "CAID Dependency Graph Eval Obs Avoidance Inferred Dirty Info")
 
 Let us first bring `obstacle_avoidance_results` in synchrony with the `eval_obs_avoidance.py` modifications.
 
 As we did with the `eval_obs_avoidance.py` node:
 * Click on the `obstacle_avoidance_results` node
 * In the information sub-pane on the right, click on the `Reveal resource` button
-  ![CAID Dependency Graph Reveal Resource Button](Images/CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button"):
+  ![CAID Dependency Graph Reveal Resource Button](Images/Button_CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button"):
 
 Because `obstacle_avoidance_results` is a folder, the `Reveal resource` button only reveals its contents
 in the `Explorer` pane on the left side of the browser window. To see the contents of the file `metric.csv`
 in the `Editor` pane, you will need to click on it in the `Explorer`:
 
-![CAID Dependency Graph Obstacle Avoidance Results Reveal Resource](Images/CAIDDependencyGraphObstacleAvoidanceResultsRevealResource.png "CAID Dependency Graph Obstacle Avoidance Results Reveal Resource")
+![CAID Dependency Graph Obstacle Avoidance Results Reveal Resource](Images/52_CAIDDependencyGraphObstacleAvoidanceResultsRevealResource.png "CAID Dependency Graph Obstacle Avoidance Results Reveal Resource")
 
 To bring the data in `obstacle_avoidance_results` into synchrony with the `eval_obs_avoidance.py`, we will edit the
 `metric.csv` file.  For this tutorial, let's say this is done by changing the `metric2` value to 75:
 
-![CAID Dependency Graph Obstacle Avoidance Results Modify](Images/CAIDDependencyGraphObstacleAvoidanceResultsModify.png "CAID Dependency Graph Obstacle Avoidance Results Modify")
+![CAID Dependency Graph Obstacle Avoidance Results Modify](Images/53_CAIDDependencyGraphObstacleAvoidanceResultsModify.png "CAID Dependency Graph Obstacle Avoidance Results Modify")
 
 We will also commit and push this modification to the `main` branch of the `eval-results` repository in the same
 way as with `eval_obs_avoidance.py` of the `eval-scripts` repository (see above).  To do this:
 
 1. Click the repository selection button
-   ![CAID Repository Selection Button](Images/CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
+   ![CAID Repository Selection Button](Images/Button_CAIDRepositorySelectionButton.png "CAID Repository Selection Button")
    in the lower left corner of the browser window.
 2. Select the `eval-results` repository in the resulting sub-window.
 3. Click the source control button
-   ![CAID Source Control Button](Images/CAIDSourceControlButton.png "CAID Source Control Button"),
+   ![CAID Source Control Button](Images/Button_CAIDSourceControlButton.png "CAID Source Control Button"),
    which should have a blue circle with a `1` in it at its lower right corner.
 4. Click the `Stage all Changes`
-   ![CAID Stage All Changes Button](Images/CAIDStageAllChangesButton.png "CAID Stage All Changes Button")
+   ![CAID Stage All Changes Button](Images/Button_CAIDStageAllChangesButton.png "CAID Stage All Changes Button")
    button in the `CHANGES` line of the `SOURCE CONTROL: GIT` pane.
 5. Enter an appropriate commit message in the `Message` textbox.
 6. Click on the `Commit` button
-   ![CAID Commit Button](Images/CAIDCommitButton.png "CAID Commit Button").
+   ![CAID Commit Button](Images/Button_CAIDCommitButton.png "CAID Commit Button").
 7. Once the thin blue line above the `Message` textbox is no longer visible, click the `More Actions` button
-   ![CAID More Actions Button](Images/CAIDMoreActionsButton.png "CAID More Actions Button").
+   ![CAID More Actions Button](Images/Button_CAIDMoreActionsButton.png "CAID More Actions Button").
 8. Select 'Push' from the resulting drop-down menu.
 9. Select `eval-results` in the resulting sub-window.
 
-![CAID Dependency Graph Obstacle Avoidance Results Push](Images/CAIDDependencyGraphObstacleAvoidanceResultsPush.png "CAID Dependency Graph Obstacle Avoidance Results Push")
+![CAID Dependency Graph Obstacle Avoidance Results Push](Images/54_CAIDDependencyGraphObstacleAvoidanceResultsPush.png "CAID Dependency Graph Obstacle Avoidance Results Push")
 
 Once the push is complete, again click on the `Depi` tab in the right sub-pane of the `Editor` pane, and click
 on the dependency link between `obstacle_avoidance_results` and `eval_obs_avoidance.py`.  Now that the
 `obstacle_avoidance_results` has been modified to be in synchrony with `eval_obs_avoidance.py`, we can mark this
 dependency as `clean` by clicking the `Mark as clean` button
-![CAID Mark As Clean Button](Images/CAIDMarkAsCleanButton.png "CAID Mark As Clean Button"):
+![CAID Mark As Clean Button](Images/Button_CAIDMarkAsCleanButton.png "CAID Mark As Clean Button"):
 
-![CAID Dependency Graph Eval Obs Avoidance Clean Button](Images/CAIDDependencyGraphEvalObsAvoidanceCleanButton.png "CAID Dependency Graph Eval Obs Avoidance Clean Button")
+![CAID Dependency Graph Eval Obs Avoidance Clean Button](Images/55_CAIDDependencyGraphEvalObsAvoidanceCleanButton.png "CAID Dependency Graph Eval Obs Avoidance Clean Button")
 
 Note that dependency link between `obstacle_avoidance_results` and `eval_obs_avoidance.py` is no longer dirty:
 
-![CAID Dependency Graph Eval Obs Avoidance Clean](Images/CAIDDependencyGraphEvalObsAvoidanceClean.png "CAID Dependency Graph Eval Obs Avoidance Clean")
+![CAID Dependency Graph Eval Obs Avoidance Clean](Images/56_CAIDDependencyGraphEvalObsAvoidanceClean.png "CAID Dependency Graph Eval Obs Avoidance Clean")
 
 and if you click on the white background in the `Dependency Graph` sub-pane, this link is no longer red:
 
-![CAID Dependency Graph Eval Obs Avoidance Black](Images/CAIDDependencyGraphEvalObsAvoidanceBlack.png "CAID Dependency Graph Eval Obs Avoidance Black")
+![CAID Dependency Graph Eval Obs Avoidance Black](Images/57_CAIDDependencyGraphEvalObsAvoidanceBlack.png "CAID Dependency Graph Eval Obs Avoidance Black")
 
 Click on the dependency link between `ObstacleAvoidanceTests` and `obstacle_avoidance_results` again, and note
 that it is now dirty in two ways:
@@ -697,14 +697,14 @@ that it is now dirty in two ways:
 * The _inferred_ dirtiness from the modification to `eval_obs_avoidance.py`
 * The direct dirtiness from the modification to `obstacle_avoidance_results`
 
-![CAID Dependency Graph Obstacle Avoidance Results Dirty](Images/CAIDDependencyGraphObstacleAvoidanceResultsDirty.png "CAID Dependency Graph Obstacle Avoidance Results Dirty")
+![CAID Dependency Graph Obstacle Avoidance Results Dirty](Images/58_CAIDDependencyGraphObstacleAvoidanceResultsDirty.png "CAID Dependency Graph Obstacle Avoidance Results Dirty")
 
 When the appropriate modifications are made to the `ObstacleAvoidanceTests` `solution` node, we can click the
 `Mark as clean` button
-![CAID Mark As Clean Button](Images/CAIDMarkAsCleanButton.png "CAID Mark As Clean Button")
+![CAID Mark As Clean Button](Images/Button_CAIDMarkAsCleanButton.png "CAID Mark As Clean Button")
 for both of these forms of dirtiness to complete our dependency review:
 
-![CAID Dependency Review Complete](Images/CAIDDependencyReviewComplete.png "CAID Dependency Review Complete")
+![CAID Dependency Review Complete](Images/59_CAIDDependencyReviewComplete.png "CAID Dependency Review Complete")
 
 ## CAID and WebGME
 
@@ -722,7 +722,7 @@ Open the `Depi Blackboard` as we did in [The Depi Blackboard Section](#the-depi-
 with all of the dependency links displayed, and notice that the dependencies between resources in the
 `webgme:TestProject` WebGME model and the `src.git` repository:
 
-![CAID Dependency Graph WebGME Dependencies](Images/CAIDDependencyGraphWebGMEDependencies.png "CAID Dependency Graph WebGME Dependencies")
+![CAID Dependency Graph WebGME Dependencies](Images/60_CAIDDependencyGraphWebGMEDependencies.png "CAID Dependency Graph WebGME Dependencies")
 
 Note that these are _circular_ dependencies, i.e. a resource in the `src.git` repository
 (e.g. the `planner_node.py` file) has a resource in the `webgme:TestProject` WebGME model
@@ -740,52 +740,52 @@ We can view the dependency graph a particular component/file pair by expanding t
 `Explorer` pane until we can see one of the source files.  For this tutorial, we will use `planner_node.py`.
 
 > NOTE:  Click on the Explorer Button
-> ![CAID Explorer Button](Images/CAIDExplorerButton.png "CAID Explorer Button")
+> ![CAID Explorer Button](Images/Button_CAIDExplorerButton.png "CAID Explorer Button")
 > near the top left corner of the browser window to view the `Explorer` pane.
 
 Click on this file using the secondary mouse button, and in the resulting pop-up menu, select
 `Show Dependency Graph`
 
-![CAID Planner Node Dependency Graph Selection](Images/CAIDPlannerNodeDependencyGraphSelection.png "CAID Planner Node Dependency Graph Selection")
+![CAID Planner Node Dependency Graph Selection](Images/61_CAIDPlannerNodeDependencyGraphSelection.png "CAID Planner Node Dependency Graph Selection")
 
 The dependency graph will appear in the right sub-pane of the `Editor` pane.  To launch WebGME and view the
 `WaypointPlanner` component of the WebGME model:
 * Click on the `WebpointPlanner` node in the dependency graph (it will turn blue to indicate that it is selected)
 * Click on the `Dependency Info` button
-  ![CAID Dependency Info Button](Images/CAIDDependencyInfoButton.png "CAID Dependency Info Button")
+  ![CAID Dependency Info Button](Images/Button_CAIDDependencyInfoButton.png "CAID Dependency Info Button")
   at the upper right of the dependency graph
 * In the `Dependency Info` pane, click the `Reveal resource` button
-  ![CAID Dependency Graph Reveal Resource Button](Images/CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button")
+  ![CAID Dependency Graph Reveal Resource Button](Images/Button_CAIDDependencyGraphRevealResourceButton.png "CAID Dependency Graph Reveal Resource Button")
 
-![CAID Reveal WebGME Waypoint Planner Resource](Images/CAIDRevealWebGMEWaypointPlannerResource.png "CAID Reveal WebGME Waypoint Planner Resource")
+![CAID Reveal WebGME Waypoint Planner Resource](Images/62_CAIDRevealWebGMEWaypointPlannerResource.png "CAID Reveal WebGME Waypoint Planner Resource")
 
 The WebGME Editor, with `WaypointPlanner` selected, will appear in the right sub-pane of the `Editor` pane:
 
-![CAID WebGME Waypoint Planner Component](Images/CAIDWebGMEWaypointPlannerComponent.png "CAID WebGME Waypoint Planner Component")
+![CAID WebGME Waypoint Planner Component](Images/63_CAIDWebGMEWaypointPlannerComponent.png "CAID WebGME Waypoint Planner Component")
 
 To modify the `WaypointPlanner`, click on the name of the WebGME model, `TestProject` for this example, at the
 top of the WebGME Editor.  In the resulting drop-down menu, click on `ProjectHistory`:
 
-![CAID WebGME Waypoint Planner Project History](Images/CAIDWebGMEWaypointPlannerProjectHistory.png "CAID WebGME Waypoint Planner Project History")
+![CAID WebGME Waypoint Planner Project History](Images/64_CAIDWebGMEWaypointPlannerProjectHistory.png "CAID WebGME Waypoint Planner Project History")
 
 In the pop-up window, click on `master`:
 
-![CAID WebGME Select Master Branch](Images/CAIDWebGMESelectMasterBranch.png "CAID WebGME Select Master Branch")
+![CAID WebGME Select Master Branch](Images/65_CAIDWebGMESelectMasterBranch.png "CAID WebGME Select Master Branch")
 
 Then click the `Close` button in the lower right corner:
 
-![CAID WebGME Click Close](Images/CAIDWebGMEClickClose.png "CAID WebGME Select Click Close")
+![CAID WebGME Click Close](Images/66_CAIDWebGMEClickClose.png "CAID WebGME Select Click Close")
 
 Now, modify the `WaypointPlanner` component of the WebGME model by clicking and dragging a `Port`
-![CAID WebGME Waypoint Planner Port](Images/CAIDWebGMEWaypointPlannerPort.png "CAID WebGME Waypoint Planner Port")
+![CAID WebGME Waypoint Planner Port](Images/Button_CAIDWebGMEWaypointPlannerPort.png "CAID WebGME Waypoint Planner Port")
 from the `Part List` on the left into the `WaypointPlanner` sub-pane:
 
-![CAID WebGME Waypoint Planner Drag Port](Images/CAIDWebGMEWaypointPlannerDragPort.png "CAID WebGME Waypoint Planner Drag Port")
+![CAID WebGME Waypoint Planner Drag Port](Images/67_CAIDWebGMEWaypointPlannerDragPort.png "CAID WebGME Waypoint Planner Drag Port")
 
 Now that the `WaypointPlanner` has been modified, click on the `Depi` tab on the right sub-pane of the `Editor`
 pane:
 
-![CAID WebGME Dependency Graph Modification](Images/CAIDWebGMEDependencyGraphModification.png "CAID WebGME Dependency Graph Modification")
+![CAID WebGME Dependency Graph Modification](Images/68_CAIDWebGMEDependencyGraphModification.png "CAID WebGME Dependency Graph Modification")
 
 Notice that the dependency links in the dependency graph are now red to indicate that the `planner_node.py` file
 may need to be modified to bring it into synchrony with the `WaypointPlanner` component of the WebGME model.  This
@@ -793,4 +793,4 @@ situation can be managed as in the
 [Updating a Resource when its Dependencies Change Section](#updating-a-resource-when-its-dependencies-change) section.
 
 > NOTE:  WebGME can be executed at any time by entering `>WebGME: Modeling Editor` into the `Command Palette`:
-> ![CAID WebGME Command Palette](Images/CAIDWebGMECommandPalette.png "CAID WebGME Command Palette")
+> ![CAID WebGME Command Palette](Images/69_CAIDWebGMECommandPalette.png "CAID WebGME Command Palette")
