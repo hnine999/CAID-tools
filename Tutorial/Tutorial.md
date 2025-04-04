@@ -738,6 +738,7 @@ contains the code it generates needs to be updated so that they remain in synchr
 As well, if a file is updated (independently, i.e. not due to a change in the WebGME model), the corresponding
 component in the WebGME model should be updated.
 
+
 We can view the dependency graph a particular component/file pair by expanding the `src` repository in the
 `Explorer` pane until we can see one of the source files.  For this tutorial, we will use `planner_node.py`.
 
@@ -745,14 +746,18 @@ We can view the dependency graph a particular component/file pair by expanding t
 > ![CAID Explorer Button](Images/Button_CAIDExplorerButton.png "CAID Explorer Button")
 > near the top left corner of the browser window to view the `Explorer` pane.
 
-Click on this file using the secondary mouse button, and in the resulting pop-up menu, select
-`Show Dependency Graph`
+Clicking on `planner_node.py` with the primary mouse button will show its contents in the `Editor`, as shown below:
+
+![CAID Planner Node Py Contents](Images/60_5-CAIDPlannerNodePyContents.png "CAID Planner Node Py Contents")
+
+To display the dependency graph of `planner_node.py`, click on it with the _secondary_ mouse button, and in the
+resulting pop-up menu, select `Show Dependency Graph`:
 
 ![CAID Planner Node Dependency Graph Selection](Images/61-CAIDPlannerNodeDependencyGraphSelection.png "CAID Planner Node Dependency Graph Selection")
 
 The dependency graph will appear in the right sub-pane of the `Editor` pane.  To launch WebGME and view the
 `WaypointPlanner` component of the WebGME model:
-* Click on the `WebpointPlanner` node in the dependency graph (it will turn blue to indicate that it is selected)
+* Click on the `WaypointPlanner` node in the dependency graph (it will turn blue to indicate that it is selected)
 * Click on the `Dependency Info` button
   ![CAID Dependency Info Button](Images/Button_CAIDDependencyInfoButton.png "CAID Dependency Info Button")
   at the upper right of the dependency graph
